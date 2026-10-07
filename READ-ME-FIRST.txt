@@ -1,23 +1,21 @@
-WORKING VOLUMES — READY-TO-UPLOAD WEBSITE
+WORKING VOLUMES — FLAT UPLOAD REPAIR
 
-This ZIP contains the built website, all 11 book covers, and the three supplied destination films. It does not contain passwords, Git history, node_modules, or the Replit backend.
+Your GitHub Pages settings are already saved. No settings changes are needed.
 
-PUBLISH USING GITHUB'S WEBSITE
-1. Unzip this archive on your computer.
-2. Open https://github.com/Stomachking/test-jp while signed into your GitHub account.
-3. Choose Add file > Upload files (an empty repository may show an Upload files link).
-4. Upload the UNZIPPED files and folders, not the ZIP itself. index.html must be at the repository root, beside assets/, experiences/, and original-shelf/.
-5. Include .nojekyll. On macOS, Command+Shift+Period shows hidden files in Finder and file pickers. This file tells GitHub to serve the already-built site without processing it.
-6. Commit the uploaded files to main.
-7. Open Settings > Pages. Choose Source: Deploy from a branch, Branch: main, Folder: / (root), then Save.
-8. Once GitHub finishes publishing, open the website link shown in Settings > Pages. That is your public viewing link.
+1. Unzip this repair ZIP.
+2. Open https://github.com/Stomachking/test-jp and choose Add file > Upload files.
+3. Upload every .html, .js, .css, .mp4 and .webm file in this update ZIP to the repository's top level.
+4. Commit the files to main. This replaces the old generated index.html.
+5. Wait for the pages build and deployment action to finish, then refresh the website.
 
-This built ZIP uses branch-based publishing. It does NOT require the separate Publish Working Volumes workflow or a Node.js build on GitHub.
+Do not delete the existing videos, pictures, CSS, or complete-shelf-v2.html.
+You do not need to upload those files again.
 
-VIEWING NOTES
-- Use a modern browser with WebGL enabled for the 3D bookshelf and spatial film view. The existing static/film fallbacks remain available.
-- Google Fonts and the original shelf's Three.js CDN imports require internet access.
-- Only the three supplied destinations have films. The other eight experience slots remain marked Not yet supplied.
-- The selected-book title uses Newsreader as a substitute; a licensed Recife font was not supplied.
-- This site needs an HTTP/HTTPS host. Opening index.html directly via file:// may fail because browsers restrict JavaScript module and document requests.
-- The current canvas preview remains unchanged. This is a standalone export snapshot.
+This repair uses the files already uploaded at the repository's top level.
+The original shelf document is unchanged; only its embedded cover URLs are adapted.
+The original book design and original-quality Watch film videos are unchanged.
+
+SCROLLING UPDATE: smaller scrolling films, lower graphics load, and Playback settings.
+Choose Smoother playback (no 3D) next to Watch film when using a restricted work computer.
+The original-quality Watch film videos are unchanged.
+
