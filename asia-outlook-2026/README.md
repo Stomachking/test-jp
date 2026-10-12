@@ -21,8 +21,17 @@ Source article: https://privatebank.jpmorgan.com/apac/en/insights/markets-and-in
    - three key points, plus a collapsible fuller answer.
 4. **Takeaways** — one line per question explored, with a copy button and a score
    of how often the reader matched the house view.
+5. **Cross-asset implementation ideas** — a separate section (top-right button, or the
+   cards at the bottom of the start page) with four ideas: Chinese equities, Japanese
+   equities, Indian equities, Asia fixed income. Each shows the call, allocation size,
+   what supports it, what to watch, how to implement, an infographic, and the full text.
+   Three charts from the original (MSCI India vs Asia Pacific, relative P/E vs S&P 500,
+   Asia HY default rates) are drawn as labelled schematics because the series data was
+   not supplied; paste the series into `SERIES` in the script to replace them.
 
-Deep links: `index.html?market=china` jumps straight into a chapter.
+Deep links: `index.html?market=china` jumps straight into a chapter; `index.html?ideas=in` opens an implementation idea.
+
+Theme: white background, black ink, brown accent. No dark mode.
 
 ## Status
 

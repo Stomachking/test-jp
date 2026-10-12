@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#f7f4ee">
+<meta name="theme-color" content="#ffffff">
 <title>Asia Outlook Explorer</title>
 <meta name="description" content="An interactive, question-led walk through the key takeaways of the 2026 Asia Outlook, market by market.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,32 +11,12 @@
 <style>
   :root{
     color-scheme: light;
-    --bg:#f7f4ee; --surface:#fffdf9; --surface-2:#f0ebe1; --line:#e3dccf; --line-2:#cfc6b4;
-    --ink:#1b1f2a; --ink-2:#4b5160; --ink-3:#7a8090;
-    --accent:#9a6b1f; --accent-ink:#5f3f0a; --accent-soft:#f3e7cf;
-    --series-1:#2a78d6; --series-1-soft:#cde2fb; --series-2:#eb6834;
-    --good:#0ca30c; --critical:#d03b3b; --warn:#c98500;
-    --track:#e8e2d5; --radius:16px; --shadow:0 1px 2px rgba(27,31,42,.06),0 8px 24px rgba(27,31,42,.06);
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      color-scheme: dark;
-      --bg:#15171c; --surface:#1d2026; --surface-2:#262a32; --line:#30353f; --line-2:#444a57;
-      --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#8e94a3;
-      --accent:#d2a24f; --accent-ink:#f0d9a8; --accent-soft:#3a2f17;
-      --series-1:#3987e5; --series-1-soft:#1c3a63; --series-2:#d95926;
-      --good:#3bbf3b; --critical:#e66767; --warn:#e0a52a;
-      --track:#2f343d; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
-    }
-  }
-  :root[data-theme="dark"]{
-    color-scheme: dark;
-    --bg:#15171c; --surface:#1d2026; --surface-2:#262a32; --line:#30353f; --line-2:#444a57;
-    --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#8e94a3;
-    --accent:#d2a24f; --accent-ink:#f0d9a8; --accent-soft:#3a2f17;
-    --series-1:#3987e5; --series-1-soft:#1c3a63; --series-2:#d95926;
-    --good:#3bbf3b; --critical:#e66767; --warn:#e0a52a;
-    --track:#2f343d; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+    --bg:#ffffff; --surface:#ffffff; --surface-2:#f6f3ee; --line:#e6e0d6; --line-2:#cfc5b6;
+    --ink:#111111; --ink-2:#44403a; --ink-3:#7d766c;
+    --accent:#6b4423; --accent-ink:#4a2d14; --accent-soft:#efe4d6;
+    --series-1:#8a5a2b; --series-1-soft:#e7d7c3; --series-2:#111111;
+    --good:#111111; --critical:#8a5a2b; --warn:#b08a5a;
+    --track:#ebe5db; --radius:16px; --shadow:0 1px 2px rgba(17,17,17,.05),0 8px 24px rgba(17,17,17,.05);
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
@@ -67,6 +47,7 @@
   .hero{padding:48px 0 28px}
   .hero h1{font-size:clamp(34px,6vw,58px);line-height:1.05;max-width:14ch;margin:10px 0 14px}
   .hero .lede{font-size:18px;max-width:58ch;color:var(--ink-2)}
+  .hero{border-bottom:1px solid var(--line)}
   .hero .meta{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--ink-3)}
   .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:28px 0 8px}
   .tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
@@ -101,6 +82,7 @@
   .btn[disabled]{opacity:.45;cursor:not-allowed}
   .btn.ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
   .btn.accent{background:var(--accent);color:#fff}
+  .top .chip{padding:7px 12px}
   .btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
 
   /* journey */
@@ -128,9 +110,9 @@
   .opt .k{width:22px;height:22px;border-radius:7px;background:var(--surface-2);display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--ink-3);flex:none}
   .opt:hover{border-color:var(--ink-3)}
   .poll.answered .opt{cursor:default;opacity:.65}
-  .poll.answered .opt.house{opacity:1;border-color:var(--good);background:color-mix(in srgb,var(--good) 10%,var(--surface))}
-  .poll.answered .opt.house .k{background:var(--good);color:#fff}
-  .poll.answered .opt.picked:not(.house){border-color:var(--critical)}
+  .poll.answered .opt.house{opacity:1;border-color:var(--ink);background:var(--surface-2)}
+  .poll.answered .opt.house .k{background:var(--ink);color:#fff}
+  .poll.answered .opt.picked:not(.house){border-color:var(--accent)}
   .poll .verdict{margin-top:10px;font-size:14px;display:none}
   .poll.answered .verdict{display:block}
   .poll .skip{background:none;border:0;padding:8px 0 0;font-size:13px;color:var(--ink-3);text-decoration:underline}
@@ -182,7 +164,7 @@
   .board .row{display:grid;grid-template-columns:28px 1fr auto;gap:10px;align-items:center;background:var(--surface);border-radius:10px;padding:10px 12px}
   .board .ic{width:28px;height:28px;border-radius:8px;display:grid;place-items:center}
   .board .ic svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-  .board .ic.up{background:var(--good)} .board .ic.down{background:var(--critical)} .board .ic.flat{background:var(--warn)}
+  .board .ic.up{background:var(--ink)} .board .ic.down{background:var(--accent)} .board .ic.flat{background:var(--warn)}
   .board .name{font-weight:600;font-size:14px}
   .board .desc{font-size:12px;color:var(--ink-3)}
   .board .tag{font-size:12px;font-weight:600;color:var(--ink-2)}
@@ -214,6 +196,47 @@
   .preview .stat span{font-size:12px;color:var(--ink-3)}
   .notice{border:1px dashed var(--line-2);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--ink-3)}
 
+  /* implementation ideas */
+  .alloc{background:var(--surface-2);border-radius:16px;padding:16px;margin-bottom:16px;display:grid;gap:10px}
+  .alloc .vt{font-weight:600;font-size:14px}
+  .alloc .stack{display:flex;height:26px;border-radius:8px;overflow:hidden;gap:2px;background:var(--surface)}
+  .alloc .stack i{display:block;height:100%}
+  .idea{background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+  .idea-head{padding:22px 22px 10px;display:grid;gap:8px}
+  .idea-head h2{font-size:clamp(22px,3.4vw,30px);line-height:1.2}
+  .stance{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:14px;background:var(--ink);color:#fff;max-width:100%;line-height:1.35}
+  .stance.brown{background:var(--accent)}
+  .stance.outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .idea-body{padding:6px 22px 22px;display:grid;gap:18px}
+  @media (min-width:860px){.idea-body .cols{display:grid;grid-template-columns:1.15fr 1fr;gap:18px;align-items:start}}
+  .twocol{display:grid;gap:12px}
+  @media (min-width:600px){.twocol{grid-template-columns:1fr 1fr}}
+  .box{background:var(--surface-2);border-radius:14px;padding:14px 16px}
+  .box h4{margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+  .box ul{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+  .box li{font-size:14px;color:var(--ink-2);display:flex;gap:10px}
+  .box li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--ink);margin-top:8px}
+  .box.watch li::before{background:var(--accent)}
+  .pillars{display:grid;gap:8px}
+  @media (min-width:600px){.pillars{grid-template-columns:repeat(3,1fr)}}
+  .pillar{text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:4px;transition:border-color .2s}
+  .pillar[aria-expanded="true"]{border-color:var(--ink)}
+  .pillar b{font-size:14px}
+  .pillar span{font-size:12px;color:var(--ink-3)}
+  .pillar .more{display:none;font-size:13px;color:var(--ink-2);padding-top:6px;border-top:1px solid var(--line);margin-top:4px}
+  .pillar[aria-expanded="true"] .more{display:block}
+  .chips{display:flex;flex-wrap:wrap;gap:6px}
+  .chips span{font-size:13px;font-weight:600;padding:6px 10px;border-radius:999px;border:1.5px solid var(--ink);color:var(--ink)}
+  .chips span.soft{border-color:var(--line-2);color:var(--ink-3);font-weight:500}
+  .meter{display:grid;gap:6px}
+  .meter .bar{height:10px;border-radius:5px;background:var(--track);position:relative;overflow:visible}
+  .meter .bar i{position:absolute;top:0;left:0;height:100%;border-radius:5px;background:var(--series-1)}
+  .meter .bar b{position:absolute;top:-4px;width:18px;height:18px;border-radius:50%;background:var(--ink);border:3px solid var(--surface);transform:translateX(-50%)}
+  .meter .ticks{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-3)}
+  .schematic{border:1px dashed var(--line-2);border-radius:12px;padding:12px;display:grid;gap:6px;background:var(--surface)}
+  .schematic .vt{font-weight:600;font-size:14px}
+  .schematic .src{font-size:11px;color:var(--ink-3)}
+  .schematic .need{font-size:11px;color:var(--accent);font-weight:600}
   footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:13px;color:var(--ink-3)}
   footer p+p{margin-top:8px}
   footer a{color:var(--ink-2)}
@@ -233,9 +256,7 @@
   <div class="wrap">
     <button class="brand" id="homeBtn" aria-label="Back to start"><span class="dot"></span>Asia Outlook Explorer</button>
     <div class="top-actions">
-      <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle dark mode">
-        <svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-      </button>
+      <button class="chip" id="ideasBtn">Implementation ideas</button>
     </div>
   </div>
 </header>
@@ -271,13 +292,36 @@
       </div>
       <div class="cards" id="cards"></div>
       <div class="cta-row">
-        <button class="btn accent" id="startBtn" disabled>
+        <button class="btn" id="startBtn" disabled>
           Explore <span id="startCount"></span>
           <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
         <button class="btn ghost" id="allBtn">Select all</button>
       </div>
     </div>
+
+    <div class="section" id="ideas-entry">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Or go straight to</div>
+          <h2>Cross-asset implementation ideas</h2>
+        </div>
+        <p class="muted small">How the views translate into positioning: four ideas across equities and fixed income.</p>
+      </div>
+      <div class="cards" id="ideaCards"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPLEMENTATION IDEAS ============ -->
+<section class="view" id="view-impl">
+  <div class="wrap journey">
+    <div class="eyebrow">Cross-asset implementation ideas</div>
+    <h2 style="font-size:clamp(26px,4vw,34px);margin:8px 0 6px">From view to position</h2>
+    <p class="muted" style="max-width:62ch;margin-bottom:16px">Each idea shows the call, the size it would take in a globally diversified portfolio, what supports it, what to watch, and how the outlook suggests implementing it.</p>
+    <div class="alloc" id="alloc"></div>
+    <div class="chapters" id="implTabs"></div>
+    <div id="implHost"></div>
   </div>
 </section>
 
@@ -299,6 +343,7 @@
     <div class="summary" id="summaryHost"></div>
     <div class="nav" style="margin-top:22px;flex-wrap:wrap">
       <button class="btn ghost" id="copyBtn">Copy takeaways</button>
+      <button class="btn ghost" id="toIdeasBtn">Implementation ideas</button>
       <button class="btn" id="restartBtn">Explore another market</button>
     </div>
   </div>
@@ -748,19 +793,227 @@ function renderSummary(){
   show('view-summary');
 }
 
+
+/* ===================== IMPLEMENTATION IDEAS ===================== */
+const IMPL = [
+  {
+    id:'cn', flag:'🇨🇳', name:'Chinese equities', title:'Picking the winners is paramount',
+    stance:'Selective · add on pullbacks', tone:'', weight:3,
+    lede:'The medium-term outlook has become more constructive. Pullbacks are opportunities to add for investors who are underweight, or to enter tactical trades in specific stocks. But recent gains were largely multiple-driven, so selection matters more than beta.',
+    supports:['Moderately pro-growth policies that put a floor under economic growth','Increasing recognition of China’s technological advancements','Improving U.S.–China relations','Domestic investors seeking alternatives to property ownership'],
+    watch:['Negative earnings revisions in 2025 mean recent gains have been largely multiple-driven','Domestic consumption remains soft','Unevenness across sectors argues against broad index exposure'],
+    how:['Core: the China Tech Innovator Basket across three themes (below)','Income: high-quality dividend names with resilient earnings and attractive yields','Value: consumer companies trading at depressed valuations offer attractive risk/reward','Size: Chinese equities are around 3% of a globally diversified equity allocation'],
+    viz:'implCn',
+    full:['The outlook for Chinese equities has become more constructive over the medium-term, and we view pullbacks as opportunities to add exposure for investors who are underweight (Chinese equities make up around 3% of a globally-diversified equity allocation) or enter tactical trades on specific stocks. Moderately pro-growth policies that establish a floor on economic growth, increasing recognition of technological advancements, improving U.S.–China relations, and domestic investors seeking alternative assets to property ownership are all potentially supportive for the Chinese equity market.','Negative earnings revisions in 2025 imply recent gains have been largely multiple-driven. Due to this unevenness, we prefer a highly selective approach regarding Chinese equities with an emphasis on our China Tech Innovator Basket. This group focuses on three key areas: AI & “super apps” driving digital efficiency and monetization, new electric vehicles (NEV) & autonomous driving reshaping mobility and expanding beyond China, and semiconductor localization strengthening domestic supply chains amid technological export controls. In addition, high-quality dividend names with resilient earnings continue to offer attractive yields. While we acknowledge domestic consumption remains soft, an increasing number of consumer companies being valued at depressed valuations could offer attractive risk/reward.']
+  },
+  {
+    id:'jp', flag:'🇯🇵', name:'Japanese equities', title:'A constructive outlook that markets have already priced in',
+    stance:'Tactically neutral · buy meaningful pullbacks', tone:'outline', weight:5,
+    lede:'Fiscal support, a still-dovish Bank of Japan and a firmer global backdrop are all constructive. But the market has priced much of it: modest upside to the December 2026 TOPIX outlook of 3,350–3,400 keeps the stance tactically neutral.',
+    supports:['A moderately expansionary fiscal programme balancing social welfare with investment in new technologies and defence','Relatively dovish monetary policy, which could keep USD/JPY in a higher range for longer, supportive for earnings','Increased support for consumption','Rising expectations of a re-acceleration in global growth'],
+    watch:['Markets appear to have priced a lot of the optimism in','Upside to the December 2026 TOPIX outlook of 3,350–3,400 is modest','Wait for meaningful pullbacks rather than chasing'],
+    how:['Prefer select opportunities in financials, industrials, consumer discretionary and technology','Use meaningful pullbacks to build a long-term neutral allocation of around 5% within a globally diversified equity portfolio'],
+    viz:'implJp',
+    full:['The new administration’s moderately expansionary fiscal program that balances increased social welfare with investing in new technologies/defense supports the market outlook. Furthermore, monetary policy remains relatively dovish, which could result in USDJPY staying in a higher range for longer, which is supportive for earnings. With increased support for consumption, and rising expectations of a re-acceleration in global growth, the domestic and global backdrop is constructive for Japanese equities.','However, markets appear to have priced a lot of that optimism in, and modest upside to our December 2026 TOPIX outlook of 3,350-3,400 keeps us tactically neutral on Japanese equities. We prefer select opportunities in the financial, industrial, consumer discretionary, and technology sectors. Meaningful pullbacks present buying opportunities for investors to build a long-term neutral allocation of around 5% within a globally-diversified equity portfolio.']
+  },
+  {
+    id:'in', flag:'🇮🇳', name:'Indian equities', title:'Attractive entry point for long-term performance',
+    stance:'Positive · build a long-term allocation', tone:'', weight:3,
+    lede:'A December 2026 MSCI India outlook of 3,350–3,450 implies a low-to-mid-teens total return. Earnings are turning, valuations are reasonable and active EM funds hold almost no India, so the risk/reward is attractive.',
+    supports:['Economic tailwinds translate into earnings: India’s earnings growth is strongly correlated with GDP growth','September season: earnings growth accelerated to 13% YoY, 4% better than expected at the start of reporting','Earnings estimates seem to have stopped drifting lower; growth expected to re-accelerate to 13–14% p.a. in 2026 and 2027 (vs ~11% in 2025)','Relative P/E vs the S&P 500 one standard deviation below the 10-year average; in line with the average premium vs MSCI Asia ex-Japan','Active EM fund positioning in Indian equities near the 0–1st percentile'],
+    watch:['The current earnings downgrade cycle has run 14 months, versus a 9–10 month historical average since 2000','Return expectations are for low-to-mid teens, not a re-rating boom'],
+    how:['Use the current entry point to build a long-term allocation','India makes up close to 3% of a globally diversified equity portfolio'],
+    viz:'implIn',
+    full:['We re-iterate our positive outlook on Indian equities with a December 2026 MSCI India outlook of 3,350-3,450, implying an expected low-mid teens total return from current levels. We expect the tailwinds for the economy to translate into tailwinds for earnings recovery (India’s earnings growth is strongly correlated to GDP growth historically). The current earnings downgrade cycle has been extended at 14 months vs 9-10 month historical average (since 2000). In addition to earnings estimates that seem to have stopped drifting lower, the September earnings season also witnessed earnings growth accelerating to 13% YoY, 4% better than expectations at the start of the reporting period. This bodes well for upside to earnings estimates in the coming quarters, and we expect earnings growth to re-accelerate at 13-14% p.a. (vs ~11% in 2025) in both 2026 and 2027.','Valuations are also reasonable with the relative price-to-earnings ratio (P/E) for MSCI India vs the S&P 500 at one standard deviation below the 10-year average, and in-line with the 10-year average premium relative vs MSCI Asia ex. Japan. With positioning by active emerging markets funds near the 0-1st percentile in terms of Indian equity exposure, we find the risk/reward attractive. Investors can take this opportunity to build a long-term allocation to this market, which makes up close to 3% of a globally-diversified equity portfolio.']
+  },
+  {
+    id:'fi', flag:'💵', name:'Asia fixed income', title:'Opportunities if you know where to look',
+    stance:'Constructive IG · selective HY', tone:'brown', weight:null,
+    lede:'Asia investment grade stays constructive on short duration, restrained supply and a 40%-plus sovereign weighting. High yield had another strong year, but tight valuations mean credit selection is paramount: BB with healthy leverage over low-quality single B.',
+    supports:['Asia IG: all-in yields in the high 4% range with duration near 4.5 years, appealing for income and capital preservation','Over 40% of the Asia IG index is sovereign and quasi-sovereign, reinforcing credit quality; it trades at a lower spread than U.S. IG','Short duration profile and restrained net supply underpin stability','High yield default rates have trended lower since 2022'],
+    watch:['China tech credit valuations remain elevated vs U.S. peers: stay patient for better entry points','Recent credit events in Hong Kong and China property continue to test confidence in high yield','Scarce new supply has pushed HY valuations to relatively tight levels versus history'],
+    how:['IG relative value: subordinated capital issued by Japanese insurers and global banks in the region','HY quality: prefer BB companies with healthy leverage over low-quality single B names','HY themes: Indian high yield on its long-term growth trajectory; Macau gaming credits on improving profiles and successful 2025 refinancing'],
+    viz:'implFi',
+    full:['The outlook for Asia’s high grade fixed income market remains constructive in 2026, with stability underpinned by its short duration profile and restrained net supply. The Asia investment grade (IG) index has been trading at a lower spread than its U.S. counterpart, due to its over 40% allocation to sovereign and quasi-sovereign issuers, which reinforces its overall credit quality and resilience. With all-in yields hovering in the high 4% range and a duration near 4.5 years, Asia IG remains an appealing proposition for local investors seeking both income and capital preservation. From a relative value perspective, we maintain a preference for subordinated capital issued by Japanese insurers and global banks in the region, supported by solid fundamentals. While U.S. technology credits may face supply pressures in 2026 due to heavy AI-related capex, China’s tech sector is less exposed, as its investment is more measured and fundamentals could improve if “anti-involution” measures become more effective. However, since current valuations remain elevated compared to U.S. peers, we prefer to stay patient and wait for better entry points as market conditions evolve.','Turning to high yield, the sector has delivered another year of strong performance, yet disciplined credit selection remains paramount. While default rates have trended lower, recent credit events in Hong Kong and China’s property markets continue to test investor confidence and may have broader implications for the high yield space. The scarcity of new supply has driven valuations to relatively tight levels versus historical norms, and thus we find better value in BB companies with healthy leverage over low-quality single B names. We see opportunities in Indian high yield, underpinned by its long-term growth trajectory; and Macau gaming credits, which benefit from improving credit profile and successful refinancing activities in 2025.']
+  }
+];
+
+/* chart data hooks: paste the series here when available and the schematic frames become real charts */
+const SERIES = { indiaVsAsiaPacYoY: [], indiaRelPE: [], asiaHyDefaults: [] };
+
+function schematic(title, sub, svg, source){
+  return `<div class="schematic"><div class="vt">${title}</div><div class="small">${sub}</div>${svg}<div class="src">Source as cited in the outlook: ${source}</div><div class="need">Schematic. Underlying series not included in the text supplied; add it to SERIES in the script to render the actual chart.</div></div>`;
+}
+const IMPLVIZ = {
+  implCn(){
+    const pillars=[['AI & “super apps”','Digital efficiency and monetisation','Platforms using AI to lift engagement, efficiency and monetisation across their ecosystems.'],['NEV & autonomous driving','Reshaping mobility, expanding beyond China','New electric vehicles and autonomous driving, with leaders now scaling outside China.'],['Semiconductor localisation','Strengthening domestic supply chains','Domestic chip supply chains being built out amid technology export controls.']];
+    return `<div class="viz anim">
+      <div class="vt">China Tech Innovator Basket: three themes (tap to expand)</div>
+      <div class="pillars">${pillars.map((p,i)=>`<button class="pillar pop" aria-expanded="false" style="animation-delay:${i*.1}s"><b>${p[0]}</b><span>${p[1]}</span><div class="more">${p[2]}</div></button>`).join('')}</div>
+      <div class="vt" style="margin-top:6px">Why selection beats beta</div>
+      <div class="board">
+        <div class="row"><div class="ic up">${svgIcon.up}</div><div><div class="name">Valuation multiples</div><div class="desc">Drove most of the recent gains</div></div><div class="tag">Up</div></div>
+        <div class="row"><div class="ic down">${svgIcon.down}</div><div><div class="name">Earnings revisions, 2025</div><div class="desc">Negative, so fundamentals have not yet caught up</div></div><div class="tag">Down</div></div>
+      </div>
+      <div class="vt" style="margin-top:6px">Beyond the basket</div>
+      <div class="chips"><span>High-quality dividend names</span><span>Depressed-valuation consumer names</span><span class="soft">Broad index exposure</span></div>
+    </div>`;
+  },
+  implJp(){
+    return `<div class="viz anim">
+      <div class="vt">December 2026 TOPIX outlook</div>
+      <svg viewBox="0 0 360 80" role="img" aria-label="TOPIX outlook range 3,350 to 3,400 for December 2026, described as modest upside">
+        <line x1="20" y1="44" x2="340" y2="44" class="grid"/>
+        <rect class="s1 grow" x="230" y="36" width="60" height="16" rx="4"/>
+        <text x="260" y="26" font-size="13" font-weight="700" text-anchor="middle">3,350–3,400</text>
+        <text x="260" y="68" font-size="11" text-anchor="middle" class="t3">Dec 2026 outlook</text>
+        <text x="20" y="32" font-size="11" class="t3">Current levels → modest upside</text>
+      </svg>
+      <div class="vs">Modest upside from current levels keeps the stance tactically neutral.</div>
+      <div class="vt">Preferred sectors</div>
+      <div class="chips"><span>Financials</span><span>Industrials</span><span>Consumer discretionary</span><span>Technology</span></div>
+      <div class="vt" style="margin-top:6px">What is doing the supporting</div>
+      <div class="board">
+        <div class="row"><div class="ic up">${svgIcon.up}</div><div><div class="name">Fiscal programme</div><div class="desc">Social welfare plus technology and defence investment</div></div><div class="tag">Support</div></div>
+        <div class="row"><div class="ic up">${svgIcon.up}</div><div><div class="name">Dovish BoJ → higher USD/JPY for longer</div><div class="desc">Supportive for exporter earnings</div></div><div class="tag">Support</div></div>
+        <div class="row"><div class="ic flat">${svgIcon.flat}</div><div><div class="name">Already priced in</div><div class="desc">Wait for meaningful pullbacks to build toward ~5%</div></div><div class="tag">Neutral</div></div>
+      </div>
+    </div>`;
+  },
+  implIn(){
+    const bar=(x,v,lab,op=1,delay=0)=>`<rect class="s1 growy" x="${x}" y="${100-v*5}" width="24" height="${v*5}" rx="4" opacity="${op}" style="animation-delay:${delay}s"/><text x="${x+12}" y="${100-v*5-6}" font-size="12" font-weight="700" text-anchor="middle">${lab}</text>`;
+    const relPE = schematic('Relative to the S&P 500, India is still trading at a discount to averages','Relative P/E to the S&P 500, x',
+      `<svg viewBox="0 0 360 120" role="img" aria-label="Schematic: current relative P/E sits one standard deviation below the 10-year average">
+        <line x1="40" y1="40" x2="340" y2="40" class="grid"/><text x="36" y="44" font-size="10" text-anchor="end" class="t3">10y avg</text>
+        <line x1="40" y1="76" x2="340" y2="76" stroke="var(--line-2)" stroke-dasharray="4 4"/><text x="36" y="80" font-size="10" text-anchor="end" class="t3">−1 SD</text>
+        <circle cx="330" cy="76" r="6" class="acc"/><text x="318" y="100" font-size="11" text-anchor="end" class="t2">Now: one standard deviation below the 10-year average</text>
+      </svg>`,'J.P. Morgan Private Bank, Bloomberg Finance L.P. Data as of November 2025.');
+    const vsAp = schematic('MSCI India rarely underperforms MSCI Asia Pacific by more than 20%','Year-on-year price growth, relative, %',
+      `<svg viewBox="0 0 360 110" role="img" aria-label="Schematic: relative year-on-year performance with a floor near minus 20 percent that is rarely breached">
+        <line x1="40" y1="40" x2="340" y2="40" class="grid"/><text x="36" y="44" font-size="10" text-anchor="end" class="t3">0%</text>
+        <rect x="40" y="80" width="300" height="20" class="acc" opacity=".12"/>
+        <line x1="40" y1="80" x2="340" y2="80" stroke="var(--accent)" stroke-dasharray="4 4"/><text x="36" y="84" font-size="10" text-anchor="end" class="t3">−20%</text>
+        <text x="190" y="95" font-size="11" text-anchor="middle" class="t2">Rarely breached</text>
+      </svg>`,'J.P. Morgan Private Bank, Bloomberg Finance L.P. Data as of November 2025.');
+    return `<div class="viz anim">
+      <div class="vt">Earnings growth, % p.a.</div>
+      <svg viewBox="0 0 360 120" role="img" aria-label="Earnings growth about 11 percent in 2025, 13 to 14 percent in 2026 and 2027">
+        <line x1="20" y1="100" x2="340" y2="100" class="grid"/>
+        ${bar(60,11,'~11%',.5)}${bar(168,13.5,'13–14%',1,.15)}${bar(276,13.5,'13–14%',1,.3)}
+        <text x="72" y="116" font-size="11" text-anchor="middle" class="t3">2025</text><text x="180" y="116" font-size="11" text-anchor="middle" class="t3">2026E</text><text x="288" y="116" font-size="11" text-anchor="middle" class="t3">2027E</text>
+      </svg>
+      <div class="twocol">
+        <div>
+          <div class="vt">Downgrade cycle length, months</div>
+          <svg viewBox="0 0 240 84" role="img" aria-label="Current downgrade cycle 14 months versus 9 to 10 month historical average">
+            <text x="0" y="17" font-size="11" class="t2">Current</text><rect class="s1 grow" x="92" y="6" width="${14*7}" height="14" rx="4"/><text x="${92+14*7+6}" y="17" font-size="12" font-weight="700">14</text>
+            <text x="0" y="47" font-size="11" class="t2">Avg since 2000</text><rect class="s1 grow" x="92" y="36" width="${9.5*7}" height="14" rx="4" opacity=".45"/><text x="${92+9.5*7+6}" y="47" font-size="12" font-weight="700">9–10</text>
+            <text x="0" y="76" font-size="10" class="t3">Extended, but estimates have stopped falling</text>
+          </svg>
+        </div>
+        <div>
+          <div class="vt">September quarter earnings, % YoY</div>
+          <svg viewBox="0 0 240 84" role="img" aria-label="September earnings grew 13 percent year on year versus 9 percent expected">
+            <text x="0" y="17" font-size="11" class="t2">Reported</text><rect class="s1 grow" x="92" y="6" width="${13*7}" height="14" rx="4"/><text x="${92+13*7+6}" y="17" font-size="12" font-weight="700">13%</text>
+            <text x="0" y="47" font-size="11" class="t2">Expected</text><rect class="s1 grow" x="92" y="36" width="${9*7}" height="14" rx="4" opacity=".45"/><text x="${92+9*7+6}" y="47" font-size="12" font-weight="700">9%</text>
+            <text x="0" y="76" font-size="10" class="t3">4 points above the start-of-season estimate</text>
+          </svg>
+        </div>
+      </div>
+      <div class="vt">Active EM fund positioning in Indian equities</div>
+      <div class="meter"><div class="bar"><i style="width:1%"></i><b style="left:1%"></b></div><div class="ticks"><span>0th percentile</span><span>50th</span><span>100th</span></div><div class="small">Near the 0–1st percentile: almost nobody is positioned for it.</div></div>
+      ${relPE}${vsAp}
+    </div>`;
+  },
+  implFi(){
+    const r=44,c=2*Math.PI*r;
+    const hy = schematic('Asia high yield default rates have trended lower since 2022','Asia High Yield Default Rates, %',
+      `<svg viewBox="0 0 360 100" role="img" aria-label="Schematic: default rates declining from 2022 to 2025">
+        <line x1="40" y1="80" x2="340" y2="80" class="grid"/>
+        <path d="M60 22 L150 46 L240 60 L330 70" fill="none" class="s1l" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        ${[[60,22,'2022'],[150,46,'2023'],[240,60,'2024'],[330,70,'2025']].map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="5" class="s1"/><circle cx="${p[0]}" cy="${p[1]}" r="2" class="surf"/><text x="${p[0]}" y="96" font-size="11" text-anchor="middle" class="t3">${p[2]}</text>`).join('')}
+      </svg>`,'J.P. Morgan Private Bank. As of December 2025.');
+    return `<div class="viz anim">
+      <div class="vt">Asia investment grade at a glance</div>
+      <div class="preview"><div class="stats">
+        <div class="stat"><b>High 4%</b><span>All-in yields</span></div>
+        <div class="stat"><b>~4.5 yrs</b><span>Duration</span></div>
+        <div class="stat"><b>Lower</b><span>Spread vs U.S. IG</span></div>
+      </div></div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center">
+        <svg viewBox="0 0 120 120" style="max-width:120px" role="img" aria-label="Donut: over 40 percent of the Asia IG index is sovereign and quasi-sovereign">
+          <circle cx="60" cy="60" r="${r}" fill="none" stroke="var(--track)" stroke-width="14"/>
+          <circle cx="60" cy="60" r="${r}" fill="none" stroke="var(--series-1)" stroke-width="14" stroke-dasharray="${c*.42} ${c}" transform="rotate(-90 60 60)"/>
+          <text x="60" y="58" font-size="18" font-weight="700" text-anchor="middle">40%+</text><text x="60" y="74" font-size="9" text-anchor="middle" class="t3">sov. &amp; quasi-sov.</text>
+        </svg>
+        <div class="small">Over 40% of the Asia IG index is sovereign and quasi-sovereign issuers, which reinforces credit quality and is why it trades at a lower spread than U.S. IG.</div>
+      </div>
+      <div class="vt">High yield: where the value sits</div>
+      <div class="board">
+        <div class="row"><div class="ic up">${svgIcon.up}</div><div><div class="name">BB with healthy leverage</div><div class="desc">Better value at today’s tight valuations</div></div><div class="tag">Prefer</div></div>
+        <div class="row"><div class="ic down">${svgIcon.down}</div><div><div class="name">Low-quality single B</div><div class="desc">Not compensated after the rally</div></div><div class="tag">Avoid</div></div>
+        <div class="row"><div class="ic up">${svgIcon.up}</div><div><div class="name">Indian HY · Macau gaming</div><div class="desc">Long-term growth; improving profiles and 2025 refinancing</div></div><div class="tag">Themes</div></div>
+      </div>
+      ${hy}
+    </div>`;
+  }
+};
+
+function renderIdeaCards(){
+  $('#ideaCards').innerHTML=IMPL.map(i=>`<button class="card" data-idea="${i.id}"><span class="pill ready">Idea</span><div class="flag">${i.flag}</div><h3>${i.name}</h3><p class="one">${i.title}</p><div class="qs">${i.stance}</div></button>`).join('');
+  $('#ideaCards').querySelectorAll('.card').forEach(b=>b.onclick=()=>openImpl(b.dataset.idea));
+}
+function openImpl(id){
+  state.impl=id||IMPL[0].id;show('view-impl');renderImpl();
+}
+function renderImpl(){
+  const cur=IMPL.find(i=>i.id===state.impl)||IMPL[0];
+  const w=IMPL.filter(i=>i.weight);
+  $('#alloc').innerHTML=`<div class="vt">Where these markets sit in a globally diversified equity portfolio</div>
+    <div class="stack">${w.map((i,k)=>`<i style="width:${i.weight}%;background:${k===1?'var(--ink)':k===2?'var(--series-1-soft)':'var(--series-1)'}" title="${i.name} ~${i.weight}%"></i>`).join('')}<i style="width:${100-w.reduce((a,i)=>a+i.weight,0)}%;background:var(--track)"></i></div>
+    <div class="legend">${w.map((i,k)=>`<span><i style="background:${k===1?'var(--ink)':k===2?'var(--series-1-soft)':'var(--series-1)'}"></i>${i.name} ~${i.weight}%</span>`).join('')}<span><i style="background:var(--track)"></i>Rest of world</span></div>`;
+  $('#implTabs').innerHTML=IMPL.map(i=>`<button class="chip" aria-current="${i.id===cur.id}" data-id="${i.id}">${i.flag} ${i.name}</button>`).join('');
+  $('#implTabs').querySelectorAll('.chip').forEach(b=>b.onclick=()=>{state.impl=b.dataset.id;renderImpl();});
+  const idx=IMPL.indexOf(cur);
+  $('#implHost').innerHTML=`<article class="idea">
+    <div class="idea-head"><div class="eyebrow">${cur.flag} ${cur.name}</div><h2>${cur.title}</h2><span class="stance ${cur.tone}">${cur.stance}</span></div>
+    <div class="idea-body">
+      <div class="view-line"><div><div class="lbl">The call</div><div class="txt">${cur.lede}</div></div></div>
+      <div class="cols">
+        ${IMPLVIZ[cur.viz]()}
+        <div style="display:grid;gap:12px">
+          <div class="box"><h4>What supports it</h4><ul>${cur.supports.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+          <div class="box watch"><h4>What to watch</h4><ul>${cur.watch.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+          <div class="box"><h4>How to implement</h4><ul>${cur.how.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+        </div>
+      </div>
+      <details class="full"><summary><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg>Read the full text from the outlook</summary><div class="body">${cur.full.map(p=>`<p>${p}</p>`).join('')}</div></details>
+    </div>
+  </article>
+  <div class="nav">
+    <button class="btn ghost" id="iPrev" ${idx===0?'disabled':''}>Back</button><span class="count">${idx+1} / ${IMPL.length}</span>
+    <button class="btn" id="iNext">${idx<IMPL.length-1?'Next: '+IMPL[idx+1].name:'Back to start'}<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>`;
+  $('#implHost').querySelectorAll('.pillar').forEach(b=>b.onclick=()=>b.setAttribute('aria-expanded',b.getAttribute('aria-expanded')!=='true'));
+  $('#iPrev').onclick=()=>{state.impl=IMPL[idx-1].id;renderImpl();window.scrollTo({top:0});};
+  $('#iNext').onclick=()=>{if(idx<IMPL.length-1){state.impl=IMPL[idx+1].id;renderImpl();window.scrollTo({top:0});}else{show('view-start');}};
+}
+
 /* ===================== BOOT ===================== */
 $('#startBtn').onclick=startJourney;
 $('#allBtn').onclick=()=>{if(state.selected.size===ORDER.length)state.selected.clear();else ORDER.forEach(id=>state.selected.add(id));renderCards();};
+$('#toIdeasBtn').onclick=()=>openImpl();
 $('#restartBtn').onclick=()=>{show('view-start');renderCards();$('#select').scrollIntoView({behavior:'smooth'});};
 $('#homeBtn').onclick=()=>{show('view-start');renderCards();};
-$('#themeBtn').onclick=()=>{const r=document.documentElement;const dark=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme: dark)').matches);r.dataset.theme=dark?'light':'dark';try{localStorage.setItem('ao-theme',r.dataset.theme)}catch(e){}};
-try{const t=localStorage.getItem('ao-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}
+$('#ideasBtn').onclick=()=>openImpl(state.impl);
+renderIdeaCards();
 // deep link: ?market=china
 const qp=new URLSearchParams(location.search).get('market');
 if(qp&&CONTENT[qp]){state.selected.add(qp);}
 renderCards();
 requestAnimationFrame(()=>document.querySelectorAll('#tiles .bar i').forEach(i=>i.style.width=i.dataset.w+'%'));
 if(qp&&CONTENT[qp])startJourney();
+if(new URLSearchParams(location.search).get('ideas')!==null)openImpl(new URLSearchParams(location.search).get('ideas'));
 </script>
 </body>
 </html>
