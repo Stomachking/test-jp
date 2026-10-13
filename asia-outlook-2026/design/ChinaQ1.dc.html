@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Question block, chart first</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#6B4423}a:hover{color:#4A2D14}
+@keyframes ao-grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.grow{transform-origin:left center;animation:ao-grow 1s cubic-bezier(.2,.7,.2,1) infinite alternate}
+</style>
+</helmet>
+<div style="width: 1280px; height: 860px; box-sizing: border-box; padding: 56px 64px; background: #FFFFFF; color: #111111; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 24px">
+  <!-- header row: question + poll chips -->
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; align-items: end">
+    <div style="display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6B4423">China · Question 1 of 5</div>
+      <h2 style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 40px; line-height: 1.08; letter-spacing: -0.01em">Can China’s growth model persist in 2026?</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.5; color: #44403A; max-width: 52ch">Yes, but it stays lopsided. Exports drive most of the growth while consumption is weak, investment is disappearing and property is still contracting.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6B4423">Your call: China’s 2026 GDP growth</div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <button style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #CFC5B6; background: #FFFFFF; font-size: 14px; font-weight: 600; color: #44403A">Below 4%</button>
+        <button style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #111111; background: #111111; color: #FFFFFF; font-size: 14px; font-weight: 600">Around 4.3%</button>
+        <button style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #CFC5B6; background: #FFFFFF; font-size: 14px; font-weight: 600; color: #44403A">5% or higher</button>
+      </div>
+      <div style="font-size: 14px; color: #44403A"><strong style="color: #111111">You matched the house view.</strong> 4.3% (range 4.1–4.6%), moderating from 2025 on a high export base.</div>
+    </div>
+  </div>
+
+  <!-- full-width chart: growth drivers + GDP gauge -->
+  <div style="display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 20px">
+    <div style="background: #F6F3EE; border-radius: 20px; padding: 22px 24px; display: flex; flex-direction: column; gap: 14px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline">
+        <div style="font-size: 14px; font-weight: 600">The growth engine, 2026</div>
+        <div style="font-size: 12px; color: #7D766C">Bars grow in on scroll, 900 ms</div>
+      </div>
+      <div style="display: grid; grid-template-columns: 120px minmax(0, 1fr) 110px; gap: 12px; align-items: center; row-gap: 14px">
+        <div style="font-size: 14px; font-weight: 600">Exports</div>
+        <div style="height: 16px; border-radius: 0 4px 4px 0; background: #111111; width: 92%" class="grow"></div>
+        <div style="font-size: 13px; color: #44403A">Historic boom</div>
+        <div style="font-size: 14px; font-weight: 600">Consumption</div>
+        <div style="height: 16px; border-radius: 0 4px 4px 0; background: #8A5A2B; width: 30%"></div>
+        <div style="font-size: 13px; color: #44403A">Weak</div>
+        <div style="font-size: 14px; font-weight: 600">Investment</div>
+        <div style="height: 16px; border-radius: 0 4px 4px 0; background: #8A5A2B; width: 20%"></div>
+        <div style="font-size: 13px; color: #44403A">Disappearing</div>
+        <div style="font-size: 14px; font-weight: 600">Property</div>
+        <div style="height: 16px; border-radius: 0 4px 4px 0; background: #8A5A2B; width: 10%"></div>
+        <div style="font-size: 13px; color: #44403A">Contracting</div>
+      </div>
+      <div style="font-size: 12px; color: #7D766C">Illustrative weight of each driver as the outlook describes it, not measured contributions. Ink marks the driver doing the work.</div>
+    </div>
+    <div style="background: #F6F3EE; border-radius: 20px; padding: 22px 24px; display: flex; flex-direction: column; gap: 12px; justify-content: space-between">
+      <div style="font-size: 14px; font-weight: 600">Real GDP growth forecast</div>
+      <div style="display: flex; align-items: baseline; gap: 8px">
+        <div style="font-family: Fraunces, Georgia, serif; font-size: 72px; font-weight: 600; letter-spacing: -0.04em; line-height: 1">4.3</div>
+        <div style="font-size: 22px; color: #7D766C">%</div>
+        <div style="font-size: 13px; color: #44403A; margin-left: 8px">range 4.1–4.6</div>
+      </div>
+      <div style="position: relative; height: 44px">
+        <div style="position: absolute; left: 0; right: 0; top: 20px; height: 1px; background: #CFC5B6"></div>
+        <div style="position: absolute; left: 30%; width: 25%; top: 12px; height: 16px; border-radius: 4px; background: #E7D7C3"></div>
+        <div style="position: absolute; left: 40%; top: 11px; width: 18px; height: 18px; border-radius: 50%; background: #111111; border: 3px solid #FFFFFF; box-shadow: 0 0 0 1px #CFC5B6; transform: translateX(-50%)"></div>
+        <div style="position: absolute; left: 0; top: 30px; font-size: 11px; color: #7D766C">3.5%</div>
+        <div style="position: absolute; left: 50%; top: 30px; font-size: 11px; color: #7D766C; transform: translateX(-50%)">4.5%</div>
+        <div style="position: absolute; right: 0; top: 30px; font-size: 11px; color: #7D766C">5.5%</div>
+      </div>
+      <div style="font-size: 12px; color: #7D766C">Number counts up from 0 on reveal, 1.2 s. Moderating from 2025.</div>
+    </div>
+  </div>
+
+  <!-- key points + takeaway + read more -->
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px">
+    <div style="display: flex; gap: 12px"><div style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #EFE4D6; color: #4A2D14; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">1</div><div style="font-size: 14px; line-height: 1.5; color: #44403A">Real GDP growth of 4.3% expected in 2026, a step down from 2025 as last year’s export boom sets a high base.</div></div>
+    <div style="display: flex; gap: 12px"><div style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #EFE4D6; color: #4A2D14; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">2</div><div style="font-size: 14px; line-height: 1.5; color: #44403A">Weak consumption and disappearing investment amid a historic export boom are likely to persist.</div></div>
+    <div style="display: flex; gap: 12px"><div style="flex: none; width: 26px; height: 26px; border-radius: 50%; background: #EFE4D6; color: #4A2D14; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">3</div><div style="font-size: 14px; line-height: 1.5; color: #44403A">The property sector remains weak and continues to weigh on investment.</div></div>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 18px; border-top: 1px solid #E6E0D6">
+    <div style="display: flex; gap: 12px; align-items: center"><div style="width: 10px; height: 10px; border-radius: 50%; background: #6B4423; flex: none"></div><div style="font-family: Fraunces, Georgia, serif; font-size: 22px; line-height: 1.3">China grows about 4.3% in 2026, but exports do almost all the work.</div></div>
+    <a href="#full" style="flex: none; font-size: 14px; font-weight: 600; color: #111111; text-decoration: underline; text-underline-offset: 3px">Read the full answer</a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":860}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

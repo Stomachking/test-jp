@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Full-width animated chart</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#6B4423}a:hover{color:#4A2D14}
+@keyframes ao-dash{from{stroke-dashoffset:1200}to{stroke-dashoffset:0}}
+.draw{stroke-dasharray:1200;animation:ao-dash 2.4s ease-in-out infinite alternate}
+@keyframes ao-rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.rise{animation:ao-rise .5s ease both}
+</style>
+</helmet>
+<div style="width: 1280px; height: 560px; box-sizing: border-box; padding: 48px 64px; background: #FFFFFF; color: #111111; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 18px">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6B4423">China · Question 4 of 5</div>
+      <h2 style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 34px; line-height: 1.1; letter-spacing: -0.01em">Why is the yuan less likely to appreciate significantly?</h2>
+    </div>
+    <div style="display: flex; gap: 12px">
+      <div style="padding: 12px 16px; border: 1px solid #E6E0D6; border-radius: 12px; display: flex; flex-direction: column; gap: 2px; min-width: 150px"><div style="font-size: 11px; color: #7D766C">Trade surplus added, YTD</div><div style="font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1">+$1tn</div></div>
+      <div style="padding: 12px 16px; border: 1px solid #E6E0D6; border-radius: 12px; display: flex; flex-direction: column; gap: 2px; min-width: 150px"><div style="font-size: 11px; color: #7D766C">Trade-weighted yuan</div><div style="font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; color: #6B4423">−4%</div></div>
+    </div>
+  </div>
+
+  <!-- chart: a schematic path with annotations placed as elements -->
+  <div style="position: relative; flex: 1; background: #F6F3EE; border-radius: 20px; padding: 20px 24px; overflow: hidden">
+    <div style="position: absolute; left: 24px; top: 18px; font-size: 13px; font-weight: 600">USD/CNH, the path the outlook expects (schematic)</div>
+    <div style="position: absolute; right: 24px; top: 18px; font-size: 12px; color: #7D766C">Line draws left to right on reveal, 1.4 s</div>
+    <!-- medium-term band -->
+    <div style="position: absolute; left: 640px; right: 120px; top: 92px; height: 70px; border-radius: 10px; background: #E7D7C3"></div>
+    <!-- 7.00 guide -->
+    <div style="position: absolute; left: 80px; right: 120px; top: 127px; height: 0; border-top: 1px dashed #CFC5B6"></div>
+    <div style="position: absolute; left: 24px; top: 119px; font-size: 12px; color: #7D766C">7.00</div>
+    <!-- the line -->
+    <svg role="img" aria-label="Schematic path: dips below 7 in the near term, then settles in a stable range" style="position: absolute; left: 80px; top: 60px; width: 1012px; height: 200px" viewBox="0 0 1012 200" preserveAspectRatio="none">
+      <path class="draw" d="M0 56 C 120 56, 180 118, 300 112 S 480 70, 580 78 S 800 76, 1012 68" fill="none" stroke="#8A5A2B" stroke-width="3" stroke-linecap="round"></path>
+    </svg>
+    <!-- endpoint marker -->
+    <div style="position: absolute; left: 1084px; top: 120px; width: 16px; height: 16px; border-radius: 50%; background: #111111; border: 3px solid #FFFFFF; box-shadow: 0 0 0 1px #CFC5B6"></div>
+    <!-- annotations -->
+    <div class="rise" style="position: absolute; left: 300px; top: 190px; width: 230px; background: #FFFFFF; border-radius: 12px; padding: 10px 12px; box-shadow: 0 6px 18px rgba(17,17,17,.08)">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6B4423">Near term</div>
+      <div style="font-size: 13px; color: #44403A; line-height: 1.4">Momentum could push USD/CNH below 7.</div>
+    </div>
+    <div class="rise" style="position: absolute; left: 740px; top: 190px; width: 260px; background: #FFFFFF; border-radius: 12px; padding: 10px 12px; box-shadow: 0 6px 18px rgba(17,17,17,.08)">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #6B4423">Medium term</div>
+      <div style="font-size: 13px; color: #44403A; line-height: 1.4">Stable, range-bound. Heavily managed under a low-vol framework; the dollar is the main driver.</div>
+    </div>
+    <div style="position: absolute; left: 24px; bottom: 16px; font-size: 12px; color: #7D766C">Shape only. Replace with the series when available; the annotations stay anchored to the data.</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":560}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

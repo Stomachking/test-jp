@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Motion spec</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#6B4423}a:hover{color:#4A2D14}
+@keyframes ao-rise{0%{opacity:0;transform:translateY(8px)}30%,70%{opacity:1;transform:none}100%{opacity:0;transform:translateY(8px)}}
+@keyframes ao-grow{0%{transform:scaleX(0)}40%,70%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+@keyframes ao-dash{0%{stroke-dashoffset:300}45%,70%{stroke-dashoffset:0}100%{stroke-dashoffset:300}}
+@keyframes ao-pulse{0%,100%{box-shadow:0 0 0 0 rgba(138,90,43,.45)}60%{box-shadow:0 0 0 14px rgba(138,90,43,0)}}
+@keyframes ao-lift{0%,100%{transform:none;box-shadow:0 1px 2px rgba(17,17,17,.06)}50%{transform:translateY(-4px);box-shadow:0 10px 24px rgba(17,17,17,.10)}}
+.d-rise{animation:ao-rise 3s ease-in-out infinite}
+.d-grow{transform-origin:left center;animation:ao-grow 3s cubic-bezier(.2,.7,.2,1) infinite}
+.d-dash{stroke-dasharray:300;animation:ao-dash 3s ease-in-out infinite}
+.d-pulse{animation:ao-pulse 2.4s ease-out infinite}
+.d-lift{animation:ao-lift 3s ease-in-out infinite}
+</style>
+</helmet>
+<div style="width: 1280px; height: 640px; box-sizing: border-box; padding: 48px 64px; background: #FFFFFF; color: #111111; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 22px">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 6px">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6B4423">Motion spec</div>
+      <h2 style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 34px; line-height: 1.1; letter-spacing: -0.01em">Six moves, used everywhere, nothing else</h2>
+    </div>
+    <div style="font-size: 13px; color: #7D766C; text-align: right">Each plays once, on first scroll into view.<br>prefers-reduced-motion: all land instantly.</div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 220px 1fr 1fr 1fr 1fr; gap: 0; border: 1px solid #E6E0D6; border-radius: 16px; overflow: hidden; font-size: 13px">
+    <!-- header -->
+    <div style="padding: 12px 16px; background: #F6F3EE; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 11px; color: #7D766C">Demo</div>
+    <div style="padding: 12px 16px; background: #F6F3EE; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 11px; color: #7D766C">Element</div>
+    <div style="padding: 12px 16px; background: #F6F3EE; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 11px; color: #7D766C">Trigger</div>
+    <div style="padding: 12px 16px; background: #F6F3EE; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 11px; color: #7D766C">Animation</div>
+    <div style="padding: 12px 16px; background: #F6F3EE; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 11px; color: #7D766C">Timing</div>
+
+    <!-- 1 reveal -->
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; display: flex; align-items: center"><div class="d-rise" style="padding: 8px 12px; border-radius: 10px; background: #F6F3EE; font-size: 12px; font-weight: 600">Key point</div></div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; font-weight: 600">Copy blocks, points, takeaway</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Enters viewport (20% visible)</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Fade in, rise 8 px; points stagger 60 ms</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">400 ms · ease-out</div>
+
+    <!-- 2 bars -->
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; display: flex; align-items: center"><div style="width: 100%; height: 12px; border-radius: 0 4px 4px 0; background: #8A5A2B" class="d-grow"></div></div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; font-weight: 600">Bars, columns, range bands</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Chart enters viewport</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Grow from baseline; series stagger 120 ms</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">900 ms · cubic-bezier(.2,.7,.2,1)</div>
+
+    <!-- 3 count -->
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; display: flex; align-items: center; gap: 6px"><div class="d-rise" style="font-family: Fraunces, Georgia, serif; font-size: 30px; font-weight: 600; letter-spacing: -0.03em">4.3</div><div style="font-size: 13px; color: #7D766C">%</div></div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; font-weight: 600">Hero numbers, stat tiles</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Tile enters viewport</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Count up from 0, decimals kept; tile bar grows with it</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">1200 ms · ease-out</div>
+
+    <!-- 4 line -->
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; display: flex; align-items: center"><svg width="180" height="34" viewBox="0 0 180 34" aria-hidden="true"><path class="d-dash" d="M2 10 C 40 10, 60 28, 90 26 S 140 14, 178 18" fill="none" stroke="#8A5A2B" stroke-width="2.5" stroke-linecap="round"></path></svg></div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; font-weight: 600">Lines, paths, rings</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Chart enters viewport</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Draw along the path; annotations rise after it lands</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">1400 ms · ease-in-out</div>
+
+    <!-- 5 pulse -->
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; display: flex; align-items: center; gap: 10px"><div class="d-pulse" style="width: 22px; height: 22px; border-radius: 50%; background: #111111"></div><div style="font-size: 12px; color: #44403A">Selected market</div></div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; font-weight: 600">Map nodes, point markers</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Idle (one node at a time) or on select</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Soft ring expands and fades, one cycle</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">2400 ms · ease-out</div>
+
+    <!-- 6 lift -->
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; display: flex; align-items: center"><div class="d-lift" style="padding: 10px 14px; border-radius: 12px; border: 1px solid #E6E0D6; background: #FFFFFF; font-size: 12px; font-weight: 600">Idea card</div></div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; font-weight: 600">Cards, poll chips, buttons</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Hover or focus; tap on touch</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">Lift 4 px, shadow deepens; chip fills ink on select</div>
+    <div style="padding: 14px 16px; border-top: 1px solid #E6E0D6; color: #44403A">200 ms · ease-out</div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":640}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

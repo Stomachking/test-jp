@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Implementation ideas as cards</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#6B4423}a:hover{color:#4A2D14}
+@keyframes ao-ring{from{stroke-dashoffset:264}to{stroke-dashoffset:var(--to)}}
+.ring{animation:ao-ring 1.2s cubic-bezier(.2,.7,.2,1) infinite alternate}
+</style>
+</helmet>
+<div style="width: 1280px; height: 760px; box-sizing: border-box; padding: 56px 64px; background: #FFFFFF; color: #111111; font-family: 'IBM Plex Sans', system-ui, sans-serif; display: flex; flex-direction: column; gap: 24px">
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 24px">
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #6B4423">Cross-asset implementation ideas</div>
+      <h2 style="margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 40px; line-height: 1.08; letter-spacing: -0.01em">From view to position</h2>
+      <p style="margin: 0; font-size: 16px; color: #44403A; max-width: 60ch">Four cards. The ring shows the market’s weight in a globally diversified equity portfolio; tap a card to open the full idea with its chart.</p>
+    </div>
+    <div style="font-size: 13px; color: #7D766C; text-align: right">Rings draw on reveal · cards lift 4 px on hover</div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; flex: 1">
+    <!-- China -->
+    <a href="#idea-cn" style="display: flex; flex-direction: column; gap: 14px; padding: 22px; border: 1px solid #E6E0D6; border-radius: 20px; text-decoration: none; color: #111111; background: #FFFFFF">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start">
+        <svg width="84" height="84" viewBox="0 0 100 100" role="img" aria-label="About 3 percent of a global equity portfolio"><circle cx="50" cy="50" r="42" fill="none" stroke="#EBE5DB" stroke-width="10"></circle><circle class="ring" cx="50" cy="50" r="42" fill="none" stroke="#8A5A2B" stroke-width="10" stroke-dasharray="264" style="--to: 256; transform: rotate(-90deg); transform-origin: 50% 50%"></circle><text x="50" y="56" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="22" font-weight="600" fill="#111111">3%</text></svg>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: #111111; color: #FFFFFF">Selective</span>
+      </div>
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6B4423">Chinese equities</div>
+      <div style="font-family: Fraunces, Georgia, serif; font-size: 22px; line-height: 1.2; font-weight: 600">Picking the winners is paramount</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #44403A; flex: 1">Add on pullbacks, but through the Tech Innovator Basket: AI and super apps, NEV and autonomous driving, semiconductor localisation.</div>
+      <div style="display: flex; gap: 6px; flex-wrap: wrap"><span style="font-size: 12px; font-weight: 600; padding: 5px 9px; border-radius: 999px; border: 1.5px solid #111111">Tech basket</span><span style="font-size: 12px; font-weight: 600; padding: 5px 9px; border-radius: 999px; border: 1.5px solid #111111">Dividends</span></div>
+    </a>
+    <!-- Japan -->
+    <a href="#idea-jp" style="display: flex; flex-direction: column; gap: 14px; padding: 22px; border: 1px solid #E6E0D6; border-radius: 20px; text-decoration: none; color: #111111; background: #FFFFFF">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start">
+        <svg width="84" height="84" viewBox="0 0 100 100" role="img" aria-label="About 5 percent of a global equity portfolio"><circle cx="50" cy="50" r="42" fill="none" stroke="#EBE5DB" stroke-width="10"></circle><circle class="ring" cx="50" cy="50" r="42" fill="none" stroke="#111111" stroke-width="10" stroke-dasharray="264" style="--to: 251; transform: rotate(-90deg); transform-origin: 50% 50%"></circle><text x="50" y="56" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="22" font-weight="600" fill="#111111">5%</text></svg>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; border: 1.5px solid #111111; color: #111111">Neutral</span>
+      </div>
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6B4423">Japanese equities</div>
+      <div style="font-family: Fraunces, Georgia, serif; font-size: 22px; line-height: 1.2; font-weight: 600">Constructive, and already priced in</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #44403A; flex: 1">TOPIX 3,350–3,400 by December 2026 leaves modest upside. Buy meaningful pullbacks toward a long-term 5%.</div>
+      <div style="display: flex; gap: 6px; flex-wrap: wrap"><span style="font-size: 12px; font-weight: 600; padding: 5px 9px; border-radius: 999px; border: 1.5px solid #111111">Financials</span><span style="font-size: 12px; font-weight: 600; padding: 5px 9px; border-radius: 999px; border: 1.5px solid #111111">Industrials</span><span style="font-size: 12px; font-weight: 600; padding: 5px 9px; border-radius: 999px; border: 1.5px solid #111111">Tech</span></div>
+    </a>
+    <!-- India -->
+    <a href="#idea-in" style="display: flex; flex-direction: column; gap: 14px; padding: 22px; border: 1px solid #E6E0D6; border-radius: 20px; text-decoration: none; color: #111111; background: #FFFFFF">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start">
+        <svg width="84" height="84" viewBox="0 0 100 100" role="img" aria-label="About 3 percent of a global equity portfolio"><circle cx="50" cy="50" r="42" fill="none" stroke="#EBE5DB" stroke-width="10"></circle><circle class="ring" cx="50" cy="50" r="42" fill="none" stroke="#8A5A2B" stroke-width="10" stroke-dasharray="264" style="--to: 256; transform: rotate(-90deg); transform-origin: 50% 50%"></circle><text x="50" y="56" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="22" font-weight="600" fill="#111111">3%</text></svg>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: #111111; color: #FFFFFF">Positive</span>
+      </div>
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6B4423">Indian equities</div>
+      <div style="font-family: Fraunces, Georgia, serif; font-size: 22px; line-height: 1.2; font-weight: 600">Attractive entry point</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #44403A; flex: 1">MSCI India 3,350–3,450 implies low-to-mid-teens total return. Earnings re-accelerate to 13–14%; EM funds hold almost none.</div>
+      <div style="display: flex; gap: 6px; flex-wrap: wrap"><span style="font-size: 12px; font-weight: 600; padding: 5px 9px; border-radius: 999px; border: 1.5px solid #111111">Long-term build</span></div>
+    </a>
+    <!-- Fixed income -->
+    <a href="#idea-fi" style="display: flex; flex-direction: column; gap: 14px; padding: 22px; border: 1px solid #E6E0D6; border-radius: 20px; text-decoration: none; color: #111111; background: #F6F3EE">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start">
+        <svg width="84" height="84" viewBox="0 0 100 100" role="img" aria-label="Over 40 percent of Asia investment grade is sovereign or quasi-sovereign"><circle cx="50" cy="50" r="42" fill="none" stroke="#E7D7C3" stroke-width="10"></circle><circle class="ring" cx="50" cy="50" r="42" fill="none" stroke="#6B4423" stroke-width="10" stroke-dasharray="264" style="--to: 153; transform: rotate(-90deg); transform-origin: 50% 50%"></circle><text x="50" y="56" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="20" font-weight="600" fill="#111111">40%+</text></svg>
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; background: #6B4423; color: #FFFFFF">IG / HY</span>
+      </div>
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #6B4423">Asia fixed income</div>
+      <div style="font-family: Fraunces, Georgia, serif; font-size: 22px; line-height: 1.2; font-weight: 600">Know where to look</div>
+      <div style="font-size: 14px; line-height: 1.5; color: #44403A; flex: 1">IG yields in the high 4% range at 4.5-year duration, 40%-plus sovereign. In HY, BB with healthy leverage over single B.</div>
+      <div style="display: flex; gap: 6px; flex-wrap: wrap"><span style="font-size: 12px; font-weight: 600; padding: 5px 9px; border-radius: 999px; border: 1.5px solid #111111">Sub capital</span><span style="font-size: 12px; font-weight: 600; padding: 5px 9px; border-radius: 999px; border: 1.5px solid #111111">Indian HY</span><span style="font-size: 12px; font-weight: 600; padding: 5px 9px; border-radius: 999px; border: 1.5px solid #111111">Macau</span></div>
+    </a>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

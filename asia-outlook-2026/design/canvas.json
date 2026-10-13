@@ -1,0 +1,22 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-12T09:20:00Z"},
+  "title": "Asia Outlook Visual Direction",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html":       {"x": 0,    "y": 0,    "w": 1280, "h": 800,  "title": "1 · Direction: Ink & Umber"},
+    "Hero.dc.html":       {"x": 1360, "y": 0,    "w": 1280, "h": 760,  "title": "2 · Masthead with market constellation"},
+    "Mobile.dc.html":     {"x": 2720, "y": 0,    "w": 390,  "h": 1500, "title": "3 · Mobile story view"},
+    "ChinaQ1.dc.html":    {"x": 0,    "y": 920,  "w": 1280, "h": 860,  "title": "4 · Question block, chart-first"},
+    "CNHChart.dc.html":   {"x": 1360, "y": 920,  "w": 1280, "h": 560,  "title": "5 · Full-width animated chart"},
+    "Ideas.dc.html":      {"x": 0,    "y": 1900, "w": 1280, "h": 760,  "title": "6 · Implementation ideas as cards"},
+    "Motion.dc.html":     {"x": 1360, "y": 1900, "w": 1280, "h": 640,  "title": "7 · Motion spec"}
+  },
+  "order": ["Main.dc.html", "Hero.dc.html", "Mobile.dc.html", "ChinaQ1.dc.html", "CNHChart.dc.html", "Ideas.dc.html", "Motion.dc.html"],
+  "notes": {
+    "t1": {"x": 0, "y": -300, "text": "Asia Outlook Explorer · visual direction v1", "kind": "title1", "maxW": 3110},
+    "s1": {"x": 2720, "y": 1600, "w": 390, "text": "Direction in one line: less copy per block, one hero graphic per section, charts at full width, and motion that reveals numbers as you scroll. White ground, black ink, umber accent.", "fill": "orange"}
+  },
+  "designSystems": []
+}

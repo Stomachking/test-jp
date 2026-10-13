@@ -79,3 +79,8 @@ with a language toggle, WeChat JS-SDK share card, single file under 150 KB.
 ## Disclaimer
 
 Interactive edition for educational purposes. Not investment advice.
+
+## Design boards
+
+`design/` holds the seven artboards from the Claude Design canvas (visual direction v1) and an
+`index.html` that previews them. The live, editable canvas is at https://claude.ai/artifact/BBaqivgrPnRVcQA1GRoKzF.
