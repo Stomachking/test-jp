@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FFFFFF">
+<title>2026 Asia Outlook · Interactive report</title>
+<meta name="description" content="The 2026 Asia Outlook as an interactive report: the questions that matter in China, Japan, India, Taiwan and Korea, with moving charts, test-your-view moments and the pages to read next.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,400&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --white:#FFFFFF; --ground:#F5F7F8; --line:#E2E4E5; --line-2:#C1C3C3;
+  --ink:#141414; --ink-2:#474C50; --brown:#3A2206; --brown-2:#936846; --tan:#AF8462;
+  --mint:#48E3A8; --cream:#E2D6CA; --brown-line:#6B5440;
+  --red:#B8483D; --amber:#E0A93B;
+  --serif: Newsreader, Georgia, "Times New Roman", serif;
+  --sans: Figtree, system-ui, -apple-system, "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;overflow-x:clip}
+a{color:var(--brown)}a:hover{color:var(--brown-2)}
+button{font:inherit;cursor:pointer;color:inherit}
+button:focus-visible,a:focus-visible{outline:2px solid var(--brown-2);outline-offset:3px}
+.in{max-width:1280px;margin:0 auto;padding-inline:clamp(16px,5vw,64px)}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brown-2)}
+.serif{font-family:var(--serif)}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:400;margin:0;text-wrap:balance}
+p{margin:0}
+.muted{color:var(--ink-2)}
+.small{font-size:14px}
+.strong{font-weight:600}
+.src{font-size:13px;color:var(--ink-2)}
+
+.draftbar{background:var(--brown);color:var(--cream);font-size:13px;text-align:center;padding:8px 16px}
+nav.top{border-bottom:1px solid var(--line)}
+nav.top .in{height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--serif);font-size:22px}
+.navr{display:flex;gap:24px;align-items:center;font-size:14px;color:var(--ink-2)}
+.pillbtn{min-height:44px;padding:0 20px;border-radius:22px;background:var(--ink);color:#fff;display:inline-flex;align-items:center;text-decoration:none;font-size:14px;font-weight:600}
+.pillbtn:hover{color:#fff;background:var(--brown)}
+
+/* hero */
+.hero .in.hero-grid{padding-block:clamp(56px,8vw,112px) clamp(64px,9vw,128px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,460px);gap:clamp(40px,7vw,112px);align-items:center}
+.hero-text{display:flex;flex-direction:column;gap:32px}
+.hero h1{font-weight:300;font-size:clamp(64px,10vw,132px);line-height:.95;letter-spacing:-.02em}
+.thesis{font-family:var(--serif);font-size:clamp(20px,2vw,24px);line-height:1.45;color:var(--ink-2);max-width:540px}
+.hero-links{display:flex;gap:20px 28px;flex-wrap:wrap;align-items:center;font-size:15px}
+.btn-dark,.btn-line{display:flex;align-items:center;justify-content:center;min-height:52px;text-decoration:none;font-size:15px;font-weight:600;text-align:center;padding:0 26px}
+.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{color:#fff;background:var(--brown)}
+.btn-line{border:1px solid var(--ink);color:var(--ink)}
+.pic{display:block;width:100%;height:100%;object-fit:cover;background:var(--ground)}
+.img-hero{aspect-ratio:4/5;width:100%;height:auto}
+
+/* calls band */
+.callsband{background:var(--ground)}
+.callsband .in{padding-block:clamp(56px,7vw,96px)}
+.calls{display:flex;flex-direction:column;gap:44px}
+.calls-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;border-bottom:1px solid var(--line-2);padding-bottom:22px}
+.calls-head h2{font-size:clamp(28px,3.2vw,40px);line-height:1.1}
+.calls-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px}
+.call{display:flex;flex-direction:column;gap:12px}
+.call+.call{border-left:1px solid var(--line-2);padding-left:40px}
+.call .n{font-family:var(--serif);font-size:clamp(52px,6vw,76px);line-height:1;font-variant-numeric:tabular-nums}
+.call b{font-size:18px}
+.call .muted{font-size:16px;line-height:1.55}
+
+/* chapter nav */
+.chapnav{border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);background:var(--white);z-index:5}
+.chapnav .in{overflow-x:auto}
+.chapnav ul{list-style:none;margin:0;padding:0;display:flex;gap:32px;min-width:max-content;height:60px;align-items:center;font-size:14px;font-weight:500}
+.chapnav a{color:var(--ink-2);text-decoration:none}
+.chapnav a:hover,.chapnav a[aria-current="true"]{color:var(--ink)}
+.chapnav a[aria-current="true"]{text-decoration:underline;text-underline-offset:6px}
+
+/* chapters */
+.opener{height:clamp(220px,38vw,560px);padding:0;overflow:hidden}
+.opener .pic{height:100%}
+.chapter{scroll-margin-top:60px}
+.chapter .in{padding-block:clamp(72px,10vw,144px) clamp(72px,10vw,160px);display:grid;grid-template-columns:240px minmax(0,1fr);gap:64px}
+.chapmeta{display:flex;flex-direction:column;gap:8px;align-self:start;position:sticky;top:90px}
+.chapmeta .num{font-family:var(--serif);font-size:64px;line-height:1;color:var(--tan)}
+.chapmeta .t{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.chapbody{max-width:900px;display:flex;flex-direction:column;gap:clamp(64px,8vw,112px)}
+.chapbody h2{font-size:clamp(38px,5vw,72px);line-height:1.08}
+.standfirst{font-family:var(--serif);font-size:clamp(19px,2vw,25px);line-height:1.5;color:var(--ink-2);margin-top:18px}
+.copy{display:flex;flex-direction:column;gap:16px;font-size:17px;line-height:1.65;max-width:70ch}
+.copy b{font-weight:600}
+.quote{padding-left:36px;border-left:2px solid var(--tan);display:flex;flex-direction:column;gap:12px}
+.quote p{font-family:var(--serif);font-style:italic;font-size:clamp(26px,3vw,36px);line-height:1.3}
+.fact{background:var(--ground);padding:32px;display:flex;flex-direction:column;gap:8px}
+.fact p{font-family:var(--serif);font-size:clamp(20px,2vw,24px);line-height:1.35}
+.cont{border-top:1px solid var(--ink);padding-top:20px}
+.cont .eyebrow{color:var(--ink-2);padding-bottom:8px;display:block}
+.row-link{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;padding-block:10px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:17px}
+.row-link span:last-child{font-size:14px;color:var(--ink-2);white-space:nowrap}
+.row-link:hover span:first-child{text-decoration:underline}
+
+/* moving charts */
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}
+.chart{display:flex;flex-direction:column;gap:14px}
+.chart-t{font-size:17px;font-weight:600}
+.bars{display:flex;flex-direction:column;gap:16px}
+.bar{display:grid;grid-template-columns:170px minmax(0,1fr) 72px;gap:18px;align-items:center}
+.track{height:36px;background:var(--ground)}
+.fill{height:100%;width:0;background:var(--tan);transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.bar.hi .fill{background:var(--brown)}
+.bar .v{text-align:right;font-family:var(--serif);font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+.grow{transition:width 1.4s cubic-bezier(.2,.7,.2,1),height 1.4s cubic-bezier(.2,.7,.2,1)}
+.cols{display:flex;align-items:flex-end;gap:14px;height:220px;border-bottom:1px solid var(--line-2)}
+.col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;height:100%;gap:8px}
+.col .val{text-align:center;font-family:var(--serif);font-size:28px;line-height:1;font-variant-numeric:tabular-nums;opacity:0;transition:opacity .6s ease 1s}
+.col .blk{height:0;background:var(--tan)}
+.col.hi .blk{background:var(--brown)}
+.col-lb{display:flex;gap:14px}
+.col-lb span{flex:1;text-align:center;font-size:13px;color:var(--ink-2)}
+.in-view .val{opacity:1}
+.hbar{display:grid;grid-template-columns:120px minmax(0,1fr) 64px;gap:14px;align-items:center}
+.hbar .tr{height:28px;background:var(--ground)}
+.hbar .fl{height:100%;width:0;background:var(--tan)}
+.hbar.hi .fl{background:var(--brown)}
+.hbar .v{text-align:right;font-family:var(--serif);font-size:24px;line-height:1;font-variant-numeric:tabular-nums}
+.gauge{position:relative;height:40px;background:var(--ground)}
+.gauge .now{position:absolute;left:0;top:0;bottom:0;width:0;background:var(--brown)}
+.gauge .band{position:absolute;top:0;bottom:0;background:repeating-linear-gradient(135deg,rgba(175,132,98,.35) 0 6px,transparent 6px 12px);opacity:0;transition:opacity .8s ease 1.2s}
+.gauge .mark{position:absolute;top:-6px;bottom:-6px;width:3px;background:var(--ink);opacity:0;transition:opacity .6s ease 1.2s}
+.in-view .gauge .band,.in-view .gauge .mark{opacity:1}
+.gauge-ax{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.div{display:grid;grid-template-columns:140px minmax(0,1fr) minmax(0,1fr);gap:0;align-items:center;row-gap:12px}
+.div .neg{display:flex;justify-content:flex-end;border-right:1px solid var(--ink);height:34px;align-items:center}
+.div .neg i{display:block;height:100%;width:0;background:var(--red)}
+.div .neg.b i{background:var(--brown-2)}
+.div .posbar{height:34px;display:flex;align-items:center;border-left:1px solid var(--ink)}
+.div .posbar i{display:block;height:100%;width:0;background:var(--brown)}
+.div .pos{height:34px;display:flex;align-items:center;padding-left:12px;font-family:var(--serif);font-size:24px;font-variant-numeric:tabular-nums}
+.div .negv{height:34px;display:flex;align-items:center;justify-content:flex-end;padding-right:12px;font-family:var(--serif);font-size:24px;font-variant-numeric:tabular-nums}
+.dots{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:5px;max-width:520px}
+.dots span{aspect-ratio:1;border-radius:50%;background:var(--line);transition:background .3s ease}
+.in-view .dots span.f{background:var(--brown)}
+.big-n{font-family:var(--serif);font-size:clamp(44px,5vw,64px);line-height:1;font-variant-numeric:tabular-nums}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--ink-2)}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:6px;vertical-align:-1px}
+
+/* test your view */
+.test{border-top:1px solid var(--ink);padding-top:28px;display:flex;flex-direction:column;gap:20px;scroll-margin-top:80px}
+.test-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap}
+.test-head h3{font-size:clamp(26px,3vw,34px);line-height:1.2;margin-top:8px}
+.linkbtn{background:none;border:none;color:var(--ink-2);text-decoration:underline;min-height:44px;font-size:14px}
+.sig{border-top:1px solid var(--line);padding-block:20px;display:flex;flex-direction:column;gap:14px}
+.sig-row{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.sig-text{flex:1 1 300px}
+.sig-text b{font-size:18px;display:block}
+.lights{display:flex;gap:8px;flex-wrap:wrap}
+.light{min-height:44px;padding:0 16px;border-radius:22px;border:1px solid var(--line-2);background:var(--white);display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500}
+.light[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.light.house{border-color:var(--brown);box-shadow:inset 0 0 0 1px var(--brown)}
+.dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.d-house{background:var(--mint)}.d-miss{background:var(--amber)}
+.sig-reveal{display:flex;gap:14px;align-items:flex-start;background:var(--ground);padding:14px 18px;font-size:15px}
+.sig-reveal .dot{width:14px;height:14px;margin-top:4px}
+.sig-reveal div{flex:1}
+.sig-reveal a{font-size:14px;font-weight:600;flex-shrink:0}
+.tally{border-top:1px solid var(--line);padding-top:20px;color:var(--ink-2)}
+.verdict{display:flex;flex-direction:column;gap:12px}
+.verdict p{font-family:var(--serif);font-size:clamp(22px,2.4vw,28px);line-height:1.35}
+@media (prefers-reduced-motion:no-preference){.sig-reveal,.verdict{animation:rise .35s ease-out}@keyframes rise{from{transform:translateY(4px)}to{transform:none}}}
+
+/* follow the thread */
+.rip{border-top:1px solid var(--ink);padding-top:28px;display:flex;flex-direction:column;gap:32px;scroll-margin-top:80px}
+.rip-head{display:flex;flex-direction:column;gap:12px}
+.rip-head h3{font-size:clamp(26px,3vw,34px);line-height:1.2}
+.rip-tabs{display:flex;gap:8px;flex-wrap:wrap;padding-top:6px}
+.rtab{min-height:44px;padding:0 18px;border:1px solid var(--line-2);background:var(--white);font-size:15px;font-weight:500;display:flex;align-items:center;gap:10px}
+.rtab[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.rtab small{font-size:12px;color:var(--brown-2);font-weight:600}
+.tl{list-style:none;margin:0;padding:0}
+.tl-i{position:relative;padding:0 0 48px 48px}
+.tl-i::before{content:"";position:absolute;left:10px;top:26px;bottom:0;width:2px;background:var(--line)}
+.tl-i.on::before{background:var(--tan)}
+.tl-i:last-child{padding-bottom:0}
+.tl-i:last-child::before{display:none}
+.tl-dot{position:absolute;left:1px;top:4px;width:20px;height:20px;border-radius:50%;background:var(--white);border:2px solid var(--line-2)}
+.tl-i.start .tl-dot{background:var(--ink);border-color:var(--ink)}
+.tl-i.on .tl-dot{background:var(--brown);border-color:var(--brown)}
+.tl-i.view .tl-dot{background:var(--mint);border-color:var(--brown)}
+.tl-c{display:flex;flex-direction:column;gap:12px;max-width:720px}
+.tl-c.tl-wide{max-width:none}
+.tl-k{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--brown-2)}
+.tl-start{font-family:var(--serif);font-size:24px}
+.tl-c h4{font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.15}
+.tl-grid{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:44px;align-items:start}
+.tl-l{display:flex;flex-direction:column;gap:12px}
+.tl-l p{font-size:17px;line-height:1.65}
+.tl-r{display:flex;flex-direction:column;gap:18px}
+.tl-stat{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.tl-stat b{font-family:var(--serif);font-weight:400;font-size:clamp(52px,6vw,76px);line-height:1;color:var(--brown);font-variant-numeric:tabular-nums}
+.tl-stat span{font-size:15px;color:var(--ink-2);max-width:36ch}
+.why{border-left:2px solid var(--tan);padding:2px 0 2px 18px;display:flex;flex-direction:column;gap:4px}
+.why span{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.why p{font-family:var(--serif);font-size:19px;line-height:1.45}
+.src-l{font-size:13px;color:var(--ink-2)}
+.reveal-btn{width:100%;text-align:left;border:1px dashed var(--line-2);background:var(--ground);padding:20px 22px;display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:64px}
+.reveal-btn span:first-child{font-family:var(--serif);font-size:clamp(20px,2.2vw,24px);line-height:1.3}
+.reveal-btn .rb-cta{flex-shrink:0;font-size:14px;font-weight:600;color:var(--brown);text-decoration:underline;text-underline-offset:3px}
+.reveal-btn:hover{border-color:var(--ink)}
+.opts2{display:flex;flex-direction:column;gap:8px}
+.opt2{text-align:left;min-height:54px;padding:12px 18px;border:1px solid var(--line-2);background:var(--white);font-size:16px}
+.opt2:hover{border-color:var(--ink)}
+.opt2.dim{color:var(--ink-2);background:var(--ground);border-color:var(--line)}
+.opt2.right{background:var(--brown);color:#fff;border-color:var(--brown)}
+.opt2.pick-muted{background:var(--ground);color:var(--ink);border-color:var(--ink)}
+.opt2 .tagS{display:inline-block;margin-left:10px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--mint)}
+.view-box{background:var(--brown);color:#fff;padding:clamp(22px,3vw,32px);max-width:none}
+.view-box .tl-k{color:var(--mint)}
+.view-box .aligned{font-weight:600;color:var(--mint);font-size:15px}
+.view-box>p{font-size:17px;line-height:1.6;color:#fff}
+.kstats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;border-top:1px solid var(--brown-line);padding-top:18px}
+.kstats div{display:flex;flex-direction:column;gap:6px}
+.kstats b{font-family:var(--serif);font-weight:400;font-size:40px;line-height:1;color:var(--mint)}
+.kstats span{font-size:14px;color:var(--cream)}
+.view-links{display:flex;gap:10px 24px;flex-wrap:wrap;align-items:center;padding-top:6px}
+.view-links a,.view-links button{color:#fff;font-weight:600;font-size:15px;min-height:44px;display:inline-flex;align-items:center;background:none;border:none;padding:0;text-decoration:underline;text-underline-offset:3px}
+.view-links a:hover,.view-links button:hover{color:var(--mint)}
+@media (prefers-reduced-motion:no-preference){ .tl-i.fresh{animation:rise .45s ease-out} }
+
+/* ideas (dark) */
+.asia{background:var(--brown);color:#fff;scroll-margin-top:60px}
+.asia .in{padding-block:clamp(72px,10vw,160px);display:flex;flex-direction:column;gap:64px}
+.asia .eyebrow{color:var(--mint)}
+.asia-top{display:flex;gap:64px;align-items:flex-end;flex-wrap:wrap}
+.asia-top>div{flex:1 1 520px;display:flex;flex-direction:column;gap:16px}
+.asia h2{font-size:clamp(38px,4.6vw,60px);line-height:1.08}
+.asia-top p{flex:0 1 400px;color:var(--cream);font-size:15px}
+.asia-body2{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:clamp(40px,6vw,80px);align-items:start}
+.asia-l{display:flex;flex-direction:column;gap:20px}
+.asia-img{aspect-ratio:4/5;width:100%;height:auto}
+.alloc{display:flex;flex-direction:column;gap:10px}
+.alloc .stack{display:flex;height:28px;gap:2px}
+.alloc .stack i{display:block;height:100%}
+.alloc .legend{color:var(--cream)}
+.asia-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px;align-content:start}
+.mk{border-top:1px solid var(--brown-line);padding-block:26px 34px;display:flex;flex-direction:column;gap:12px}
+.mk-h{display:flex;justify-content:space-between;gap:8px;font-size:13px}
+.mk-h span:first-child{font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mint)}
+.mk-h span:last-child{color:var(--line-2)}
+.mk h3{font-size:clamp(26px,2.6vw,32px);line-height:1.2}
+.mk p{font-size:17px;line-height:1.6;color:var(--cream)}
+.mk .mk-n{font-family:var(--serif);font-size:40px;line-height:1;color:var(--mint);font-variant-numeric:tabular-nums}
+.mk a{color:#fff;font-weight:600;font-size:14px}.mk a:hover{color:var(--mint)}
+
+/* reading path */
+.path{scroll-margin-top:60px}
+.path .in{padding-block:clamp(72px,10vw,160px);display:grid;grid-template-columns:400px minmax(0,1fr);gap:64px}
+.path-l{display:flex;flex-direction:column;gap:18px}
+.path h2{font-size:clamp(34px,4vw,52px);line-height:1.1}
+.personas{display:flex;flex-direction:column;gap:10px;padding-top:6px}
+.persona{text-align:left;min-height:52px;padding:0 20px;font-size:16px;font-weight:500;border:1px solid var(--line-2);background:var(--white)}
+.persona[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.path-list{border-top:1px solid var(--ink);display:flex;flex-direction:column}
+.item{display:flex;gap:22px;align-items:center;padding-block:24px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.item .no{width:40px;flex-shrink:0;font-family:var(--serif);font-size:30px;color:var(--tan)}
+.item .mid{flex:1;display:flex;flex-direction:column;gap:4px}
+.item .mid span:first-child{font-family:var(--serif);font-size:clamp(20px,2vw,25px);line-height:1.25}
+.item .mid span:last-child,.item .meta{font-size:14px;color:var(--ink-2)}
+.item .meta{width:140px;flex-shrink:0;text-align:right}
+.item:hover .mid span:first-child{text-decoration:underline}
+.total{padding-top:20px;color:var(--ink-2)}
+
+/* full report */
+.report{background:var(--ground);scroll-margin-top:60px}
+.report .in{padding-block:clamp(64px,8vw,128px);display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:64px}
+.toc{border-top:1px solid var(--ink);margin-top:20px}
+.toc a{display:flex;gap:22px;align-items:baseline;padding-block:22px;border-bottom:1px solid var(--line-2);text-decoration:none;color:var(--ink)}
+.toc .lb{width:90px;flex-shrink:0;font-size:14px;color:var(--ink-2)}
+.toc .tt{flex:1;font-family:var(--serif);font-size:clamp(20px,2vw,26px);line-height:1.25}
+.toc .mt{width:160px;flex-shrink:0;text-align:right;font-size:14px;color:var(--ink-2)}
+.toc a:hover .tt{text-decoration:underline}
+.dl{display:flex;flex-direction:column;gap:16px;padding-top:40px}
+.aux{display:flex;gap:14px;align-items:center;padding-top:8px}
+.aux div{display:flex;flex-direction:column}
+.aux b{font-size:15px}
+
+/* keep */
+.keep{background:var(--brown);color:#fff;scroll-margin-top:60px}
+.keep .in{padding-block:clamp(64px,8vw,112px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(40px,6vw,88px);align-items:start}
+.keep .eyebrow{color:var(--mint)}
+.keep h2{margin:14px 0 18px;font-size:clamp(34px,4vw,52px);line-height:1.1;color:#fff}
+.keep .lead{font-size:17px;line-height:1.65;color:var(--cream);max-width:560px}
+.keep-prev{margin-top:36px;border-top:1px solid var(--brown-line);padding-top:24px}
+.kp-h{display:block;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);margin-bottom:14px}
+.keep-prev ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.keep-prev li{display:flex;gap:12px;align-items:baseline;font-size:16px;line-height:1.5}
+.keep-prev li i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--tan);transform:translateY(-2px)}
+.keep-prev li.you i{background:var(--mint)}
+.keep-prev li small{display:block;font-size:13px;color:var(--line-2)}
+.kp-n{margin:16px 0 0;font-size:13px;color:var(--line-2)}
+.keep-f{background:#fff;color:var(--ink);padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:18px}
+.keep-f label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:600;color:var(--ink-2);min-width:0}
+.keep-f input[type=text],.keep-f input[type=email],.keep-f select{width:100%;min-height:48px;padding:0 14px;border:1px solid var(--line-2);background:#fff;font:inherit;font-size:16px;font-weight:400;color:var(--ink);border-radius:0}
+.keep-f input:focus,.keep-f select:focus{outline:2px solid var(--brown-2);outline-offset:1px}
+.kf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.keep-f fieldset{border:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 20px;align-items:center}
+.keep-f legend{font-size:13px;font-weight:600;color:var(--ink-2);margin-bottom:6px;width:100%}
+.keep-f .kf-r{flex-direction:row;align-items:center;gap:8px;min-height:44px;font-size:15px;font-weight:400;color:var(--ink)}
+.keep-f .kf-c{flex-direction:row;align-items:flex-start;gap:10px;font-size:13px;font-weight:400;line-height:1.5;color:var(--ink-2)}
+.keep-f .kf-c input,.keep-f .kf-r input{width:18px;height:18px;flex:none;accent-color:var(--brown);margin-top:2px}
+.btn-mint{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;background:var(--mint);color:var(--ink);text-decoration:none;font-size:15px;font-weight:600;border:none;cursor:pointer}
+.keep-f [hidden]{display:none!important}
+.kf-err{font-size:14px;color:#A33A2B}
+.kf-ok{display:flex;flex-direction:column;gap:6px;border-left:3px solid var(--mint);padding:4px 0 4px 14px;font-size:14px;line-height:1.5;color:var(--ink-2)}
+.kf-ok b{color:var(--ink);font-size:16px}
+.kf-adv{border:1px solid var(--line);background:var(--ground);padding:16px;display:flex;flex-direction:column;gap:14px}
+.keep-f .kf-t{flex-direction:row;align-items:flex-start;gap:12px;font-size:15px;font-weight:400;color:var(--ink);cursor:pointer}
+.kf-t input{width:20px;height:20px;flex:none;accent-color:var(--brown);margin-top:2px}
+.kf-t b{display:block;font-weight:600}
+.kf-t small{display:block;font-size:13px;color:var(--ink-2);margin-top:4px;line-height:1.45}
+.kf-advbox{display:flex;flex-direction:column;gap:10px}
+.kf-advbox strong{font-size:13px;color:var(--ink-2)}
+.topics{display:flex;flex-wrap:wrap;gap:8px}
+.topic{min-height:44px;padding:0 18px;border-radius:22px;border:1px solid var(--line-2);background:var(--white);font-size:14px;font-weight:500}
+.topic[aria-pressed="true"]{background:var(--brown);border-color:var(--brown);color:#fff}
+.kf-sug{font-size:12px;color:var(--ink-2)}
+
+footer{background:var(--ground);border-top:1px solid var(--line)}
+footer .in{padding-block:36px;font-size:12px;line-height:1.6;color:var(--ink-2)}
+footer p{max-width:1000px}
+footer p+p{margin-top:8px}
+
+@media (max-width:900px){
+  .hero .in.hero-grid{grid-template-columns:minmax(0,1fr)}
+  .img-hero{order:-1;aspect-ratio:4/3}
+  .chapter .in,.path .in,.report .in{grid-template-columns:minmax(0,1fr);gap:36px}
+  .chapmeta{position:static;flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:6px 16px}
+  .chapmeta .num{font-size:44px}
+  .calls-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+  .call+.call{border-left:none;padding-left:0;border-top:1px solid var(--line-2);padding-top:24px}
+  .two{grid-template-columns:minmax(0,1fr)}
+  .bar{grid-template-columns:110px minmax(0,1fr) 56px;gap:12px}
+  .bar .v{font-size:26px}
+  .div{grid-template-columns:100px minmax(0,1fr) minmax(0,1fr)}
+  .dots{gap:4px}
+  .tl-i{padding-left:38px}.tl-dot{width:18px;height:18px}.tl-i::before{left:9px}
+  .tl-grid{grid-template-columns:minmax(0,1fr);gap:20px}.tl-r{order:-1}
+  .kstats{grid-template-columns:minmax(0,1fr)}.why p{font-size:18px}
+  .asia-body2{grid-template-columns:minmax(0,1fr)}.asia-img{aspect-ratio:4/3}.asia-grid{grid-template-columns:minmax(0,1fr)}
+  .item .meta,.toc .mt{width:auto}
+  .navr span{display:none}
+  .quote{padding-left:22px}
+  .keep .in{grid-template-columns:minmax(0,1fr)}.kf-row{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){ .grow,.fill,.col .val,.dots span,.gauge .band,.gauge .mark{transition:none!important} }
+</style>
+</head>
+<body>
+
+<div class="draftbar">Concept mockup for internal discussion, built with 2026 Asia Outlook content</div>
+<nav class="top"><div class="in">
+  <span class="brand">J.P. Morgan Private Bank</span>
+  <div class="navr"><span>Insights &amp; Advice</span><span>Asia | English</span><a class="pillbtn" href="#advisor">Contact us</a></div>
+</div></nav>
+
+<header class="hero" id="hero"><div class="in hero-grid">
+  <div class="hero-text">
+    <span class="eyebrow">2026 Asia Outlook · Asia Strategy Focus</span>
+    <h1>Carried<br>by exports</h1>
+    <p class="thesis">Central banks are nearly done easing, so budgets must do more. AI capex keeps Taiwan and Korea busy, India offers the best entry point, and China and Japan reward selectivity. Here is what we expect, market by market, and how we are positioning.</p>
+    <div class="hero-links">
+      <a class="btn-dark" href="#china">Start with China</a>
+      <a class="strong" href="#ideas">See the implementation ideas</a>
+    </div>
+  </div>
+  <div class="hero-media"><img class="pic img-hero" src="img/hero-aerial.jpg" alt="Aerial view of river channels winding through green wetlands"></div>
+</div></header>
+
+<section class="callsband" id="calls"><div class="in">
+  <div class="calls">
+    <div class="calls-head"><h2>Three numbers that frame the year</h2><span class="small muted">From the 2026 Asia Outlook, published 18 December 2025</span></div>
+    <div class="calls-grid">
+      <div class="call"><span class="n">~30%</span><b>of global AI capex flows to Taiwan and Korea</b><span class="muted">Enough to keep an earnings upgrade cycle going across Asia ex-Japan: 12–13% growth in 2026, 10–11% in 2027.</span></div>
+      <div class="call"><span class="n">4.3%</span><b>China’s real GDP growth in 2026</b><span class="muted">Range 4.1–4.6%, moderating from 2025 on a high export base. Exports carry the economy while consumption and property lag.</span></div>
+      <div class="call"><span class="n">7.5%</span><b>India’s GDP growth in 2026</b><span class="muted">Low inflation, 125bp of rate cuts, tax cuts and infrastructure spending. India is a top implementation idea outside the U.S.</span></div>
+    </div>
+  </div>
+</div></section>
+
+<div class="chapnav"><div class="in"><ul>
+  <li><a href="#region">01 The region</a></li>
+  <li><a href="#china">02 China</a></li>
+  <li><a href="#japan">03 Japan</a></li>
+  <li><a href="#india">04 India</a></li>
+  <li><a href="#twkr">05 Taiwan &amp; Korea</a></li>
+  <li><a href="#ideas">Implementation ideas</a></li>
+  <li><a href="#path">Your reading path</a></li>
+  <li><a href="#report">The full outlook</a></li>
+  <li><a href="#keep">Your summary</a></li>
+</ul></div></div>
+
+<!-- ============ 01 THE REGION ============ -->
+<section class="chapter" id="region"><div class="in">
+  <aside class="chapmeta"><span class="num">01</span><span class="t">The region</span><span class="small muted">Policy, AI and the dollar</span><span class="small muted">About 4 min read</span></aside>
+  <div class="chapbody">
+    <div>
+      <h2>The baton passes from central banks to budgets</h2>
+      <p class="standfirst">Asian economies outperformed in 2025, helped by a broadly weaker U.S. dollar. Monetary easing is in its final legs, so fiscal policy carries more of the load in 2026, and AI capex keeps the region’s exporters busy.</p>
+    </div>
+    <div class="copy">
+      <p>Asian central banks have been steadily implementing monetary policy easing in 2025, and they look poised to enter the final legs of the easing cycle in the coming months. This means fiscal policy would play a bigger role in supporting growth in 2026. Indonesia exemplifies this pro-growth stance: the new administration has outlined a suite of fiscal policies aimed at boosting liquidity, accelerating state spending, and supporting key sectors such as agriculture, energy and infrastructure.</p>
+      <p>Looking ahead to 2026, we are optimistic about global AI tailwinds continuing to support tech exporters like Taiwan and South Korea. India presents a compelling entry point with a robust mix of cyclical tailwinds. China will likely continue to grapple with structural economic challenges, though its impressive pace of tech innovation can yield select winners in some sectors. Japan’s macro outlook is complicated by stubborn inflation and a behind-the-curve central bank, though its equities still offer medium-term opportunities.</p>
+    </div>
+
+    <div class="two">
+      <div class="chart anim">
+        <span class="chart-t">How much of global AI capex lands in Taiwan and Korea</span>
+        <div class="big-n"><span data-count="30" data-prefix="~" data-suffix="%">0%</span> <span class="small muted" style="font-family:var(--sans)">of total AI capex</span></div>
+        <div class="gauge"><div class="now grow" data-w="30"></div></div>
+        <div class="gauge-ax"><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div>
+        <span class="src">A tailwind for growth amid trade uncertainty across Asia. Source: J.P. Morgan Private Bank estimate, 2026 Asia Outlook.</span>
+      </div>
+      <div class="chart anim">
+        <span class="chart-t">Asia ex-Japan earnings growth stays elevated</span>
+        <div class="cols">
+          <div class="col hi"><span class="val">12–13%</span><div class="blk grow" data-h="88"></div></div>
+          <div class="col"><span class="val">10–11%</span><div class="blk grow" data-h="72"></div></div>
+        </div>
+        <div class="col-lb"><span>2026E</span><span>2027E</span></div>
+        <span class="src">Bars drawn at the midpoint of each stated range. Source: J.P. Morgan Private Bank, 2026 Asia Outlook.</span>
+      </div>
+    </div>
+
+    <div class="quote">
+      <p>“Asian central banks look poised to enter the final legs of the easing cycle. This means fiscal policy would play a bigger role in supporting growth in 2026.”</p>
+      <span class="small muted">2026 Asia Outlook, Asia Strategy Focus</span>
+    </div>
+
+    <div class="test" id="test-region" data-quiz="region"></div>
+
+    <div class="cont">
+      <span class="eyebrow">Continue in the outlook</span>
+      <a class="row-link" href="#china"><span>China: can the growth model persist?</span><span>Chapter 02 · 6 min</span></a>
+      <a class="row-link" href="#twkr"><span>Taiwan and Korea: the AI exporters</span><span>Chapter 05 · 3 min</span></a>
+      <a class="row-link" href="#ideas"><span>Cross-asset implementation ideas</span><span>4 ideas · 5 min</span></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 02 CHINA ============ -->
+<div class="opener"><img class="pic" src="img/container-ship.jpg" alt="The bow of a loaded container ship at sea" style="object-position:50% 38%"></div>
+<section class="chapter" id="china"><div class="in">
+  <aside class="chapmeta"><span class="num">02</span><span class="t">China</span><span class="small muted">Four questions and the equity view</span><span class="small muted">About 6 min read</span></aside>
+  <div class="chapbody">
+    <div>
+      <h2>Can China’s growth model persist in 2026?</h2>
+      <p class="standfirst">Yes, but it stays lopsided. Exports drive most of the growth while consumption is weak, investment is disappearing and property is still contracting. We expect real GDP growth of 4.3%, and we look for winners in innovation, not in the index.</p>
+    </div>
+
+    <div class="copy">
+      <p>The Chinese economy remains unbalanced with exports driving most of the growth. We expect that imbalance to persist: the trends of weak consumption and disappearing investment amid a historic export boom are likely to continue into 2026, with the property sector still weak and weighing on investment. On that basis we expect real GDP growth of 4.3% (range 4.1–4.6%) in 2026, moderating from 2025 due to the high base for export growth.</p>
+    </div>
+
+    <div class="two">
+      <div class="chart anim">
+        <span class="chart-t">Real GDP growth forecast, 2026</span>
+        <div class="big-n"><span data-count="43" data-div="10" data-suffix="%">0%</span></div>
+        <div class="gauge"><div class="band" style="left:30%;width:25%"></div><div class="mark" style="left:40%"></div><div class="now grow" data-w="40"></div></div>
+        <div class="gauge-ax"><span>3.5%</span><span>4.0%</span><span>4.5%</span><span>5.0%</span><span>5.5%</span></div>
+        <div class="legend"><span><i style="background:var(--brown)"></i>Point forecast 4.3%</span><span><i style="background:repeating-linear-gradient(135deg,rgba(175,132,98,.6) 0 3px,transparent 3px 6px)"></i>Stated range 4.1–4.6%</span></div>
+        <span class="src">Moderating from 2025 on a high export base. Source: J.P. Morgan Private Bank, 2026 Asia Outlook.</span>
+      </div>
+      <div class="chart anim">
+        <span class="chart-t">China’s share of total global exports</span>
+        <div class="big-n"><span data-count="15" data-prefix="~" data-suffix="%">0%</span></div>
+        <div class="dots" id="dots-exports" data-f="15" aria-hidden="true"></div>
+        <span class="src">Each dot is 1% of world exports. Exports added over $1tn to the trade surplus year-to-date. Source: 2026 Asia Outlook.</span>
+      </div>
+    </div>
+
+    <div class="copy">
+      <p><b>Will consumption recover?</b> Not in a big way. The weakness traces back to a weak labour market and slowing income growth rather than to a lack of stimulus. The major consumer-stimulus policy in 2025, trade-in subsidies for some durable goods, is set to continue in 2026; it helps the categories it targets but does not change the income picture. We expect further support to come mainly through faster deployment of existing fiscal resources.</p>
+      <p><b>What does the industrial build-out mean globally?</b> China’s market share has risen to about 15% of total global exports, and that success invites pushback. These developments are a key reason why we anticipate Chinese export growth to moderate heading into 2026. The tech sector is less exposed, as its investment is more measured and fundamentals could improve if “anti-involution” measures become more effective.</p>
+    </div>
+
+    <div class="two">
+      <div class="chart anim">
+        <span class="chart-t">A record surplus has not lifted the yuan</span>
+        <div class="div">
+          <span class="small muted">Trade surplus added, YTD</span><div class="neg"></div><div class="posbar"><i class="grow" data-w="90"></i></div>
+          <span class="small muted">Trade-weighted yuan</span><div class="neg b"><i class="grow" data-w="36"></i></div><span class="pos" style="padding-left:12px">−4%</span>
+        </div>
+        <div class="legend"><span><i style="background:var(--brown)"></i>+$1tn to the surplus</span><span><i style="background:var(--brown-2)"></i>Yuan weaker on a trade-weighted basis</span></div>
+        <span class="src">The bar for significant appreciation is high. Recent strength looks largely seasonal. Source: 2026 Asia Outlook.</span>
+      </div>
+      <div class="fact"><p>The yuan is a heavily managed currency under a low-volatility framework, which makes the U.S. dollar the main driver of USD/CNH. Momentum could push the pair below 7 in the near term; over the medium term we expect a stable, range-bound trajectory.</p><span class="src">Why is the yuan less likely to appreciate significantly?</span></div>
+    </div>
+
+    <div class="quote">
+      <p>“Negative earnings revisions in 2025 imply recent gains have been largely multiple-driven. We prefer a highly selective approach.”</p>
+      <span class="small muted">Chinese equities: picking the winners is paramount</span>
+    </div>
+
+    <div class="test" id="test-china" data-quiz="china"></div>
+
+    <div class="rip" id="ripple">
+      <div class="rip-head">
+        <span class="eyebrow">Follow the thread</span>
+        <h3>China’s story runs through exports. Follow one thread to see where it leads and where we look.</h3>
+        <div class="rip-tabs" role="tablist" aria-label="Choose a thread" id="rip-tabs"></div>
+      </div>
+      <ol class="tl" id="rip-tl" aria-live="polite"></ol>
+    </div>
+
+    <div class="cont">
+      <span class="eyebrow">Continue in the outlook</span>
+      <a class="row-link" href="#idea-cn"><span>Chinese equities: picking the winners is paramount</span><span>Implementation idea · 3 min</span></a>
+      <a class="row-link ext" data-anchor="" href="#"><span>Read the China section in full</span><span>privatebank.jpmorgan.com</span></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 03 JAPAN ============ -->
+<div class="opener"><img class="pic" src="img/bridge-fog.jpg" alt="Traffic crossing a suspension bridge through fog" style="object-position:50% 40%"></div>
+<section class="chapter" id="japan"><div class="in">
+  <aside class="chapmeta"><span class="num">03</span><span class="t">Japan</span><span class="small muted">Inflation and a priced-in market</span><span class="small muted">About 4 min read</span></aside>
+  <div class="chapbody">
+    <div>
+      <h2>Can Japan overcome inflation?</h2>
+      <p class="standfirst">In our base case inflation moderates and stabilises near 2% over 2026, but only if several policy conditions line up. The equity outlook is constructive, and the market has already priced a lot of it in.</p>
+    </div>
+    <div class="copy">
+      <p>Japan’s macro outlook is complicated by stubborn inflation and a behind-the-curve central bank. Achieving our base case will likely require rice prices to peak in the fourth quarter, authorities to prevent excessive yen depreciation, and the new administration’s expansionary fiscal programme not to add demand-driven price pressure. We expect Shunto wage gains broadly in line with 2025’s outcome of around 5.5%, and the yen to remain weak in the near term before potentially grinding towards the 146–150 range by end-2026.</p>
+      <p>The new administration’s moderately expansionary fiscal program that balances increased social welfare with investing in new technologies/defense supports the market outlook. Furthermore, monetary policy remains relatively dovish, which could result in USDJPY staying in a higher range for longer, which is supportive for earnings. However, markets appear to have priced a lot of that optimism in, and modest upside to our December 2026 TOPIX outlook of 3,350–3,400 keeps us tactically neutral on Japanese equities.</p>
+    </div>
+    <div class="two">
+      <div class="chart anim">
+        <span class="chart-t">The two numbers behind the inflation call</span>
+        <div class="bars">
+          <div class="bar hi"><span class="muted">Shunto wage gains</span><div class="track"><div class="fill" data-v="55"></div></div><span class="v">~5.5%</span></div>
+          <div class="bar"><span class="muted">Inflation, end-2026</span><div class="track"><div class="fill" data-v="20"></div></div><span class="v">~2%</span></div>
+        </div>
+        <span class="src">Bars on a common 0–10% scale. Wage gains in line with 2025; inflation stabilising near the BoJ target in our base case. Source: 2026 Asia Outlook.</span>
+      </div>
+      <div class="chart anim">
+        <span class="chart-t">USD/JPY: weak now, firmer by year-end</span>
+        <div class="big-n">146–150 <span class="small muted" style="font-family:var(--sans)">by end-2026</span></div>
+        <div class="gauge"><div class="band" style="left:60%;width:20%"></div><div class="now grow" data-w="88"></div></div>
+        <div class="gauge-ax"><span>140</span><span>145</span><span>150</span><span>155</span><span>160</span></div>
+        <div class="legend"><span><i style="background:var(--brown)"></i>Near term: yen stays weak</span><span><i style="background:repeating-linear-gradient(135deg,rgba(175,132,98,.6) 0 3px,transparent 3px 6px)"></i>End-2026 range</span></div>
+        <span class="src">Schematic. The near-term level is illustrative; the range is the outlook’s. Source: 2026 Asia Outlook.</span>
+      </div>
+    </div>
+    <div class="fact"><p>We prefer select opportunities in the financial, industrial, consumer discretionary and technology sectors. Meaningful pullbacks present buying opportunities to build a long-term neutral allocation of around 5% within a globally diversified equity portfolio.</p><span class="src">Japanese equities: a constructive outlook that markets have already priced in</span></div>
+    <div class="test" id="test-japan" data-quiz="japan"></div>
+    <div class="cont">
+      <span class="eyebrow">Continue in the outlook</span>
+      <a class="row-link" href="#idea-jp"><span>Japanese equities: constructive, and already priced in</span><span>Implementation idea · 2 min</span></a>
+      <a class="row-link ext" href="#"><span>Read the Japan section in full</span><span>privatebank.jpmorgan.com</span></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 04 INDIA ============ -->
+<section class="chapter" id="india"><div class="in">
+  <aside class="chapmeta"><span class="num">04</span><span class="t">India</span><span class="small muted">Top idea outside the U.S.</span><span class="small muted">About 4 min read</span></aside>
+  <div class="chapbody">
+    <div>
+      <h2>An attractive entry point for long-term performance</h2>
+      <p class="standfirst">Low inflation, rate cuts, tax cuts and infrastructure spending re-accelerate earnings. Valuations are reasonable and active EM funds hold almost no India. Tariffs are the headwind.</p>
+    </div>
+    <div class="copy">
+      <p>India presents a compelling entry point with a robust mix of cyclical tailwinds and remains one of our top implementation ideas outside the U.S. despite export headwinds. Inflation has been low at around 2%, a 47-year low, which gave the Reserve Bank of India room to cut rates by 125bp from 6.50% to 5.25%. Together with direct and indirect tax cuts from the recent budget and infrastructure projects, this underpins a 2026 GDP growth projection of 7.5%. The Liberation Day tariffs hit India at a 36% effective rate, which persists in the absence of a trade deal.</p>
+      <p>We expect the tailwinds for the economy to translate into tailwinds for earnings recovery, since India’s earnings growth is strongly correlated to GDP growth historically. The current earnings downgrade cycle has been extended at 14 months vs a 9–10 month historical average since 2000. Estimates seem to have stopped drifting lower, and the September earnings season saw growth accelerate to 13% YoY, 4% better than expected at the start of the reporting period. We expect earnings growth to re-accelerate at 13–14% p.a. in both 2026 and 2027, versus about 11% in 2025.</p>
+    </div>
+    <div class="two">
+      <div class="chart anim">
+        <span class="chart-t">Earnings growth re-accelerates</span>
+        <div class="cols">
+          <div class="col"><span class="val">~11%</span><div class="blk grow" data-h="62"></div></div>
+          <div class="col hi"><span class="val">13–14%</span><div class="blk grow" data-h="78"></div></div>
+          <div class="col hi"><span class="val">13–14%</span><div class="blk grow" data-h="78"></div></div>
+        </div>
+        <div class="col-lb"><span>2025</span><span>2026E</span><span>2027E</span></div>
+        <span class="src">Bars drawn at the midpoint of each stated range. Source: 2026 Asia Outlook.</span>
+      </div>
+      <div class="chart anim">
+        <span class="chart-t">The downgrade cycle has run long</span>
+        <div class="hbar hi"><span class="small muted">Current cycle</span><div class="tr"><div class="fl grow" data-w="93"></div></div><span class="v">14 mo</span></div>
+        <div class="hbar"><span class="small muted">Average since 2000</span><div class="tr"><div class="fl grow" data-w="63"></div></div><span class="v">9–10</span></div>
+        <span class="src">Extended, but estimates seem to have stopped drifting lower. Source: 2026 Asia Outlook.</span>
+      </div>
+    </div>
+    <div class="two">
+      <div class="chart anim">
+        <span class="chart-t">Active EM funds hold almost no India</span>
+        <div class="big-n"><span data-count="1" data-prefix="0–" data-suffix="st">0</span> <span class="small muted" style="font-family:var(--sans)">percentile of positioning</span></div>
+        <div class="dots" id="dots-india" data-f="1" aria-hidden="true"></div>
+        <span class="src">Each dot is one percentile of active EM fund exposure to Indian equities. Source: 2026 Asia Outlook.</span>
+      </div>
+      <div class="fact"><p>December 2026 MSCI India outlook of 3,350–3,450, implying an expected low-to-mid-teens total return. Relative P/E vs the S&amp;P 500 sits one standard deviation below the 10-year average. India makes up close to 3% of a globally diversified equity portfolio.</p><span class="src">Indian equities: attractive entry point for long-term performance</span></div>
+    </div>
+    <div class="test" id="test-india" data-quiz="india"></div>
+    <div class="cont">
+      <span class="eyebrow">Continue in the outlook</span>
+      <a class="row-link" href="#idea-in"><span>Indian equities: build a long-term allocation</span><span>Implementation idea · 3 min</span></a>
+      <a class="row-link ext" href="#"><span>Read the India section in full</span><span>privatebank.jpmorgan.com</span></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ 05 TAIWAN & KOREA ============ -->
+<div class="opener"><img class="pic" src="img/power-lines.jpg" alt="Power transmission towers crossing a forested hillside in mist" style="object-position:50% 45%"></div>
+<section class="chapter" id="twkr"><div class="in">
+  <aside class="chapmeta"><span class="num">05</span><span class="t">Taiwan &amp; Korea</span><span class="small muted">The AI exporters</span><span class="small muted">About 3 min read</span></aside>
+  <div class="chapbody">
+    <div>
+      <h2>Close to 30% of global AI capex lands here</h2>
+      <p class="standfirst">Global AI tailwinds continue to support Taiwan and South Korea in 2026. Taiwan dominates advanced fabrication, Korea leads the world in memory, and together they drive an earnings upgrade cycle across Asia ex-Japan.</p>
+    </div>
+    <div class="copy">
+      <p>We estimate that close to 30% of total AI capex makes its way to these two economies, which has been a tailwind for growth amidst trade uncertainty across Asia. This is consequential enough to drive an earnings upgrade cycle in Asia ex-Japan that could keep earnings growth elevated at 12–13% in 2026 and 10–11% in 2027.</p>
+      <p>Korea is leading the world in the increasingly important role of memory in AI applications and workloads, while authorities continue to push companies to improve valuation multiples through shareholder-friendly measures. Taiwan dominates advanced chip fabrication, the other critical bottleneck in the AI supply chain. The risks are concentration in a handful of large companies, any slowdown in AI capex, and geopolitics.</p>
+    </div>
+    <div class="two">
+      <div class="chart anim">
+        <span class="chart-t">Where the AI supply chain’s bottlenecks sit</span>
+        <div class="hbar hi"><span class="small muted">Taiwan</span><div class="tr"><div class="fl grow" data-w="100"></div></div><span class="v">Fabs</span></div>
+        <div class="hbar hi"><span class="small muted">Korea</span><div class="tr"><div class="fl grow" data-w="100"></div></div><span class="v">Memory</span></div>
+        <div class="hbar"><span class="small muted">Rest of Asia</span><div class="tr"><div class="fl grow" data-w="40"></div></div><span class="v">Inputs</span></div>
+        <span class="src">Qualitative. Advanced fabrication and memory are the two bottlenecks the outlook names; Indonesia supplies nickel to AI-related supply chains. Source: 2026 Asia Outlook.</span>
+      </div>
+      <div class="fact"><p>“Leading the world in the increasingly important role of memory in AI applications and workloads.” Korean authorities are also pushing companies to lift valuation multiples through shareholder-friendly steps.</p><span class="src">On Korea, 2026 Asia Outlook</span></div>
+    </div>
+    <div class="test" id="test-twkr" data-quiz="twkr"></div>
+    <div class="cont">
+      <span class="eyebrow">Continue in the outlook</span>
+      <a class="row-link" href="#region"><span>The region: AI capex and the earnings cycle</span><span>Chapter 01 · 4 min</span></a>
+      <a class="row-link ext" href="#"><span>Read the Taiwan and Korea section in full</span><span>privatebank.jpmorgan.com</span></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ IMPLEMENTATION IDEAS ============ -->
+<section class="asia" id="ideas"><div class="in">
+  <div class="asia-top">
+    <div><span class="eyebrow">Cross-asset implementation ideas</span><h2>From view to position</h2></div>
+    <p>How the views translate into positioning across Chinese, Japanese and Indian equities, and Asia fixed income.</p>
+  </div>
+  <div class="asia-body2">
+    <div class="asia-l">
+      <img class="pic asia-img" src="img/great-hall.jpg" alt="A classical government building reflected in still water" style="object-position:40% 55%">
+      <div class="alloc">
+        <span class="small" style="color:var(--cream)">Where these markets sit in a globally diversified equity portfolio</span>
+        <div class="stack"><i style="width:3%;background:var(--mint)" title="China ~3%"></i><i style="width:5%;background:#fff" title="Japan ~5%"></i><i style="width:3%;background:var(--tan)" title="India ~3%"></i><i style="width:89%;background:var(--brown-line)"></i></div>
+        <div class="legend"><span><i style="background:var(--mint)"></i>China ~3%</span><span><i style="background:#fff"></i>Japan ~5%</span><span><i style="background:var(--tan)"></i>India ~3%</span><span><i style="background:var(--brown-line)"></i>Rest of world</span></div>
+      </div>
+    </div>
+    <div class="asia-grid">
+      <div class="mk" id="idea-cn"><div class="mk-h"><span>Chinese equities</span><span>Selective</span></div><h3>Picking the winners is paramount</h3><span class="mk-n">~3%</span><p>Add on pullbacks, but through the China Tech Innovator Basket: AI and “super apps”, NEV and autonomous driving, semiconductor localisation. High-quality dividend names and depressed-valuation consumer names round it out. Recent gains were largely multiple-driven, so selection beats beta.</p><a href="#china">Back to the China chapter</a></div>
+      <div class="mk" id="idea-jp"><div class="mk-h"><span>Japanese equities</span><span>Tactically neutral</span></div><h3>Constructive, and already priced in</h3><span class="mk-n">~5%</span><p>Modest upside to the December 2026 TOPIX outlook of 3,350–3,400. Prefer financials, industrials, consumer discretionary and technology; use meaningful pullbacks to build a long-term neutral allocation of around 5%.</p><a href="#japan">Back to the Japan chapter</a></div>
+      <div class="mk" id="idea-in"><div class="mk-h"><span>Indian equities</span><span>Positive</span></div><h3>Attractive entry point</h3><span class="mk-n">3,350–3,450</span><p>December 2026 MSCI India outlook, implying a low-to-mid-teens total return. Earnings re-accelerate to 13–14% p.a. in 2026 and 2027, relative valuations are a standard deviation below average, and active EM funds hold almost none. Build a long-term allocation of close to 3%.</p><a href="#india">Back to the India chapter</a></div>
+      <div class="mk" id="idea-fi"><div class="mk-h"><span>Asia fixed income</span><span>Constructive IG · selective HY</span></div><h3>Opportunities if you know where to look</h3><span class="mk-n">High 4%</span><p>Asia IG all-in yields at a duration near 4.5 years, with over 40% of the index in sovereign and quasi-sovereign issuers. Prefer subordinated capital from Japanese insurers and global banks. In high yield, BB with healthy leverage over low-quality single B; Indian HY and Macau gaming credits.</p><a href="#fi-game">Test your view: can you beat Asia cash?</a></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ============ READING PATH ============ -->
+<section class="path" id="path"><div class="in">
+  <div class="path-l">
+    <span class="eyebrow">Your reading path</span>
+    <h2>Find the sections most relevant to you</h2>
+    <p class="muted">Tell us what is on your mind and we will point you to the sections to start with.</p>
+    <div class="personas" role="group" aria-label="What is on your mind" id="personas"></div>
+  </div>
+  <div>
+    <div class="path-list" id="pathlist"></div>
+    <p class="total" id="pathtotal"></p>
+  </div>
+</div></section>
+
+<!-- ============ FULL OUTLOOK ============ -->
+<section class="report" id="report"><div class="in">
+  <div>
+    <span class="eyebrow">The full outlook</span>
+    <div class="toc">
+      <a href="#region"><span class="lb">Opening</span><span class="tt">The region: policy, AI and the dollar</span><span class="mt">Chapter 01 · 4 min</span></a>
+      <a href="#china"><span class="lb">Market</span><span class="tt">China: can the growth model persist?</span><span class="mt">Chapter 02 · 6 min</span></a>
+      <a href="#japan"><span class="lb">Market</span><span class="tt">Japan: can it overcome inflation?</span><span class="mt">Chapter 03 · 4 min</span></a>
+      <a href="#india"><span class="lb">Market</span><span class="tt">India: an attractive entry point</span><span class="mt">Chapter 04 · 4 min</span></a>
+      <a href="#twkr"><span class="lb">Market</span><span class="tt">Taiwan and Korea: the AI exporters</span><span class="mt">Chapter 05 · 3 min</span></a>
+      <a href="#ideas"><span class="lb">Closing</span><span class="tt">Cross-asset implementation ideas</span><span class="mt">4 ideas · 5 min</span></a>
+    </div>
+  </div>
+  <div class="dl">
+    <a class="btn-dark ext" href="#">Read the 2026 Asia Outlook online</a>
+    <a class="btn-line" href="../">Open the interactive explorer</a>
+    <div class="aux"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3A2206" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4z"/></svg><div><b>[Asia strategist video · 3 min]</b><span class="small muted">The Asia view in the strategist’s own words</span></div></div>
+    <div class="aux"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3A2206" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg><div><b>Ask the Digital Advisor</b><span class="small muted">Questions answered from the outlook</span></div></div>
+  </div>
+</div></section>
+
+<!-- ============ KEEP THE SUMMARY ============ -->
+<section class="keep" id="keep"><span id="advisor"></span><div class="in">
+  <div class="keep-l">
+    <span class="eyebrow">Take it from here</span>
+    <h2>Keep the summary. Talk it through with your advisor.</h2>
+    <p class="lead">You have covered a lot on this page. We will send you a short summary of the market views, the numbers behind them and the implementation ideas, shaped by what you explored here. And if you would like to go further, your J.P. Morgan team can bring our strategists’ views to your own portfolio.</p>
+    <div class="keep-prev">
+      <span class="kp-h">What your summary will include</span>
+      <ul id="keeplist"></ul>
+      <p class="kp-n" id="keepnote"></p>
+    </div>
+  </div>
+  <form class="keep-f" id="keepform" novalidate>
+    <div class="kf-row"><label>First name<input type="text" name="fn" autocomplete="given-name" required></label><label>Last name<input type="text" name="ln" autocomplete="family-name" required></label></div>
+    <label>Email<input type="email" name="em" autocomplete="email" required></label>
+    <div class="kf-row"><label>Where you are based<select name="mk"><option>Hong Kong</option><option>Singapore</option><option>Mainland China</option><option>Taiwan</option><option>Japan</option><option>India</option><option>Australia</option><option>Elsewhere</option></select></label>
+    <label>Language<select name="lg"><option>English</option><option>繁體中文</option><option>简体中文</option></select></label></div>
+    <fieldset><legend>Are you a J.P. Morgan Private Bank client?</legend>
+      <label class="kf-r"><input type="radio" name="cl" value="yes" checked> Yes</label><label class="kf-r"><input type="radio" name="cl" value="no"> Not yet</label></fieldset>
+    <div class="kf-adv">
+      <label class="kf-t"><input type="checkbox" name="adv" id="advchk"> <span><b>I would also like to talk it through with my advisor</b><small>Your J.P. Morgan team will be in touch to discuss what matters to you.</small></span></label>
+      <div class="kf-advbox" id="advbox" hidden>
+        <strong>I’d like to discuss</strong>
+        <div class="topics" role="group" aria-label="Topics to discuss" id="topics"></div>
+        <p class="kf-sug" id="topicnote" hidden>Suggested from what you explored. Change them as you like.</p>
+      </div>
+    </div>
+    <label class="kf-c"><input type="checkbox" name="ok" required> I agree to J.P. Morgan contacting me about this summary and related insights, in line with the Privacy Policy. I can unsubscribe at any time.</label>
+    <button class="btn-mint" type="submit" id="keepbtn">Email me my summary</button>
+    <p class="kf-err" id="keeperr" hidden>Please add your name and email, and tick the consent box.</p>
+    <div class="kf-ok" id="keepok" hidden><b id="keepokh">Thank you. Your summary is on its way.</b><span>Mockup only: in the live page the summary would be emailed, and your details and what you explored would be passed to your J.P. Morgan team to shape follow-up.</span></div>
+  </form>
+</div></section>
+
+<footer><div class="in">
+  <p>Concept mockup for internal discussion, built with 2026 Asia Outlook content. The views are those of J.P. Morgan Private Bank’s Asia Strategy team as of 18 December 2025 and may change without notice. Outlooks and past performance are not reliable indicators of future results. Not a recommendation. Figures are as stated in the outlook; bars marked schematic or qualitative illustrate a described relationship rather than measured data.</p>
+  <p>Source: J.P. Morgan Private Bank, Asia Strategy Focus: 2026 Asia Outlook. Images from the concept mockup.</p>
+</div></footer>
+
+<script>
+(function(){
+var SRC="https://privatebank.jpmorgan.com/apac/en/insights/markets-and-investing/asf/2026-asia-outlook";
+document.querySelectorAll('a.ext').forEach(function(a){ a.href=SRC; a.target='_blank'; a.rel='noopener'; });
+var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* dot grids */
+document.querySelectorAll('.dots[data-f]').forEach(function(dg){
+  var f=+dg.getAttribute('data-f'), h='';
+  for(var d=0; d<100; d++){ h+='<span class="'+(d<f?'f':'')+'" style="transition-delay:'+(d<f?(0.3+d*0.03).toFixed(2):0)+'s"></span>'; }
+  dg.innerHTML=h;
+});
+
+/* moving charts */
+function countUp(el){
+  var to=+el.getAttribute('data-count'), div=+(el.getAttribute('data-div')||1), pre=el.getAttribute('data-prefix')||'', suf=el.getAttribute('data-suffix')||'';
+  function fmt(v){ return pre+(div>1?(v/div).toFixed(1):v)+suf; }
+  if(reduce){ el.textContent=fmt(to); return; }
+  var t0=null, dur=1400;
+  function step(t){ if(!t0) t0=t; var k=Math.min(1,(t-t0)/dur); var e=1-Math.pow(1-k,3); el.textContent=fmt(Math.round(to*e)); if(k<1) requestAnimationFrame(step); }
+  requestAnimationFrame(step);
+}
+function play(box){
+  if(box.classList.contains('in-view')) return;
+  box.classList.add('in-view');
+  box.querySelectorAll('[data-v],[data-w],[data-h]').forEach(function(el,i){
+    el.style.transitionDelay=(i*0.18)+'s';
+    if(el.hasAttribute('data-v')) el.style.width=el.getAttribute('data-v')+'%';
+    if(el.hasAttribute('data-w')) el.style.width=el.getAttribute('data-w')+'%';
+    if(el.hasAttribute('data-h')) el.style.height=el.getAttribute('data-h')+'%';
+  });
+  box.querySelectorAll('[data-count]').forEach(countUp);
+}
+var boxes=document.querySelectorAll('.anim');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ play(e.target); io.unobserve(e.target); } }); },{threshold:.35});
+  boxes.forEach(function(b){ io.observe(b); });
+} else boxes.forEach(play);
+setTimeout(function(){ boxes.forEach(play); }, 6000);
+
+/* hero calls count up */
+document.querySelectorAll('.call .n').forEach(function(n){
+  var txt=n.textContent, m=txt.match(/^(~?)([\d.]+)(%?)$/);
+  if(!m || reduce) return;
+  var to=parseFloat(m[2]), dec=(m[2].split('.')[1]||'').length, pre=m[1], suf=m[3], t0=null;
+  function step(t){ if(!t0) t0=t; var k=Math.min(1,(t-t0)/1600), e=1-Math.pow(1-k,3); n.textContent=pre+(to*e).toFixed(dec)+suf; if(k<1) requestAnimationFrame(step); else n.textContent=txt; }
+  requestAnimationFrame(step);
+});
+
+/* chapter nav current */
+var navLinks=document.querySelectorAll('.chapnav a');
+if('IntersectionObserver' in window){
+  var nio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ navLinks.forEach(function(a){ a.setAttribute('aria-current', a.getAttribute('href')==='#'+e.target.id); }); } }); },{rootMargin:'-30% 0px -60% 0px'});
+  document.querySelectorAll('section[id]').forEach(function(s){ nio.observe(s); });
+}
+
+/* ---------- test your view ---------- */
+var QUIZ={
+  region:{title:'Three calls on the region. How would you make them?', verdict:'Our view: budgets take over from central banks, AI capex keeps the exporters busy, and India is the entry point.', link:'#china', linkText:'Start with China', items:[
+    {id:'r1',name:'The policy mix',q:'Which lever does more for Asian growth in 2026?',opts:['Rate cuts','Government spending','Neither, exports'],house:1,stat:'Asian central banks are entering the final legs of easing, so fiscal policy has to do more in 2026. Indonesia is the clearest example.'},
+    {id:'r2',name:'AI capex',q:'Roughly what share of global AI capex flows to Taiwan and Korea?',opts:['~10%','~30%','~60%'],house:1,stat:'Close to 30%, enough to keep Asia ex-Japan earnings growth at 12–13% in 2026.'},
+    {id:'r3',name:'The entry point',q:'Which market is a top implementation idea outside the U.S.?',opts:['Japan','China','India'],house:2,stat:'India: cyclical tailwinds, re-accelerating earnings and relative valuations a standard deviation below their 10-year average.'}
+  ]},
+  china:{title:'Four questions on China. How would you call them?', verdict:'Our verdict: growth holds near 4.3% but stays lopsided. Do not bank on a strong yuan, and in equities follow innovation rather than the index.', link:'#ripple', linkText:'Follow the thread', items:[
+    {id:'c1',name:'Growth',q:'China’s real GDP growth in 2026 will be…',opts:['Below 4%','Around 4.3%','5% or higher'],house:1,stat:'4.3% (range 4.1–4.6%), moderating from 2025 on a high export base.'},
+    {id:'c2',name:'Consumption',q:'What holds Chinese consumers back most?',opts:['Jobs and incomes','Too few subsidies','High rates'],house:0,stat:'A weak labour market and slowing income growth. Trade-in subsidies continue in 2026 but cushion rather than cure.'},
+    {id:'c3',name:'Exports',q:'China’s share of total global exports is closest to…',opts:['5%','15%','30%'],house:1,stat:'About 15%, after exports added over $1tn to the trade surplus. A key reason we expect export growth to moderate.'},
+    {id:'c4',name:'The yuan',q:'With a $1tn+ surplus, what did the yuan do on a trade-weighted basis?',opts:['Rose sharply','Stayed flat','Fell about 4%'],house:2,stat:'It weakened 4%. Heavily managed under a low-vol framework, with the dollar as the main driver; range-bound over the medium term.'}
+  ]},
+  japan:{title:'Two calls on Japan. Yours first.', verdict:'Our verdict: inflation can settle near 2%, but only with several conditions met. Equities are constructive and priced in, so we stay tactically neutral and buy meaningful pullbacks.', link:'#idea-jp', linkText:'See the Japan implementation idea', items:[
+    {id:'j1',name:'Inflation',q:'Where does Japan’s inflation settle over 2026 in the base case?',opts:['Near 2%','Near 3%','Above 4%'],house:0,stat:'Near 2%, if rice prices peak in Q4, the yen avoids excessive depreciation and fiscal policy does not add demand-driven pressure.'},
+    {id:'j2',name:'Equities',q:'What is the stance on Japanese equities?',opts:['Overweight','Tactically neutral','Underweight'],house:1,stat:'Tactically neutral. Modest upside to the December 2026 TOPIX outlook of 3,350–3,400; pullbacks are buying opportunities toward ~5%.'}
+  ]},
+  india:{title:'Three calls on India. Yours first.', verdict:'Our verdict: a compelling entry point. Earnings re-accelerate to 13–14%, valuations are reasonable, and almost nobody is positioned for it.', link:'#idea-in', linkText:'See the India implementation idea', items:[
+    {id:'i1',name:'Growth',q:'India’s 2026 GDP growth forecast is…',opts:['6%','7.5%','9%'],house:1,stat:'7.5%, on low inflation, 125bp of rate cuts, tax cuts and infrastructure spending.'},
+    {id:'i2',name:'Earnings',q:'The current earnings downgrade cycle has run…',opts:['6 months','14 months','24 months'],house:1,stat:'14 months versus a 9–10 month average since 2000. Estimates have stopped drifting lower and September growth beat by 4 points.'},
+    {id:'i3',name:'Positioning',q:'Active EM funds’ exposure to Indian equities sits near the…',opts:['0–1st percentile','50th percentile','99th percentile'],house:0,stat:'The 0–1st percentile. With valuations a standard deviation below average, the risk/reward is attractive.'}
+  ]},
+  twkr:{title:'Two calls on the AI exporters.', verdict:'Our verdict: AI tailwinds continue to support Taiwan and Korea in 2026; the risks are concentration, any slowdown in AI capex, and geopolitics.', link:'#ideas', linkText:'See the implementation ideas', items:[
+    {id:'t1',name:'Korea',q:'Where does Korea lead the world?',opts:['Memory for AI','Advanced fabrication','Cloud platforms'],house:0,stat:'Memory, whose role in AI applications and workloads keeps growing. Taiwan leads advanced fabrication.'},
+    {id:'t2',name:'Earnings',q:'Asia ex-Japan earnings growth in 2026 is expected at…',opts:['5–6%','12–13%','25–30%'],house:1,stat:'12–13% in 2026 and 10–11% in 2027, driven by the AI capex flowing to these two economies.'}
+  ]}
+};
+var picks={};
+function drawTest(el){
+  var key=el.getAttribute('data-quiz'), Q=QUIZ[key];
+  var answered=0, agree=0;
+  var rows=Q.items.map(function(s){
+    var p=picks[s.id]; if(p!==undefined){answered++; if(p===s.house) agree++;}
+    var btns=s.opts.map(function(o,i){ return '<button class="light'+(p!==undefined&&i===s.house?' house':'')+'" type="button" aria-pressed="'+(p===i)+'" data-sig="'+s.id+'" data-c="'+i+'">'+o+'</button>'; }).join('');
+    var rev=p!==undefined?'<div class="sig-reveal"><span class="dot '+(p===s.house?'d-house':'d-miss')+'"></span><div><strong>'+(p===s.house?'You matched our view: ':'Our view: ')+s.opts[s.house]+'.</strong> '+s.stat+'</div></div>':'';
+    return '<div class="sig"><div class="sig-row"><div class="sig-text"><b>'+s.name+'</b><span class="muted">'+s.q+'</span></div><div class="lights" role="group" aria-label="Your call on '+s.name+'">'+btns+'</div></div>'+rev+'</div>';
+  }).join('');
+  var n=Q.items.length;
+  var tally=answered===0?'Make a call to see how our strategists called it.':'Your view matches ours on '+agree+' of '+answered+(answered===n?' calls.':' calls so far.');
+  var verdict=answered===n?'<div class="verdict"><p>'+Q.verdict+'</p><a class="strong" href="'+Q.link+'">'+Q.linkText+'</a></div>':'';
+  el.innerHTML='<div class="test-head"><div><span class="eyebrow">Test your view</span><h3>'+Q.title+'</h3></div><button class="linkbtn" type="button" data-reset="'+key+'">Clear my calls</button></div><div>'+rows+'</div><p class="tally">'+tally+'</p>'+verdict;
+}
+document.querySelectorAll('.test[data-quiz]').forEach(function(el){
+  drawTest(el);
+  el.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b) return;
+    if(b.hasAttribute('data-reset')){ QUIZ[b.getAttribute('data-reset')].items.forEach(function(s){ delete picks[s.id]; }); }
+    else picks[b.getAttribute('data-sig')]=+b.getAttribute('data-c');
+    drawTest(el);
+  });
+});
+
+/* ---------- follow the thread ---------- */
+var THREADS=[
+ {tab:'Exports',
+  steps:[
+   {k:'The boom', t:'A historic export boom', stat:'+$1tn', cap:'Added to China’s trade surplus year-to-date',
+    what:'Exports are driving most of China’s growth while consumption stays weak, investment fades and property keeps contracting. China’s market share has risen to about 15% of total global exports.',
+    why:'The economy grows, but on one engine. Everything else in the China story follows from that.', src:'2026 Asia Outlook'},
+   {teaser:'What does winning that much share invite?', k:'Which invites', t:'Pushback, and a slower 2026', stat:'15%', cap:'China’s share of total global exports',
+    what:'That success invites pushback from trading partners, and the high base makes a repeat harder. These developments are a key reason why we anticipate Chinese export growth to moderate heading into 2026.',
+    why:'Growth of 4.3% in 2026 is a step down from 2025, not a collapse. The moderation is in the export engine itself.', src:'2026 Asia Outlook'},
+   {teaser:'A record surplus should lift the currency. Does it?', k:'Which does not lift', t:'A managed yuan', stat:'−4%', cap:'Trade-weighted yuan over the same period',
+    what:'Despite the surplus, the yuan has weakened 4% on a trade-weighted basis. It is a heavily managed currency under a low-vol framework, so the U.S. dollar is the main driver of USD/CNH. Policymakers are wary of hurting export competitiveness or entrenching deflation.',
+    why:'The bar for significant appreciation is high. Momentum could push USD/CNH below 7 near term; medium term we expect a stable, range-bound pair.', src:'2026 Asia Outlook'}
+  ],
+  ask:'Where would you look for opportunity in China?', opts:['Innovation-led winners, selected stock by stock','The broad index, on the export boom','A strong-yuan trade'], ans:0,
+  play:'Pick the winners; do not buy the engine',
+  view:'The outlook for Chinese equities has become more constructive over the medium term, and we view pullbacks as opportunities to add for investors who are underweight. But negative earnings revisions in 2025 imply recent gains were largely multiple-driven, so we prefer a highly selective approach with an emphasis on the China Tech Innovator Basket: AI and super apps, NEV and autonomous driving, semiconductor localisation.',
+  kstats:[['~3%','Chinese equities in a globally diversified equity allocation'],['4.3%','Real GDP growth expected in 2026, range 4.1–4.6%']],
+  pages:'China chapter and the implementation idea', link:'#idea-cn'},
+ {tab:'Consumption',
+  steps:[
+   {k:'The boom', t:'Growth that households do not feel', stat:'Weak', cap:'Consumption, while exports boom',
+    what:'The export engine runs hot, but the labour market is weak and income growth is slowing. Households stay cautious even as headline growth holds up.',
+    why:'Consumption weakness is a jobs and incomes problem, not a stimulus problem.', src:'2026 Asia Outlook'},
+   {teaser:'Will subsidies change that?', k:'Which subsidies cushion', t:'Trade-in subsidies continue', stat:'2026', cap:'The 2025 durable-goods trade-in programme is set to continue',
+    what:'The major consumer-stimulus policy of 2025 helps the categories it targets. It does not change the income picture that drives overall spending.',
+    why:'Expect support mainly through faster deployment of existing fiscal resources, not a new consumption programme.', src:'2026 Asia Outlook'},
+   {teaser:'So where is the consumer opportunity, if any?', k:'Which leaves', t:'Depressed consumer valuations', stat:'Risk / reward', cap:'An increasing number of consumer companies trade at depressed valuations',
+    what:'While we acknowledge domestic consumption remains soft, an increasing number of consumer companies being valued at depressed valuations could offer attractive risk/reward.',
+    why:'The macro says wait; selected valuations say look. That tension is the opportunity.', src:'Chinese equities: picking the winners is paramount'}
+  ],
+  ask:'How would you play China’s consumer?', opts:['Selected consumer names at depressed valuations','Avoid consumer entirely until incomes recover','Buy broad consumer exposure on the subsidies'], ans:0,
+  play:'Selective value in consumer, alongside dividends',
+  view:'Beyond the Tech Innovator Basket, high-quality dividend names with resilient earnings continue to offer attractive yields, and consumer companies at depressed valuations could offer attractive risk/reward even with consumption soft.',
+  kstats:[['Trade-in','The 2025 subsidy programme that continues in 2026'],['Jobs','The constraint the outlook points to, not stimulus']],
+  pages:'China chapter', link:'#idea-cn'},
+ {tab:'Tech',
+  steps:[
+   {k:'The boom', t:'Innovation at impressive pace', stat:'3', cap:'Themes in the China Tech Innovator Basket',
+    what:'China will likely continue to grapple with structural economic challenges, though its impressive pace of tech innovation can yield select winners: AI and “super apps” driving digital efficiency and monetisation, NEV and autonomous driving reshaping mobility, and semiconductor localisation.',
+    why:'The reason to own China is innovation, not the macro.', src:'2026 Asia Outlook'},
+   {teaser:'Is tech caught in the overcapacity problem?', k:'Which is less exposed', t:'Measured investment', stat:'Less', cap:'Exposure of China’s tech sector to overcapacity, versus U.S. tech credits facing AI capex supply pressure',
+    what:'China’s tech sector is less exposed, as its investment is more measured, and fundamentals could improve if “anti-involution” measures to curb price wars become more effective.',
+    why:'Even so, valuations remain elevated versus U.S. peers in credit, so we stay patient for better entry points.', src:'Asia fixed income'},
+   {teaser:'What would make the credit side interesting?', k:'Which rewards', t:'Patience in China tech credit', stat:'Wait', cap:'For better entry points as market conditions evolve',
+    what:'Since current valuations remain elevated compared to U.S. peers, we prefer to stay patient and wait for better entry points.',
+    why:'Equity: selective now. Credit: selective later.', src:'Asia fixed income: opportunities if you know where to look'}
+  ],
+  ask:'Where would you look first?', opts:['The Tech Innovator Basket in equities','China tech credit at today’s valuations','Neither; wait for the macro to improve'], ans:0,
+  play:'Equities now, credit when the price is right',
+  view:'In equities we emphasise the China Tech Innovator Basket across AI and super apps, NEV and autonomous driving, and semiconductor localisation. In credit, China’s tech sector is less exposed to the capex-driven supply pressure facing U.S. tech, but valuations are elevated, so we wait for better entry points.',
+  kstats:[['AI · NEV · Chips','The three basket themes'],['Elevated','China tech credit valuations versus U.S. peers']],
+  pages:'China chapter and Asia fixed income', link:'#idea-fi'}
+];
+var rip={t:0, shown:1, choice:null, explored:{}, fresh:-1};
+var tabsEl=document.getElementById('rip-tabs'), tlEl=document.getElementById('rip-tl');
+function drawRip(){
+  tabsEl.innerHTML=THREADS.map(function(th,i){ return '<button class="rtab" type="button" role="tab" aria-selected="'+(i===rip.t)+'" data-thread="'+i+'">'+th.tab+(rip.explored[i]&&i!==rip.t?'<small>Explored</small>':'')+'</button>'; }).join('');
+  var th=THREADS[rip.t], h='';
+  h+='<li class="tl-i start"><span class="tl-dot"></span><div class="tl-c"><span class="tl-k">Start</span><p class="tl-start">The export boom</p></div></li>';
+  for(var i=0;i<rip.shown;i++){
+    var st=th.steps[i];
+    h+='<li class="tl-i on'+(rip.fresh===i?' fresh':'')+'"><span class="tl-dot"></span><div class="tl-c tl-wide"><div class="tl-grid">'+
+      '<div class="tl-l"><span class="tl-k">'+st.k+'</span><h4>'+st.t+'</h4><p>'+st.what+'</p><span class="src-l">'+st.src+'</span></div>'+
+      '<div class="tl-r"><div class="tl-stat"><b>'+st.stat+'</b><span>'+st.cap+'</span></div>'+
+      '<div class="why"><span>Why it matters</span><p>'+st.why+'</p></div></div></div></div></li>';
+  }
+  if(rip.shown<3){
+    h+='<li class="tl-i next"><span class="tl-dot"></span><div class="tl-c"><span class="tl-k">Then</span><button class="reveal-btn" type="button" data-reveal="1"><span>'+th.steps[rip.shown].teaser+'</span><span class="rb-cta">Reveal</span></button></div></li>';
+  } else {
+    var ob=th.opts.map(function(o,i){ var c=''; if(rip.choice!==null){ c=i===th.ans?' right':(i===rip.choice?' pick-muted':' dim'); } return '<button type="button" class="opt2'+c+'" aria-pressed="'+(rip.choice===i)+'" data-choose="'+i+'">'+o+(rip.choice!==null&&i===th.ans?'<span class="tagS">Our strategists</span>':'')+'</button>'; }).join('');
+    h+='<li class="tl-i ask'+(rip.fresh===2&&rip.choice===null?' fresh':'')+(rip.choice!==null?' on':'')+'"><span class="tl-dot"></span><div class="tl-c"><span class="tl-k">So what for investors?</span><h4>'+th.ask+'</h4><div class="opts2">'+ob+'</div></div></li>';
+    if(rip.choice!==null){
+      var nxt=THREADS.map(function(x,i){return i;}).filter(function(i){ return i!==rip.t && !rip.explored[i]; })[0];
+      if(nxt===undefined) nxt=(rip.t+1)%THREADS.length;
+      h+='<li class="tl-i view fresh"><span class="tl-dot"></span><div class="tl-c view-box">'+
+        '<span class="tl-k">Our strategists’ view</span><h4>'+th.play+'</h4>'+
+        '<p class="aligned">'+(rip.choice===th.ans?'You are looking where our strategists look.':'Our strategists look elsewhere: '+th.opts[th.ans].toLowerCase()+'.')+'</p>'+
+        '<p>'+th.view+'</p>'+
+        '<div class="kstats">'+th.kstats.map(function(k){ return '<div><b>'+k[0]+'</b><span>'+k[1]+'</span></div>'; }).join('')+'</div>'+
+        '<div class="view-links"><a href="'+th.link+'">Read this in the '+th.pages+'</a><button type="button" data-thread="'+nxt+'">Follow the '+THREADS[nxt].tab.toLowerCase()+' thread</button><a href="#advisor">How much China is in my portfolio?</a></div>'+
+        '</div></li>';
+    }
+  }
+  tlEl.innerHTML=h;
+  var fs=tlEl.querySelectorAll('.fresh'), f=fs.length?fs[fs.length-1]:null;
+  if(f && rip.fresh!==-1){ try{ f.scrollIntoView({behavior:reduce?'auto':'smooth', block:'nearest'}); }catch(e){} }
+  rip.fresh=-1;
+}
+document.getElementById('ripple').addEventListener('click',function(e){
+  var b=e.target.closest('button'); if(!b) return;
+  if(b.hasAttribute('data-thread')){ rip.t=+b.getAttribute('data-thread'); rip.shown=1; rip.choice=null; rip.fresh=-1; drawRip(); document.getElementById('ripple').scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'}); return; }
+  if(b.hasAttribute('data-reveal')){ rip.shown++; rip.fresh=rip.shown-1; drawRip(); return; }
+  if(b.hasAttribute('data-choose') && rip.choice===null){ rip.choice=+b.getAttribute('data-choose'); rip.explored[rip.t]=true; rip.fresh=4; drawRip(); }
+});
+drawRip();
+
+/* ---------- reading paths ---------- */
+var PATHS={
+  china:{label:'I invest mainly in China',items:[
+    ['Can China’s growth model persist in 2026?','Chapter 02 · China','#china',6],
+    ['Follow the thread: exports, consumption, tech','Chapter 02 · China','#ripple',4],
+    ['Chinese equities: picking the winners is paramount','Implementation ideas','#idea-cn',3],
+    ['Why the yuan is less likely to appreciate','Chapter 02 · China','#china',2]]},
+  ai:{label:'I want AI exposure in Asia',items:[
+    ['Taiwan and Korea: close to 30% of global AI capex','Chapter 05','#twkr',3],
+    ['The region: the AI earnings upgrade cycle','Chapter 01','#region',4],
+    ['China’s Tech Innovator Basket','Implementation ideas','#idea-cn',3],
+    ['Asia fixed income: China tech credit, patiently','Implementation ideas','#idea-fi',2]]},
+  india:{label:'I am looking at India',items:[
+    ['India: an attractive entry point','Chapter 04 · India','#india',4],
+    ['Indian equities: build a long-term allocation','Implementation ideas','#idea-in',3],
+    ['The region: where the best entry point is','Chapter 01','#region',4],
+    ['Asia fixed income: Indian high yield','Implementation ideas','#idea-fi',2]]},
+  income:{label:'I want income from Asia',items:[
+    ['Asia fixed income: opportunities if you know where to look','Implementation ideas','#idea-fi',4],
+    ['Japan: dovish policy and a priced-in market','Chapter 03 · Japan','#japan',4],
+    ['Chinese equities: high-quality dividend names','Implementation ideas','#idea-cn',3],
+    ['The region: central banks hand over to budgets','Chapter 01','#region',4]]}
+};
+var path='china';
+var pEl=document.getElementById('personas'), lEl=document.getElementById('pathlist'), tEl=document.getElementById('pathtotal');
+function drawPath(){
+  pEl.innerHTML=Object.keys(PATHS).map(function(k){ return '<button class="persona" type="button" aria-pressed="'+(k===path)+'" data-k="'+k+'">'+PATHS[k].label+'</button>'; }).join('');
+  var total=0;
+  lEl.innerHTML=PATHS[path].items.map(function(it,i){ total+=it[3]; return '<a class="item" href="'+it[2]+'"><span class="no">0'+(i+1)+'</span><span class="mid"><span>'+it[0]+'</span><span>'+it[1]+'</span></span><span class="meta">'+it[3]+' min</span></a>'; }).join('');
+  tEl.textContent='About '+total+' minutes of reading to get started.';
+}
+pEl.addEventListener('click',function(e){ var b=e.target.closest('[data-k]'); if(!b) return; path=b.getAttribute('data-k'); drawPath(); });
+drawPath();
+
+/* ---------- advisor topics + keep the summary ---------- */
+var TOPICS=['China in my portfolio','AI exposure in Asia','Building an India allocation','Japan after the rally','Asia bonds for income','Currency risk in Asia'];
+var on={}; var topEl=document.getElementById('topics');
+function drawTopics(){ topEl.innerHTML=TOPICS.map(function(t,i){ return '<button class="topic" type="button" aria-pressed="'+(!!on[i])+'" data-i="'+i+'">'+t+'</button>'; }).join(''); }
+var touched=false;
+topEl.addEventListener('click',function(e){ var b=e.target.closest('[data-i]'); if(!b) return; var i=b.getAttribute('data-i'); on[i]=!on[i]; touched=true; document.getElementById('topicnote').hidden=true; drawTopics(); });
+drawTopics();
+
+var eng={path:false};
+var keepList=document.getElementById('keeplist'), keepNote=document.getElementById('keepnote');
+function li(t,sub,you){ return '<li'+(you?' class="you"':'')+'><i></i><span>'+t+(sub?'<small>'+sub+'</small>':'')+'</span></li>'; }
+function drawKeep(){
+  var h=li('The five market views','The region, China, Japan, India, and Taiwan and Korea, each with its numbers');
+  var n=0, ag=0, byq={};
+  Object.keys(QUIZ).forEach(function(k){ QUIZ[k].items.forEach(function(s){ if(picks[s.id]!==undefined){ n++; byq[k]=true; if(picks[s.id]===s.house) ag++; } }); });
+  if(n) h+=li('Your calls, next to our strategists’','You matched our view on '+ag+' of '+n+(n===1?' call':' calls'),true);
+  var ex=Object.keys(rip.explored).map(function(k){ return THREADS[k].tab; });
+  if(ex.length) h+=li('The China thread'+(ex.length>1?'s':'')+' you followed: '+ex.join(', '),'With our strategists’ investment view',true);
+  if(eng.path) h+=li('Your reading path: '+PATHS[path].label,'The sections to start with',true);
+  h+=li('The four implementation ideas','Chinese, Japanese and Indian equities, and Asia fixed income');
+  keepList.innerHTML=h;
+  if(!touched){
+    var sug={};
+    if(byq.china||ex.length||(eng.path&&path==='china')) sug[0]=true;
+    if(byq.twkr||byq.region||(eng.path&&path==='ai')) sug[1]=true;
+    if(byq.india||(eng.path&&path==='india')) sug[2]=true;
+    if(byq.japan) sug[3]=true;
+    if(eng.path&&path==='income') sug[4]=true;
+    on=sug; drawTopics(); document.getElementById('topicnote').hidden=!Object.keys(sug).length;
+  }
+  var mine=keepList.querySelectorAll('li.you').length;
+  keepNote.textContent=mine?'Highlighted items come from what you explored on this page.':'Try the interactives above and your summary will include your own results.';
+}
+document.addEventListener('click',function(e){
+  if(e.target.closest('#personas [data-k]')) eng.path=true;
+  setTimeout(drawKeep,0);
+},true);
+drawKeep();
+var advchk=document.getElementById('advchk'), advbox=document.getElementById('advbox'), keepbtn=document.getElementById('keepbtn');
+function setAdv(v){ advchk.checked=v; advbox.hidden=!v; keepbtn.textContent=v?'Send summary and request a call':'Email me my summary'; }
+advchk.addEventListener('change',function(){ setAdv(advchk.checked); });
+document.addEventListener('click',function(e){ var a=e.target.closest('a[href="#advisor"]'); if(a) setAdv(true); });
+document.getElementById('keepform').addEventListener('submit',function(e){
+  e.preventDefault(); var f=e.target;
+  var ok=f.fn.value.trim()&&f.ln.value.trim()&&/.+@.+\..+/.test(f.em.value)&&f.ok.checked;
+  document.getElementById('keeperr').hidden=!!ok; document.getElementById('keepok').hidden=!ok;
+  document.getElementById('keepokh').textContent=advchk.checked?'Thank you. Your summary is on its way, and your J.P. Morgan team will be in touch.':'Thank you. Your summary is on its way.';
+});
+})();
+</script>
+</body>
+</html>

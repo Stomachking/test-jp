@@ -15,6 +15,7 @@ Source article: https://privatebank.jpmorgan.com/apac/en/insights/markets-and-in
 | `asia-outlook.js` | Content + infographics + renderer. Builds the whole component into one container. |
 | `index.html` | Demo host page (what GitHub Pages serves). |
 | `embed-snippet.html` | The three lines to paste into an article page. |
+| `report/index.html` | The 2026 Asia Outlook as a full report page, built on the "Outlook Landing Concept" design (Newsreader + Figtree, white ground, deep brown and mint). Single file plus `report/img/`. |
 
 ## Embedding on a web page
 
@@ -79,6 +80,16 @@ with a language toggle, WeChat JS-SDK share card, single file under 150 KB.
 ## Disclaimer
 
 Interactive edition for educational purposes. Not investment advice.
+
+## Report page (`report/`)
+
+Built from the supplied concept mockup, section for section: draft bar and nav, image hero,
+"three numbers" band, sticky chapter nav, five chapters (The region, China, Japan, India,
+Taiwan & Korea) each with an image opener, standfirst, copy, moving charts, a "Test your view"
+block and "Continue in the outlook" links; China also has a three-thread "Follow the thread"
+timeline. Then the dark "From view to position" ideas section, "Your reading path" personas,
+"The full outlook" table of contents, and the "Keep the summary" form that reflects what the
+reader explored. All interactions are client-side mockups; the form does not submit anywhere.
 
 ## Design boards
 
