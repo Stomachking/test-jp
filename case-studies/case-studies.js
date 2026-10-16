@@ -126,12 +126,56 @@ const CONTENT = [
   }
 ];
 
+/* ===================== ICONS (inline SVG, stroke-based) ===================== */
+const I={
+  launch:'<path d="M5 19l3-3M14 4c3 0 6 3 6 6l-8 8-6-6zM9 15l-3 5 5-3"/><circle cx="15" cy="9" r="1.5"/>',
+  carry:'<path d="M12 3v18M7 7c0-2 2-3 5-3s5 1 5 3-2 3-5 3-5 1-5 3 2 3 5 3 5-1 5-3"/>',
+  conc:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/>',
+  liquidity:'<path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/>',
+  cash:'<rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 11h18M16 15h2"/>',
+  xborder:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>',
+  succession:'<circle cx="12" cy="6" r="2.5"/><circle cx="6" cy="17" r="2.5"/><circle cx="18" cy="17" r="2.5"/><path d="M12 8.5V12M12 12l-6 2.5M12 12l6 2.5"/>',
+  access:'<rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/>',
+  pe:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/>',
+  hf:'<path d="M3 17l5-6 4 4 5-7 4 3M17 8h4v4"/>',
+  ceo:'<path d="M4 21V5l8-3 8 3v16M9 9h2M13 9h2M9 13h2M13 13h2M10 21v-4h4v4"/>',
+  fo:'<path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-5h4v5"/>',
+  compass:'<circle cx="12" cy="12" r="9"/><path d="M15 9l-2 5-5 2 2-5z"/>',
+  flag:'<path d="M5 21V4M5 4h12l-2 4 2 4H5"/>',
+  layers:'<path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5M3 17.5l9 5 9-5"/>',
+  spark:'<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/>',
+  check:'<circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 11l2 2 4-4"/>',
+  quote:'<path d="M7 7h4v6H7zM13 7h4v6h-4zM7 13c0 3 2 4 4 4M13 13c0 3 2 4 4 4"/>',
+  arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>'
+};
+const icon=(k,cls='')=>`<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true">${I[k]||''}</svg>`;
+SITUATIONS.forEach(s=>{s.icon=s.id;});
+CONTENT[0].persona='pe'; CONTENT[1].persona='hf'; CONTENT[2].persona='ceo'; CONTENT[3].persona='fo';
+
 /* ===================== HELPERS ===================== */
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>Array.from(r.querySelectorAll(s));
 const sitName=id=>(SITUATIONS.find(s=>s.id===id)||{}).name||id;
 const CHEV='<svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>';
 const TICK='<svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>';
+
+/* ===================== MOTION ===================== */
+const reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function observeReveal(scope){
+  const els=$$('.reveal',scope);
+  if(reduce||!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return;}
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px',threshold:.15});
+  els.forEach(e=>io.observe(e));
+}
+function countUp(scope){
+  if(reduce) return;
+  $$('.count',scope).forEach(el=>{
+    const txt=el.dataset.v; const m=txt.match(/^(\D*)(\d+)(.*)$/); if(!m) return;
+    const target=+m[2]; const start=performance.now(); const dur=900;
+    const tick=t=>{const k=Math.min(1,(t-start)/dur); const v=Math.round(target*(1-Math.pow(1-k,3))); el.textContent=m[1]+v+m[3]; if(k<1) requestAnimationFrame(tick);};
+    requestAnimationFrame(tick);
+  });
+}
 
 /* ===================== RENDER ===================== */
 function render(root){
@@ -143,16 +187,23 @@ function render(root){
   root.innerHTML=`
   <div class="wrap">
     <header class="intro">
-      <div class="eyebrow">Case studies</div>
-      <h2>Tailored strategies for financial leaders</h2>
-      <p class="lede">The same four pillars, banking, lending, investing and planning, combined differently for each client. Pick the situation closest to yours and read how the strategy was put together.</p>
-      <p class="note"><i></i><span>The scenarios below are illustrative composites built to show how strategies are tailored. They are not descriptions of actual clients, and nothing here is advice.</span></p>
+      <div class="intro-text">
+        <div class="eyebrow">Case studies</div>
+        <h2>Tailored strategies for financial leaders</h2>
+        <p class="lede">Four pillars. Combined differently for every client. Pick the situation closest to yours.</p>
+        <p class="note"><i></i><span>Illustrative composites, not actual clients. Not advice.</span></p>
+      </div>
+      <div class="orbit" aria-hidden="true">
+        <div class="ring r1"></div><div class="ring r2"></div>
+        <div class="core"><span>You</span></div>
+        ${PILLARS.map((p,i)=>`<div class="sat s${i+1}"><span class="sat-ic">${p.icon}</span><b>${esc(p.name)}</b></div>`).join('')}
+      </div>
     </header>
 
-    <section class="matcher" aria-labelledby="cs-match-h">
+    <section class="matcher reveal" aria-labelledby="cs-match-h">
       <div class="head"><h3 id="cs-match-h">Which of these sound like you?</h3><div class="count" id="cs-count"></div></div>
       <div class="chips" id="cs-sit" role="group" aria-label="Situations">
-        ${SITUATIONS.map(s=>`<button class="chip" type="button" aria-pressed="false" data-sit="${s.id}"><i class="dot"></i>${esc(s.name)}</button>`).join('')}
+        ${SITUATIONS.map(s=>`<button class="chip" type="button" aria-pressed="false" data-sit="${s.id}">${icon(s.icon)}${esc(s.name)}</button>`).join('')}
         <button class="chip reset" type="button" id="cs-reset" hidden>Clear</button>
       </div>
     </section>
@@ -160,10 +211,10 @@ function render(root){
     <div class="rail" id="cs-rail" role="tablist" aria-label="Case studies"></div>
     <section class="detail" id="cs-detail" role="tabpanel"></section>
 
-    <section class="map" aria-labelledby="cs-map-h">
+    <section class="map reveal" aria-labelledby="cs-map-h">
       <div class="eyebrow">Strategy map</div>
       <h3 id="cs-map-h">Same pillars, different combinations</h3>
-      <p class="sub">Each column is one client. Read down a column to see how the four pillars were weighted for that situation; read across a row to see how one pillar changes shape from client to client. Select a cell to open that case.</p>
+      <p class="sub">One column per client. Dots show how heavily each pillar was used. Hover for the strategies; select a cell to open the case.</p>
       <div class="matrix" id="cs-matrix"></div>
     </section>
 
@@ -195,7 +246,7 @@ function render(root){
     rail.innerHTML=CONTENT.map(c=>{
       const n=matchCount(c);
       return `<button class="case-card pop ${sel&&n===0?'dim':''}" type="button" role="tab" aria-selected="${c.id===state.active}" data-case="${c.id}" id="cs-tab-${c.id}">
-        <div class="who"><span class="avatar" aria-hidden="true">${esc(c.initials)}</span><div><div class="role">${esc(c.role)}</div><div class="where">${esc(c.where)}</div></div></div>
+        <div class="who"><span class="avatar">${icon(c.persona)}</span><div><div class="role">${esc(c.role)}</div><div class="where">${esc(c.where)}</div></div></div>
         <h3>${esc(c.headline)}</h3>
         <div class="tags">${c.tags.map(t=>`<span class="tag ${state.selected.has(t)?'hit':''}">${esc(sitName(t))}</span>`).join('')}</div>
         <div class="match">${sel?(n?`Matches ${n} of your ${sel}`:'No overlap'):''}</div>
@@ -215,54 +266,60 @@ function render(root){
     const c=CONTENT.find(x=>x.id===state.active);
     const d=$('#cs-detail',root);
     d.setAttribute('aria-labelledby','cs-tab-'+c.id);
+    const weights=PILLARS.map(p=>(c.strategies[p.id]||[]).length); const wmax=Math.max(...weights,1);
     d.innerHTML=`
     <div class="detail-head">
-      <div class="title"><span class="pill">${esc(c.role)}</span><span class="small">${esc(c.where)}</span></div>
-      <h3>${esc(c.headline)}</h3>
+      <div class="title"><span class="avatar big">${icon(c.persona)}</span><div><span class="pill">${esc(c.role)}</span> <span class="small">${esc(c.where)}</span><h3>${esc(c.headline)}</h3></div></div>
       <p class="one">${esc(c.one)}</p>
+      <div class="weights" aria-label="How the four pillars were weighted">${PILLARS.map((p,i)=>`<div class="w"><span class="w-ic">${p.icon}</span><div class="w-bar"><i style="--w:${weights[i]/wmax*100}%"></i></div><b>${esc(p.name)}</b><span class="w-n">${weights[i]||'–'}</span></div>`).join('')}</div>
     </div>
     <div class="detail-body">
       <aside class="profile">
-        <div class="pcard pop">
-          <div class="lbl">Client profile</div>
+        <div class="pcard reveal">
+          <div class="lbl">${icon('check','lbl-ic')}Client profile</div>
           <ul class="facts">${c.facts.map(f=>`<li><span>${esc(f[0])}</span><b>${esc(f[1])}</b></li>`).join('')}</ul>
         </div>
-        <div class="pcard shape pop">
-          <div class="lbl">Wealth shape</div>
+        <div class="pcard shape reveal">
+          <div class="lbl">${icon('layers','lbl-ic')}Wealth shape</div>
           <div class="bars">
             <div class="row"><div class="cap"><b>Before</b><span>share of net worth</span></div>${shapeBar(c.shape.before)}</div>
-            <div class="row"><div class="cap"><b>After</b><span>at the end of the engagement</span></div>${shapeBar(c.shape.after)}</div>
+            <div class="row"><div class="cap"><b>After</b><span>end of engagement</span></div>${shapeBar(c.shape.after)}</div>
           </div>
           <div class="legend">${SHAPE_KEYS.map((k,i)=>`<span><i class="k${i+1}"></i>${esc(k)}</span>`).join('')}</div>
           <div class="delta">${c.delta}</div>
         </div>
-        <div class="pcard pop">
-          <div class="lbl">Outcome</div>
-          <div class="outcomes">${c.outcomes.map(o=>`<div class="outcome"><b>${esc(o[0])}</b><span>${esc(o[1])}</span></div>`).join('')}</div>
+        <div class="pcard reveal">
+          <div class="lbl">${icon('spark','lbl-ic')}Outcome</div>
+          <div class="outcomes">${c.outcomes.map(o=>`<div class="outcome"><b class="count" data-v="${esc(o[0])}">${esc(o[0])}</b><span>${esc(o[1])}</span></div>`).join('')}</div>
         </div>
       </aside>
       <div class="journey">
-        <div class="step pop"><div class="n">1</div><div class="body"><h4>The situation</h4><p>${esc(c.situation)}</p></div></div>
-        <div class="step pop"><div class="n">2</div><div class="body"><h4>What mattered most</h4><ul class="prior">${c.priorities.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div></div>
-        <div class="step pop"><div class="n">3</div><div class="body"><h4>The tailored strategy</h4><p>Four pillars, weighted for this client. Open any strategy to see why it was chosen and what it unlocked.</p>
-          <div class="stack-grid">${PILLARS.map(p=>{const list=c.strategies[p.id]||[];return `<div class="pillar ${list.length?'':'off'}">
-            <div class="ph"><span class="ic" aria-hidden="true">${p.icon}</span><b>${esc(p.name)}</b><span>${list.length?list.length+(list.length>1?' strategies':' strategy'):'not needed here'}</span></div>
-            ${list.length?list.map((s,i)=>`<button class="strat" type="button" aria-expanded="false" data-p="${p.id}" data-i="${i}"><span class="sname">${esc(s.name)}${CHEV}</span><div class="why"><div><b>Why for this client</b><br>${esc(s.why)}</div><div><b>What it unlocked</b><br>${esc(s.unlock)}</div></div></button>`).join(''):`<div class="none">${esc(p.sub)} were already in place.</div>`}
+        <div class="step reveal"><div class="n">${icon('compass')}</div><div class="body"><h4>The situation</h4>
+          <p class="clamp" id="cs-sit-p">${esc(c.situation)}</p><button class="more" type="button" data-for="cs-sit-p">Read the full story ${icon('arrow')}</button></div></div>
+        <div class="step reveal"><div class="n">${icon('flag')}</div><div class="body"><h4>What mattered most</h4><ul class="prior">${c.priorities.map((p,i)=>`<li><span class="pn">${i+1}</span>${esc(p)}</li>`).join('')}</ul></div></div>
+        <div class="step reveal"><div class="n">${icon('layers')}</div><div class="body"><h4>The tailored strategy</h4><p class="hint">Open a strategy to see why it was chosen and what it unlocked.</p>
+          <div class="stack-grid">${PILLARS.map((p,pi)=>{const list=c.strategies[p.id]||[];return `<div class="pillar ${list.length?'':'off'} reveal">
+            <div class="ph"><span class="ic">${p.icon}</span><b>${esc(p.name)}</b><span class="dots">${[0,1,2].map(k=>`<i class="${k<list.length?'on':''}"></i>`).join('')}</span></div>
+            ${list.length?list.map((s,i)=>`<button class="strat" type="button" aria-expanded="false"><span class="sname">${esc(s.name)}${CHEV}</span><div class="why"><div><b>Why for this client</b><br>${esc(s.why)}</div><div><b>What it unlocked</b><br>${esc(s.unlock)}</div></div></button>`).join(''):`<div class="none">Already in place</div>`}
           </div>`;}).join('')}</div></div></div>
-        <div class="step pop"><div class="n">4</div><div class="body"><h4>How it played out</h4>
+        <div class="step reveal"><div class="n">${icon('quote')}</div><div class="body"><h4>How it played out</h4>
           <div class="quote"><div class="txt">“${esc(c.quote.txt)}”</div><div class="by">${esc(c.quote.by)}</div></div></div></div>
-        <div class="step pop"><div class="n">5</div><div class="body"><h4>Could this be you?</h4>
+        <div class="step reveal"><div class="n">${icon('check')}</div><div class="body"><h4>Could this be you?</h4>
           <div class="fit"><div class="lbl">This case fits if</div>
-            <ul>${c.fit.map(t=>`<li class="${state.selected.has(t)?'on':''}"><span class="tick">${TICK}</span>${esc(sitName(t))}</li>`).join('')}</ul>
-            <div class="cta"><a class="btn" href="#contact">Talk to the Financial Leaders Group</a><button class="btn ghost" type="button" id="cs-next">Next case</button></div>
+            <ul>${c.fit.map(t=>`<li class="${state.selected.has(t)?'on':''}"><span class="tick">${TICK}</span>${icon(t)}${esc(sitName(t))}</li>`).join('')}</ul>
+            <div class="cta"><a class="btn" href="#contact">Talk to the Financial Leaders Group ${icon('arrow')}</a><button class="btn ghost" type="button" id="cs-next">Next case ${icon('arrow')}</button></div>
           </div></div></div>
       </div>
     </div>`;
+    d.classList.remove('swap'); void d.offsetWidth; d.classList.add('swap');
+    observeReveal(d);
+    countUp(d);
     // animate the "after" bars from the "before" widths
     const stacks=$$('.shape .row .stack',d);
     if(stacks[1]){ $$('i',stacks[1]).forEach(el=>{ const i=+el.className.slice(1)-1; const to=el.style.width; el.style.width=(c.shape.before[i]||0)+'%'; requestAnimationFrame(()=>requestAnimationFrame(()=>{el.style.width=to;})); }); }
     d.addEventListener('click',e=>{
       const s=e.target.closest('.strat'); if(s){s.setAttribute('aria-expanded',s.getAttribute('aria-expanded')!=='true'); return;}
+      const m=e.target.closest('.more'); if(m){const p=$('#'+m.dataset.for,d); p.classList.toggle('clamp'); m.innerHTML=(p.classList.contains('clamp')?'Read the full story ':'Show less ')+icon('arrow'); return;}
       if(e.target.closest('#cs-next')){const i=CONTENT.findIndex(x=>x.id===state.active); state.active=CONTENT[(i+1)%CONTENT.length].id; renderRail(); renderDetail(); renderMatrix(); $('#cs-rail',root).scrollIntoView({behavior:'smooth',block:'start'});}
     });
   }
@@ -270,14 +327,15 @@ function render(root){
   /* --- matrix --- */
   function renderMatrix(){
     const m=$('#cs-matrix',root);
-    m.innerHTML=`<table><thead><tr><th scope="col">Pillar</th>${CONTENT.map(c=>`<th scope="col">${esc(c.role)}<br><span style="font-weight:400;text-transform:none;letter-spacing:0">${esc(c.where.split(' · ')[0])}</span></th>`).join('')}</tr></thead>
-    <tbody>${PILLARS.map(p=>`<tr><th scope="row">${esc(p.name)}<span>${esc(p.sub)}</span></th>${CONTENT.map(c=>{const list=c.strategies[p.id]||[];return `<td class="${c.id===state.active?'cur':''}" data-case="${c.id}" tabindex="0" role="button" aria-label="Open ${esc(c.role)}"><div class="cell">${list.length?list.map(s=>`<span>${esc(s.name)}</span>`).join(''):'<span class="no">Already in place</span>'}</div></td>`;}).join('')}</tr>`).join('')}</tbody></table>`;
+    m.innerHTML=`<table><thead><tr><th scope="col">Pillar</th>${CONTENT.map(c=>`<th scope="col"><span class="avatar sm">${icon(c.persona)}</span>${esc(c.role)}<br><span style="font-weight:400;text-transform:none;letter-spacing:0">${esc(c.where.split(' · ')[0])}</span></th>`).join('')}</tr></thead>
+    <tbody>${PILLARS.map(p=>`<tr><th scope="row"><span class="ic sm">${p.icon}</span>${esc(p.name)}<span>${esc(p.sub)}</span></th>${CONTENT.map(c=>{const list=c.strategies[p.id]||[];return `<td class="${c.id===state.active?'cur':''}" data-case="${c.id}" tabindex="0" role="button" aria-label="Open ${esc(c.role)}"><div class="cell" title="${esc(list.map(s=>s.name).join(' · ')||'Already in place')}"><span class="dots">${[0,1,2].map(k=>`<i class="${k<list.length?'on':''}"></i>`).join('')}</span>${list.length?`<span>${esc(list[0].name)}${list.length>1?` <em>+${list.length-1}</em>`:''}</span>`:'<span class="no">Already in place</span>'}</div></td>`;}).join('')}</tr>`).join('')}</tbody></table>`;
     const open=t=>{const td=t.closest('td[data-case]'); if(!td) return; state.active=td.dataset.case; renderRail(); renderDetail(); renderMatrix(); $('#cs-detail',root).scrollIntoView({behavior:'smooth',block:'start'});};
     m.onclick=e=>open(e.target);
     m.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(e.target);}};
   }
 
   renderRail(); renderDetail(); renderMatrix();
+  observeReveal(root);
 }
 
 function init(container){

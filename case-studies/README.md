@@ -53,6 +53,16 @@ Deep links: `#cs-pe`, `#cs-hf`, `#cs-ceo`, `#cs-fo` open a case directly.
      (fit check that lights up the situations the reader selected, plus CTA and "next case").
 5. **Strategy map**: pillars × clients table. Click a cell to open that case.
 
+## Motion and icons
+
+- Intro: an orbit graphic of the four pillar icons circling "You", slowly rotating.
+- Every situation chip, persona, pillar and journey step carries a line icon from the `I` map in `case-studies.js`.
+- Pillar weight bars in the case header fill in when a case opens; outcome numbers count up; the
+  "after" wealth-shape bar grows from the "before" widths.
+- Sections and journey steps reveal on scroll (IntersectionObserver); strategy accordions slide open.
+- Long copy is clamped to three lines with a "Read the full story" toggle.
+- Everything respects `prefers-reduced-motion`.
+
 ## Content
 
 Four illustrative composites: a private equity partner (Hong Kong), a hedge fund founder spinning
