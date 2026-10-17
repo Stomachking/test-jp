@@ -46,11 +46,13 @@ Deep links: `#cs-pe`, `#cs-hf`, `#cs-ceo`, `#cs-fo` open a case directly.
    Selecting any of them sorts the case cards by overlap, dims non-matches and opens the best match.
 3. **Case rail**: four cards (persona, headline, situation tags, match count). Tabs for the detail.
 4. **Case detail**
-   - Sticky profile rail: client profile facts, animated *wealth shape* before/after bars, three outcome numbers.
-   - Journey: 1 The situation · 2 What mattered most · 3 The tailored strategy (four pillar cards; each
-     strategy expands to "why for this client" and "what it unlocked"; pillars not used are shown as
-     "already in place" so the weighting is honest) · 4 How it played out (quote) · 5 Could this be you
-     (fit check that lights up the situations the reader selected, plus CTA and "next case").
+   - Hero strip: the *wealth shape* before/after bars (animated) next to three outcome numbers.
+   - Sticky profile rail: who the client is (facts plus a clamped story) and a "this case fits if" check
+     with the contact CTA and "next case".
+   - Journey: 1 What we identified (three issue cards, each with an icon, a headline metric and one line)
+     · 2 How we helped (one row per issue: the issue on the left, the strategies that answer it on the
+     right, each tagged with its pillar and expandable to "why for this client" and "what it unlocked")
+     · 3 In the client's words.
 5. **Strategy map**: pillars × clients table. Click a cell to open that case.
 
 ## Motion and icons
@@ -69,7 +71,8 @@ Four illustrative composites: a private equity partner (Hong Kong), a hedge fund
 out (Singapore), an asset-management CEO after a sale (Tokyo) and a second-generation family-office
 principal (Sydney). All copy, figures and quotes are invented to demonstrate the format and must be
 replaced with approved material before publication. Edit `CONTENT` in `case-studies.js`; every case
-has `facts`, `shape`, `situation`, `priorities`, `strategies` (by pillar), `outcomes`, `quote` and `fit`.
+has `facts`, `shape`, `situation`, `issues`, `strategies` (by pillar; each strategy lists the issue indexes it
+`solves`), `outcomes`, `quote` and `fit`.
 
 ## Not yet done
 

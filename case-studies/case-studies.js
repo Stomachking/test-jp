@@ -44,14 +44,19 @@ const CONTENT = [
     delta:'Firm and fund exposure fell from <b>70% to 48%</b> without selling a single fund interest early.',
     situation:'The partner’s wealth looked large on paper but behaved like an illiquid private asset: capital calls arrived on the fund’s schedule, distributions came in bursts, and personal spending, school fees in two cities and a planned property purchase all needed cash that was not reliably there. Three vintages of carry made the picture more complex, not simpler.',
     priorities:['Meet every capital call without being a forced seller.','Build a portfolio that does not simply replicate private-equity risk.','Put the carry into a structure the next generation can inherit cleanly.'],
+    issues:[
+      {icon:'conc',title:'Wealthy on paper, illiquid in practice',metric:'70% in one firm',detail:'Firm equity and unrealised carry dominate the balance sheet and cannot be sold.'},
+      {icon:'liquidity',title:'Cash arrives on the fund’s timetable, not the family’s',metric:'Calls vs. distributions',detail:'Capital calls land between lumpy distributions; school fees and a property purchase do not wait.'},
+      {icon:'succession',title:'Three vintages of carry with no structure',metric:'2 jurisdictions',detail:'Carry is most valuable to transfer before it is realised, and the family spans Hong Kong and Singapore.'}
+    ],
     strategies:{
-      banking:[{name:'Multi-currency cash hub',why:'Hong Kong and Singapore outgoings in two currencies, with distributions arriving in U.S. dollars.',unlock:'One view of household cash, automated sweeps into a short-duration ladder.'}],
-      lending:[{name:'Capital-call facility secured on fund interests',why:'Calls landed between distributions; selling listed holdings each time would have broken the long-term portfolio.',unlock:'Calls met on the fund’s timetable; repaid from the next distribution.'},
-               {name:'Securities-based line for the property purchase',why:'A one-off need that would otherwise have forced a sale at a poor moment.',unlock:'Purchase completed; line repaid over eighteen months.'}],
-      investing:[{name:'Core portfolio built around the carry',why:'The partner already carried buyout risk at work, so the public portfolio tilts to quality equities, duration and income rather than more private equity.',unlock:'Diversified sleeve grew from 18% to 38% of net worth.'},
-                 {name:'Private credit as a complement',why:'Income to smooth the gap between distributions, with lower correlation to the fund’s own exits.',unlock:'Predictable quarterly income covering fixed outgoings.'}],
-      planning:[{name:'Trust structure for carry across vintages',why:'Carry is most valuable to transfer before it is realised; three vintages meant three different timings.',unlock:'Future carry held for the children with governance the partner set.'},
-                {name:'Cross-border family planning',why:'Two residencies, two sets of rules, one family.',unlock:'A single plan the advisers in both cities work from.'}]
+      banking:[{solves:[1],name:'Multi-currency cash hub',why:'Hong Kong and Singapore outgoings in two currencies, with distributions arriving in U.S. dollars.',unlock:'One view of household cash, automated sweeps into a short-duration ladder.'}],
+      lending:[{solves:[1],name:'Capital-call facility secured on fund interests',why:'Calls landed between distributions; selling listed holdings each time would have broken the long-term portfolio.',unlock:'Calls met on the fund’s timetable; repaid from the next distribution.'},
+               {solves:[1],name:'Securities-based line for the property purchase',why:'A one-off need that would otherwise have forced a sale at a poor moment.',unlock:'Purchase completed; line repaid over eighteen months.'}],
+      investing:[{solves:[0],name:'Core portfolio built around the carry',why:'The partner already carried buyout risk at work, so the public portfolio tilts to quality equities, duration and income rather than more private equity.',unlock:'Diversified sleeve grew from 18% to 38% of net worth.'},
+                 {solves:[0, 1],name:'Private credit as a complement',why:'Income to smooth the gap between distributions, with lower correlation to the fund’s own exits.',unlock:'Predictable quarterly income covering fixed outgoings.'}],
+      planning:[{solves:[2],name:'Trust structure for carry across vintages',why:'Carry is most valuable to transfer before it is realised; three vintages meant three different timings.',unlock:'Future carry held for the children with governance the partner set.'},
+                {solves:[2],name:'Cross-border family planning',why:'Two residencies, two sets of rules, one family.',unlock:'A single plan the advisers in both cities work from.'}]
     },
     outcomes:[['70→48%','firm & fund share of net worth'],['0','forced sales to meet calls'],['3','vintages of carry structured']],
     quote:{txt:'The calls stopped being a monthly scramble. For the first time the carry felt like family wealth rather than a bet on my own fund.',by:'Composite client voice, illustrative'},
@@ -67,13 +72,18 @@ const CONTENT = [
     delta:'The founder’s own strategy became the main concentration, by design, while <b>legacy concentrated stock fell from 35% to 8%</b> to fund it.',
     situation:'The spin-out was the opportunity of a career, and everything about it pulled on personal liquidity: the management company needed working capital, investors expected a visible GP commitment, and deferred compensation from the old platform would not vest for two more years. The founder’s personal portfolio was heavy in the same names the new fund would trade.',
     priorities:['Open the management company and fund accounts quickly, with treasury that scales.','Fund the GP commitment without liquidating everything personal.','Make the personal portfolio a counterweight to the fund, not a copy of it.'],
+    issues:[
+      {icon:'cash',title:'One pool of money, three claims on it',metric:'18-month runway',detail:'Working capital for the firm, a visible GP commitment and the household’s living costs all draw on the same liquidity.'},
+      {icon:'conc',title:'Personal wealth mirrors the fund',metric:'35% in overlapping names',detail:'The personal portfolio holds the same positions the new fund will trade, so the family carries the strategy risk twice.'},
+      {icon:'launch',title:'A launch date that cannot slip',metric:'Accounts before first close',detail:'Management company, GP and fund accounts must be live before the first subscription.'}
+    ],
     strategies:{
-      banking:[{name:'Entity onboarding for the management company and GP',why:'Launch dates do not move; the accounts had to be live before the first subscription.',unlock:'Operating, payroll and fee accounts open ahead of launch.'},
-               {name:'Operating treasury for the firm',why:'Working capital sitting idle during the runway period.',unlock:'Surplus swept into government money-market funds and a short ladder.'}],
-      lending:[{name:'Securities-based line for the GP commitment',why:'A loan against the diversified personal portfolio rather than selling it in a hurry.',unlock:'Commitment met on day one; repaid as deferred compensation vested.'}],
-      investing:[{name:'Personal portfolio rebuilt as a counterweight',why:'The founder now owned one large, deliberate concentration: their own fund. Everything else should look different.',unlock:'Low-overlap mandate with fixed income, real assets and non-overlapping equity.'},
-                 {name:'Staged sale of legacy concentrated stock',why:'Three positions overlapped with the fund’s book and crowded the risk budget.',unlock:'Concentration reduced from 35% to 8% over six quarters.'}],
-      planning:[{name:'Key-person and family protection',why:'The household’s income and wealth now depended on one person and one strategy.',unlock:'Protection sized to the runway and the GP stake.'}]
+      banking:[{solves:[2],name:'Entity onboarding for the management company and GP',why:'Launch dates do not move; the accounts had to be live before the first subscription.',unlock:'Operating, payroll and fee accounts open ahead of launch.'},
+               {solves:[0],name:'Operating treasury for the firm',why:'Working capital sitting idle during the runway period.',unlock:'Surplus swept into government money-market funds and a short ladder.'}],
+      lending:[{solves:[0],name:'Securities-based line for the GP commitment',why:'A loan against the diversified personal portfolio rather than selling it in a hurry.',unlock:'Commitment met on day one; repaid as deferred compensation vested.'}],
+      investing:[{solves:[1],name:'Personal portfolio rebuilt as a counterweight',why:'The founder now owned one large, deliberate concentration: their own fund. Everything else should look different.',unlock:'Low-overlap mandate with fixed income, real assets and non-overlapping equity.'},
+                 {solves:[1],name:'Staged sale of legacy concentrated stock',why:'Three positions overlapped with the fund’s book and crowded the risk budget.',unlock:'Concentration reduced from 35% to 8% over six quarters.'}],
+      planning:[{solves:[0],name:'Key-person and family protection',why:'The household’s income and wealth now depended on one person and one strategy.',unlock:'Protection sized to the runway and the GP stake.'}]
     },
     outcomes:[['Day 1','accounts live before first close'],['35→8%','legacy concentrated stock'],['6 qtrs','to complete the staged sale']],
     quote:{txt:'I wanted my investors to see conviction and my family to see prudence. Those two things turned out to be the same plan.',by:'Composite client voice, illustrative'},
@@ -89,13 +99,18 @@ const CONTENT = [
     delta:'Concentration in the acquirer fell from <b>72% to 30%</b> across the lock-up schedule, with the rest moved to a diversified core and philanthropy.',
     situation:'Selling the firm removed one concentration and created another. Most of the proceeds were shares under lock-up, so the CEO could not simply diversify, yet the position was large enough that every earnings call moved the family’s net worth. Three children in three tax jurisdictions and a long-held wish to fund education in Japan added planning decisions that could not wait for the lock-ups to end.',
     priorities:['Reduce single-stock risk inside the rules of the lock-up.','Fund life and philanthropy now, not in two years.','Settle how wealth passes to children in three countries before any shares are sold.'],
+    issues:[
+      {icon:'conc',title:'One stock, and it is locked up',metric:'72% in acquirer shares',detail:'Most of the sale proceeds are restricted shares; every earnings call moves the family’s net worth.'},
+      {icon:'liquidity',title:'Life and philanthropy cannot wait two years',metric:'4 releases over 24 months',detail:'A home, living costs and the first foundation grant need funding before the lock-ups end.'},
+      {icon:'xborder',title:'Three children, three tax systems',metric:'JP · UK · US',detail:'Transfers must be sequenced around each child’s residency and each share release.'}
+    ],
     strategies:{
-      banking:[{name:'Consolidated custody and reporting',why:'Shares, cash from the sale and legacy accounts sat in four places.',unlock:'One statement across jurisdictions, one set of numbers for the family.'}],
-      lending:[{name:'Lending against the restricted shares',why:'Liquidity was needed during the lock-up; selling was not possible.',unlock:'Living costs, a home and the first foundation grant funded without a sale.'}],
-      investing:[{name:'Hedging the position through the lock-up',why:'A collar on the unrestricted portion capped the downside the family could not afford.',unlock:'Downside protected while keeping some upside through the release schedule.'},
-                 {name:'Diversification programme by tranche',why:'Each lock-up release had a plan before it arrived, so decisions were not made on the day.',unlock:'Four tranches moved into a diversified core on schedule.'}],
-      planning:[{name:'Multi-jurisdiction estate and gifting plan',why:'Rules in Japan, the U.K. and the U.S. interact; sequencing matters.',unlock:'Transfers timed to the share releases and each child’s residency.'},
-                {name:'Family foundation for education in Japan',why:'A wish that had waited years because the firm always came first.',unlock:'Foundation funded with shares, grants starting in year one.'}]
+      banking:[{solves:[2],name:'Consolidated custody and reporting',why:'Shares, cash from the sale and legacy accounts sat in four places.',unlock:'One statement across jurisdictions, one set of numbers for the family.'}],
+      lending:[{solves:[1],name:'Lending against the restricted shares',why:'Liquidity was needed during the lock-up; selling was not possible.',unlock:'Living costs, a home and the first foundation grant funded without a sale.'}],
+      investing:[{solves:[0],name:'Hedging the position through the lock-up',why:'A collar on the unrestricted portion capped the downside the family could not afford.',unlock:'Downside protected while keeping some upside through the release schedule.'},
+                 {solves:[0],name:'Diversification programme by tranche',why:'Each lock-up release had a plan before it arrived, so decisions were not made on the day.',unlock:'Four tranches moved into a diversified core on schedule.'}],
+      planning:[{solves:[2],name:'Multi-jurisdiction estate and gifting plan',why:'Rules in Japan, the U.K. and the U.S. interact; sequencing matters.',unlock:'Transfers timed to the share releases and each child’s residency.'},
+                {solves:[1, 0],name:'Family foundation for education in Japan',why:'A wish that had waited years because the firm always came first.',unlock:'Foundation funded with shares, grants starting in year one.'}]
     },
     outcomes:[['72→30%','single-stock exposure'],['4/4','lock-up releases executed to plan'],['Yr 1','first foundation grants made']],
     quote:{txt:'Selling the company was supposed to simplify things. It took a plan for all three countries to actually make that true.',by:'Composite client voice, illustrative'},
@@ -111,14 +126,19 @@ const CONTENT = [
     delta:'Idle cash fell from <b>20% to 10%</b> as the diversified and alternatives sleeve grew to 44%, run through a new investment committee.',
     situation:'The first generation had built the family office around what they knew best: credit. The second generation inherited an operating fund, a handful of direct holdings and more cash than anyone intended, with no common view across managers and no forum where the next generation could learn to decide. Co-investment opportunities were arriving faster than the office could evaluate them.',
     priorities:['Get institutional-quality access to private markets and the due diligence to use it.','Put cash to work and consolidate reporting across the fund and the family.','Build governance a third generation can grow into.'],
+    issues:[
+      {icon:'cash',title:'A fifth of the balance sheet earning nothing',metric:'20% idle cash',detail:'Cash built up with no plan for when the family would need it.'},
+      {icon:'access',title:'Opportunities arriving faster than the office can judge them',metric:'No diligence process',detail:'Co-investments and alternatives the office could not source or vet alone.'},
+      {icon:'succession',title:'Decisions live with one person',metric:'5 next-gen, no forum',detail:'No investment committee, and a third generation with no place to learn.'}
+    ],
     strategies:{
-      banking:[{name:'Fund banking for the credit vehicle',why:'The family’s fund needed the same subscription-line and treasury tooling as any sponsor.',unlock:'Capital calls bridged and operating cash managed in one place.'},
-               {name:'Reporting across the office',why:'Managers, direct holdings and the fund each reported differently.',unlock:'One consolidated book the committee reviews quarterly.'}],
-      lending:[{name:'Co-investment facility',why:'Good opportunities arrived on short deadlines; cash was committed elsewhere.',unlock:'Three co-investments completed without disturbing the core.'}],
-      investing:[{name:'Alternatives access with manager due diligence',why:'Private equity, infrastructure and hedge fund exposure the office could not source alone.',unlock:'Alternatives sleeve built over two years from a vetted shortlist.'},
-                 {name:'Cash put to work by tenor',why:'A fifth of the balance sheet was earning almost nothing.',unlock:'Idle cash halved; tiered by when the family needs it.'}],
-      planning:[{name:'Investment committee and next-generation seats',why:'Decisions lived with one person; the family wanted a process.',unlock:'Charter, quarterly cycle and two rotating next-generation seats.'},
-                {name:'Education programme for the third generation',why:'Five family members, two overseas, at different stages.',unlock:'Structured curriculum tied to committee attendance.'}]
+      banking:[{solves:[0],name:'Fund banking for the credit vehicle',why:'The family’s fund needed the same subscription-line and treasury tooling as any sponsor.',unlock:'Capital calls bridged and operating cash managed in one place.'},
+               {solves:[2],name:'Reporting across the office',why:'Managers, direct holdings and the fund each reported differently.',unlock:'One consolidated book the committee reviews quarterly.'}],
+      lending:[{solves:[1],name:'Co-investment facility',why:'Good opportunities arrived on short deadlines; cash was committed elsewhere.',unlock:'Three co-investments completed without disturbing the core.'}],
+      investing:[{solves:[1],name:'Alternatives access with manager due diligence',why:'Private equity, infrastructure and hedge fund exposure the office could not source alone.',unlock:'Alternatives sleeve built over two years from a vetted shortlist.'},
+                 {solves:[0],name:'Cash put to work by tenor',why:'A fifth of the balance sheet was earning almost nothing.',unlock:'Idle cash halved; tiered by when the family needs it.'}],
+      planning:[{solves:[2],name:'Investment committee and next-generation seats',why:'Decisions lived with one person; the family wanted a process.',unlock:'Charter, quarterly cycle and two rotating next-generation seats.'},
+                {solves:[2],name:'Education programme for the third generation',why:'Five family members, two overseas, at different stages.',unlock:'Structured curriculum tied to committee attendance.'}]
     },
     outcomes:[['20→10%','idle cash'],['3','co-investments completed'],['2','next-generation committee seats']],
     quote:{txt:'My parents built the fund. What we needed was a way for my children to learn to run it with us, not after us.',by:'Composite client voice, illustrative'},
@@ -146,11 +166,16 @@ const I={
   spark:'<path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/>',
   check:'<circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M15 11l2 2 4-4"/>',
   quote:'<path d="M7 7h4v6H7zM13 7h4v6h-4zM7 13c0 3 2 4 4 4M13 13c0 3 2 4 4 4"/>',
-  arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>'
+  arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+  issue:'<circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/>',
+  bank:'<path d="M3 10h18M5 10v8M9 10v8M15 10v8M19 10v8M3 18h18M12 3l9 6H3z"/>',
 };
 const icon=(k,cls='')=>`<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true">${I[k]||''}</svg>`;
 SITUATIONS.forEach(s=>{s.icon=s.id;});
 CONTENT[0].persona='pe'; CONTENT[1].persona='hf'; CONTENT[2].persona='ceo'; CONTENT[3].persona='fo';
+
+/* flat list of a case's strategies, each tagged with its pillar */
+const flat=c=>PILLARS.flatMap(p=>(c.strategies[p.id]||[]).map(st=>Object.assign({pillar:p},st)));
 
 /* ===================== HELPERS ===================== */
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -266,49 +291,51 @@ function render(root){
     const c=CONTENT.find(x=>x.id===state.active);
     const d=$('#cs-detail',root);
     d.setAttribute('aria-labelledby','cs-tab-'+c.id);
-    const weights=PILLARS.map(p=>(c.strategies[p.id]||[]).length); const wmax=Math.max(...weights,1);
+    const strategies=flat(c);
     d.innerHTML=`
     <div class="detail-head">
       <div class="title"><span class="avatar big">${icon(c.persona)}</span><div><span class="pill">${esc(c.role)}</span> <span class="small">${esc(c.where)}</span><h3>${esc(c.headline)}</h3></div></div>
       <p class="one">${esc(c.one)}</p>
-      <div class="weights" aria-label="How the four pillars were weighted">${PILLARS.map((p,i)=>`<div class="w"><span class="w-ic">${p.icon}</span><div class="w-bar"><i style="--w:${weights[i]/wmax*100}%"></i></div><b>${esc(p.name)}</b><span class="w-n">${weights[i]||'–'}</span></div>`).join('')}</div>
+    </div>
+    <div class="hero">
+      <div class="shape big-shape">
+        <div class="lbl">${icon('layers','lbl-ic')}Wealth shape <span class="small">share of net worth</span></div>
+        <div class="bars">
+          <div class="row"><div class="cap"><b>Before</b><span>when the client came to us</span></div>${shapeBar(c.shape.before)}</div>
+          <div class="row"><div class="cap"><b>After</b><span>end of the engagement</span></div>${shapeBar(c.shape.after)}</div>
+        </div>
+        <div class="legend">${SHAPE_KEYS.map((k,i)=>`<span><i class="k${i+1}"></i>${esc(k)}</span>`).join('')}</div>
+        <div class="delta">${c.delta}</div>
+      </div>
+      <div class="hero-out">
+        <div class="lbl">${icon('spark','lbl-ic')}Outcome</div>
+        <div class="outcomes">${c.outcomes.map(o=>`<div class="outcome"><b class="count" data-v="${esc(o[0])}">${esc(o[0])}</b><span>${esc(o[1])}</span></div>`).join('')}</div>
+      </div>
     </div>
     <div class="detail-body">
       <aside class="profile">
         <div class="pcard reveal">
-          <div class="lbl">${icon('check','lbl-ic')}Client profile</div>
+          <div class="lbl">${icon('check','lbl-ic')}The client</div>
           <ul class="facts">${c.facts.map(f=>`<li><span>${esc(f[0])}</span><b>${esc(f[1])}</b></li>`).join('')}</ul>
+          <p class="story clamp" id="cs-sit-p">${esc(c.situation)}</p><button class="more" type="button" data-for="cs-sit-p">Read the full story ${icon('arrow')}</button>
         </div>
-        <div class="pcard shape reveal">
-          <div class="lbl">${icon('layers','lbl-ic')}Wealth shape</div>
-          <div class="bars">
-            <div class="row"><div class="cap"><b>Before</b><span>share of net worth</span></div>${shapeBar(c.shape.before)}</div>
-            <div class="row"><div class="cap"><b>After</b><span>end of engagement</span></div>${shapeBar(c.shape.after)}</div>
-          </div>
-          <div class="legend">${SHAPE_KEYS.map((k,i)=>`<span><i class="k${i+1}"></i>${esc(k)}</span>`).join('')}</div>
-          <div class="delta">${c.delta}</div>
-        </div>
-        <div class="pcard reveal">
-          <div class="lbl">${icon('spark','lbl-ic')}Outcome</div>
-          <div class="outcomes">${c.outcomes.map(o=>`<div class="outcome"><b class="count" data-v="${esc(o[0])}">${esc(o[0])}</b><span>${esc(o[1])}</span></div>`).join('')}</div>
+        <div class="pcard reveal fit">
+          <div class="lbl">This case fits if</div>
+          <ul>${c.fit.map(t=>`<li class="${state.selected.has(t)?'on':''}"><span class="tick">${TICK}</span>${icon(t)}${esc(sitName(t))}</li>`).join('')}</ul>
+          <div class="cta"><a class="btn" href="#contact">Talk to us ${icon('arrow')}</a><button class="btn ghost" type="button" id="cs-next">Next case ${icon('arrow')}</button></div>
         </div>
       </aside>
       <div class="journey">
-        <div class="step reveal"><div class="n">${icon('compass')}</div><div class="body"><h4>The situation</h4>
-          <p class="clamp" id="cs-sit-p">${esc(c.situation)}</p><button class="more" type="button" data-for="cs-sit-p">Read the full story ${icon('arrow')}</button></div></div>
-        <div class="step reveal"><div class="n">${icon('flag')}</div><div class="body"><h4>What mattered most</h4><ul class="prior">${c.priorities.map((p,i)=>`<li><span class="pn">${i+1}</span>${esc(p)}</li>`).join('')}</ul></div></div>
-        <div class="step reveal"><div class="n">${icon('layers')}</div><div class="body"><h4>The tailored strategy</h4><p class="hint">Open a strategy to see why it was chosen and what it unlocked.</p>
-          <div class="stack-grid">${PILLARS.map((p,pi)=>{const list=c.strategies[p.id]||[];return `<div class="pillar ${list.length?'':'off'} reveal">
-            <div class="ph"><span class="ic">${p.icon}</span><b>${esc(p.name)}</b><span class="dots">${[0,1,2].map(k=>`<i class="${k<list.length?'on':''}"></i>`).join('')}</span></div>
-            ${list.length?list.map((s,i)=>`<button class="strat" type="button" aria-expanded="false"><span class="sname">${esc(s.name)}${CHEV}</span><div class="why"><div><b>Why for this client</b><br>${esc(s.why)}</div><div><b>What it unlocked</b><br>${esc(s.unlock)}</div></div></button>`).join(''):`<div class="none">Already in place</div>`}
+        <div class="step reveal"><div class="n">${icon('issue')}</div><div class="body"><h4>What we identified</h4>
+          <div class="issues">${c.issues.map((it,i)=>`<div class="issue reveal" data-issue="${i}"><div class="ih"><span class="inum">${i+1}</span><span class="metric">${esc(it.metric)}</span></div><div class="ii">${icon(it.icon)}</div><b>${esc(it.title)}</b><p>${esc(it.detail)}</p></div>`).join('')}</div></div></div>
+        <div class="step reveal"><div class="n">${icon('layers')}</div><div class="body"><h4>How we helped</h4><p class="hint">Each issue, and the strategies tailored to answer it. Open a strategy for the reasoning.</p>
+          <div class="map-rows">${c.issues.map((it,i)=>{const list=strategies.filter(st=>st.solves.includes(i));return `<div class="mrow reveal">
+            <div class="mi"><span class="inum">${i+1}</span><div><b>${esc(it.title)}</b><span class="small">${esc(it.metric)}</span></div></div>
+            <div class="mline" aria-hidden="true">${icon('arrow')}</div>
+            <div class="ms">${list.map(st=>`<button class="strat" type="button" aria-expanded="false"><span class="sname"><span class="pb ${st.pillar.id}">${st.pillar.icon}${esc(st.pillar.name)}</span>${esc(st.name)}${CHEV}</span><div class="why"><div><b>Why for this client</b><br>${esc(st.why)}</div><div><b>What it unlocked</b><br>${esc(st.unlock)}</div></div></button>`).join('')}</div>
           </div>`;}).join('')}</div></div></div>
-        <div class="step reveal"><div class="n">${icon('quote')}</div><div class="body"><h4>How it played out</h4>
+        <div class="step reveal"><div class="n">${icon('quote')}</div><div class="body"><h4>In the client’s words</h4>
           <div class="quote"><div class="txt">“${esc(c.quote.txt)}”</div><div class="by">${esc(c.quote.by)}</div></div></div></div>
-        <div class="step reveal"><div class="n">${icon('check')}</div><div class="body"><h4>Could this be you?</h4>
-          <div class="fit"><div class="lbl">This case fits if</div>
-            <ul>${c.fit.map(t=>`<li class="${state.selected.has(t)?'on':''}"><span class="tick">${TICK}</span>${icon(t)}${esc(sitName(t))}</li>`).join('')}</ul>
-            <div class="cta"><a class="btn" href="#contact">Talk to the Financial Leaders Group ${icon('arrow')}</a><button class="btn ghost" type="button" id="cs-next">Next case ${icon('arrow')}</button></div>
-          </div></div></div>
       </div>
     </div>`;
     d.classList.remove('swap'); void d.offsetWidth; d.classList.add('swap');

@@ -148,7 +148,8 @@
 .cs .step .n::after{content:"";position:absolute;top:36px;left:50%;width:1px;height:calc(100% + 400px);background:var(--cs-line);z-index:0}
 .cs .step{position:relative;overflow:hidden}
 .cs .step:last-child .n::after{display:none}
-.cs .step .body{display:grid;gap:10px;padding-bottom:4px}
+.cs .step .body{display:grid;gap:10px;padding-bottom:4px;min-width:0}
+.cs .journey,.cs .detail-body>*{min-width:0}
 .cs .step h4{font-family:var(--cs-serif);font-weight:600;font-size:21px;line-height:1.2;margin-top:3px}
 .cs .step p{font-size:15px;color:var(--cs-ink-2);max-width:64ch}
 .cs .step p b{color:var(--cs-ink)}
@@ -236,3 +237,56 @@
 @keyframes cs-pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 @media (max-width:600px){.cs .intro{padding:32px 0 20px}.cs .detail-body{padding:18px}.cs .detail-head{padding:20px 18px 16px}.cs .outcomes{grid-template-columns:1fr 1fr 1fr}.cs .outcome b{font-size:20px}}
 @media (prefers-reduced-motion:reduce){.cs *{animation:none!important;transition:none!important}.cs .reveal{opacity:1;transform:none}.cs .w .w-bar i{width:var(--w)}}
+
+/* ---------- v3: profile → issues → strategies per issue ---------- */
+.cs .hero{display:grid;gap:16px;padding:20px 24px;border-bottom:1px solid var(--cs-line);background:var(--cs-surface-2)}
+@media (min-width:900px){.cs .hero{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}}
+.cs .hero .lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cs-accent);display:flex;align-items:center;gap:6px}
+.cs .hero .lbl .small{text-transform:none;letter-spacing:0;font-weight:400;margin-left:4px}
+.cs .big-shape{display:grid;gap:12px}
+.cs .big-shape .stack{height:34px;border-radius:9px}
+.cs .big-shape .cap{font-size:13px}
+.cs .hero-out{display:grid;gap:10px;align-content:start}
+.cs .hero-out .outcomes{grid-template-columns:1fr 1fr 1fr}
+.cs .pcard .story{font-size:14px;color:var(--cs-ink-2);border-top:1px solid var(--cs-line);padding-top:10px;margin-top:2px}
+.cs .pcard.fit{background:var(--cs-surface-2)}
+.cs .pcard.fit .cta{margin-top:2px}
+.cs .issues{display:grid;gap:10px}
+@media (min-width:700px){.cs .issues{grid-template-columns:repeat(3,1fr)}}
+.cs .issue{background:var(--cs-surface);border:1.5px solid var(--cs-line);border-radius:14px;padding:14px;display:grid;gap:8px;align-content:start;position:relative;transition:border-color .2s,transform .2s}
+.cs .issue:hover{border-color:var(--cs-ink);transform:translateY(-2px)}
+.cs .issue .ih{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.cs .inum{flex:none;width:24px;height:24px;border-radius:50%;background:var(--cs-ink);color:#fff;font-size:12px;font-weight:700;display:grid;place-items:center}
+.cs .metric{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 8px;border-radius:999px;background:var(--cs-accent-soft);color:var(--cs-accent-ink);white-space:nowrap}
+.cs .issue .ii{width:40px;height:40px;border-radius:12px;background:var(--cs-surface-2);display:grid;place-items:center;color:var(--cs-accent);margin-top:2px}
+.cs .issue .ii .ico{width:20px;height:20px}
+.cs .issue b{font-size:15px;line-height:1.3;color:var(--cs-ink)}
+.cs .issue p{font-size:13px!important;color:var(--cs-ink-3)!important;line-height:1.5}
+.cs .map-rows{display:grid;gap:12px}
+.cs .mrow{display:grid;gap:10px;background:var(--cs-surface-2);border-radius:14px;padding:14px}
+@media (min-width:760px){.cs .mrow{grid-template-columns:minmax(0,.9fr) 28px minmax(0,1.3fr);align-items:start}}
+.cs .mi{display:flex;gap:10px;align-items:flex-start}
+.cs .mi b{display:block;font-size:14px;line-height:1.3;color:var(--cs-ink)}
+.cs .mi .small{display:block;margin-top:2px}
+.cs .mline{display:none;color:var(--cs-ink-3);padding-top:4px}
+@media (min-width:760px){.cs .mline{display:grid;place-items:center}}
+.cs .mline .ico{width:18px;height:18px;animation:cs-nudge 1.8s ease-in-out infinite}
+@keyframes cs-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(4px)}}
+.cs .ms{display:grid;gap:8px}
+.cs .strat .sname{flex-wrap:wrap}
+.cs .pb{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:6px;background:var(--cs-ink);color:#fff;margin-right:8px}
+.cs .pb svg{width:11px;height:11px;stroke:#fff;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.cs .pb.lending{background:var(--cs-series-1)} .cs .pb.investing{background:var(--cs-accent)} .cs .pb.planning{background:var(--cs-ink-2)}
+.cs .strat .sname .ico{margin-left:auto}
+@media (max-width:600px){.cs .hero{padding:16px 18px}.cs .hero-out .outcomes{grid-template-columns:1fr 1fr 1fr}}
+.cs .issues{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:699px){.cs .issues{grid-template-columns:1fr}}
+.cs .issue .ih{flex-wrap:wrap}
+.cs .metric{white-space:normal}
+.cs .ms .strat{position:relative;padding-right:34px}
+.cs .ms .strat .sname{display:block}
+.cs .ms .strat .pb{display:inline-flex;margin:0 0 6px}
+.cs .ms .strat .sname .ico{position:absolute;right:10px;top:12px;margin:0}
+.cs .ms .strat .pb{display:flex;width:max-content;margin:0 0 6px}
+.cs .ms .strat .sname>svg:not(.ico){position:absolute;right:10px;top:12px;width:14px;height:14px;stroke:var(--cs-ink-3);fill:none;stroke-width:2}
+.cs .issue .metric{font-size:10px;padding:3px 7px}
