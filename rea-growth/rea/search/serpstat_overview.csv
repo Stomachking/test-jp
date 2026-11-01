@@ -1,0 +1,13 @@
+brand,domain,database,visibility,keywords,est_monthly_traffic,traffic_change_vs_prev,ads,traffic_from_ai_overviews,aio_keywords,aio_citations,pulled,source
+J.P. Morgan Private Bank,privatebank.jpmorgan.com,g_us,2.1605,25039,1170559,118786,4,150133,13742,2030,2026-11-01,serpstat.google.domain.overview
+Goldman Sachs PWM,goldmansachs.com,g_us,3.517,37012,609221,51774,26,107829,15732,3873,2026-11-01,serpstat.google.domain.overview
+UBS GWM,ubs.com,g_us,1.9018,37170,1234404,-87227,20,114971,12226,3001,2026-11-01,serpstat.google.domain.overview
+HSBC Private Bank,privatebanking.hsbc.com,g_us,,1438,137290,0,0,,,,2026-11-01,serpstat.google.domain.overview
+Morgan Stanley PWM,morganstanley.com,g_us,11.6369,116531,2382291,116021,21,286392,48200,9875,2026-11-01,serpstat.google.domain.overview
+BlackRock,blackrock.com,g_us,10.9588,68883,1606449,-57045,58,180926,37876,8721,2026-11-01,serpstat.google.domain.overview
+J.P. Morgan Private Bank,privatebank.jpmorgan.com,g_hk,,1421,58836,0,,,,,2026-11-01,serpstat.google.domain.overview
+Goldman Sachs PWM,goldmansachs.com,g_hk,8.686,8229,12905,-1317,0,3260,187,53,2026-11-01,serpstat.google.domain.overview
+UBS GWM,ubs.com,g_hk,69.4797,10193,51842,9822,1,6242,441,135,2026-11-01,serpstat.google.domain.overview
+HSBC Private Bank,privatebanking.hsbc.com,g_hk,,508,47954,0,,,,,2026-11-01,serpstat.google.domain.overview
+Morgan Stanley PWM,morganstanley.com,g_hk,15.8942,13755,13928,1163,0,3280,263,63,2026-11-01,serpstat.google.domain.overview
+BlackRock,blackrock.com,g_hk,38.0766,12028,32247,5149,3,6350,537,172,2026-11-01,serpstat.google.domain.overview

@@ -1,0 +1,1428 @@
+{
+ "pulled": "2026-11-01",
+ "traffic_summary": {
+  "J.P. Morgan Private Bank": {
+   "organic_oct25": 920300,
+   "organic_peak": [
+    "2026-02",
+    1035000
+   ],
+   "organic_sep26": 649500,
+   "organic_change_pct": -29.4,
+   "organic_peak_to_sep_pct": -37.2,
+   "paid_dec25": 98880,
+   "paid_sep26": 785000,
+   "paid_x_dec_to_sep": 7.9,
+   "paid_biggest_step": [
+    "2026-02",
+    127.1
+   ],
+   "budget_sep26": 1912000
+  },
+  "Goldman Sachs PWM": {
+   "organic_oct25": 246200,
+   "organic_peak": [
+    "2026-01",
+    248000
+   ],
+   "organic_sep26": 196900,
+   "organic_change_pct": -20.0,
+   "organic_peak_to_sep_pct": -20.6,
+   "paid_dec25": 19460,
+   "paid_sep26": 34080,
+   "paid_x_dec_to_sep": 1.8,
+   "paid_biggest_step": [
+    "2026-04",
+    20.4
+   ],
+   "budget_sep26": 383900
+  },
+  "UBS GWM": {
+   "organic_oct25": 189100,
+   "organic_peak": [
+    "2025-10",
+    189100
+   ],
+   "organic_sep26": 162300,
+   "organic_change_pct": -14.2,
+   "organic_peak_to_sep_pct": -14.2,
+   "paid_dec25": 147100,
+   "paid_sep26": 565800,
+   "paid_x_dec_to_sep": 3.8,
+   "paid_biggest_step": [
+    "2026-03",
+    157.6
+   ],
+   "budget_sep26": 627100
+  },
+  "HSBC Private Bank": {
+   "organic_oct25": 336000,
+   "organic_peak": [
+    "2026-05",
+    355600
+   ],
+   "organic_sep26": 302500,
+   "organic_change_pct": -10.0,
+   "organic_peak_to_sep_pct": -14.9,
+   "paid_dec25": 34580,
+   "paid_sep26": 237600,
+   "paid_x_dec_to_sep": 6.9,
+   "paid_biggest_step": [
+    "2026-03",
+    123.7
+   ],
+   "budget_sep26": 719100
+  },
+  "Morgan Stanley PWM": {
+   "organic_oct25": 439200,
+   "organic_peak": [
+    "2025-10",
+    439200
+   ],
+   "organic_sep26": 396700,
+   "organic_change_pct": -9.7,
+   "organic_peak_to_sep_pct": -9.7,
+   "paid_dec25": 69250,
+   "paid_sep26": 158700,
+   "paid_x_dec_to_sep": 2.3,
+   "paid_biggest_step": [
+    "2026-01",
+    45.0
+   ],
+   "budget_sep26": 496300
+  },
+  "BlackRock": {
+   "organic_oct25": 297900,
+   "organic_peak": [
+    "2026-07",
+    320000
+   ],
+   "organic_sep26": 289600,
+   "organic_change_pct": -2.8,
+   "organic_peak_to_sep_pct": -9.5,
+   "paid_dec25": 20350,
+   "paid_sep26": 79570,
+   "paid_x_dec_to_sep": 3.9,
+   "paid_biggest_step": [
+    "2026-08",
+    30.4
+   ],
+   "budget_sep26": 797900
+  }
+ },
+ "li_stats": {
+  "J.P. Morgan Private Bank": {
+   "n": 14,
+   "settled_cutoff": "2026-10-25",
+   "followers": "324,856 followers",
+   "median_reactions": 97,
+   "top_quarter": [
+    [
+     "2026-10-02",
+     "image",
+     3534,
+     56,
+     "American Banker has named J.P. Morgan Asset & Wealth Management CEO Mary  Callahan Erdoes the \u201cMost Powerful W",
+     "https://www.linkedin.com/posts/jpmorganprivatebank-us_american-banker-has-named-jp-morgan-asset-activity-7511772023568650240-iHd4"
+    ],
+    [
+     "2026-10-05",
+     "document",
+     507,
+     93,
+     "We\u2019re delighted to announce that Maya Prabhu has stepped into a new role as Head of Wealth Advisory and Family",
+     "https://www.linkedin.com/posts/jpmorganprivatebank-us_welcome-maya-prabhu-activity-7512677992666472448-OV5T"
+    ],
+    [
+     "2026-10-19",
+     "video",
+     288,
+     5,
+     "What's the most important investment decision you'll make? It's probably not the stock you buy next week. It's",
+     "https://www.linkedin.com/posts/jpmorganprivatebank-us_whats-the-most-important-investment-decision-activity-7517947671085645825-4yLN"
+    ],
+    [
+     "2026-10-22",
+     "video",
+     248,
+     4,
+     "A day in London. A global community. One conversation: what\u2019s next for family offices.   From markets and geop",
+     "https://www.linkedin.com/posts/jpmorganprivatebank-us_a-day-in-london-a-global-community-one-activity-7519004634636591105-93Yv"
+    ]
+   ],
+   "bottom_half_median": 58,
+   "fmt_all": {
+    "image": 2,
+    "document": 5,
+    "video": 3,
+    "multi-image": 4
+   },
+   "fmt_top": {
+    "image": 1,
+    "document": 1,
+    "video": 2
+   },
+   "fmt_bottom": {
+    "video": 1,
+    "document": 2,
+    "multi-image": 4
+   },
+   "video_top": [
+    2,
+    4
+   ],
+   "video_bot": [
+    1,
+    7
+   ],
+   "doc_top": [
+    1,
+    4
+   ],
+   "doc_bot": [
+    2,
+    7
+   ],
+   "people_top": [
+    2,
+    4
+   ],
+   "people_bot": [
+    4,
+    7
+   ],
+   "question_top": [
+    1,
+    4
+   ],
+   "question_bot": [
+    0,
+    7
+   ],
+   "number_top": [
+    0,
+    4
+   ],
+   "number_bot": [
+    3,
+    7
+   ],
+   "posts_per_week": 3.5,
+   "repost_share": [
+    0,
+    14
+   ]
+  },
+  "Goldman Sachs PWM": {
+   "n": 20,
+   "settled_cutoff": "2026-10-25",
+   "followers": "6,204,516 followers",
+   "median_reactions": 376,
+   "top_quarter": [
+    [
+     "2026-10-01",
+     "image",
+     2470,
+     48,
+     "American Banker has named four Goldman Sachs leaders to its 2026 Most Powerful Women in Banking lists:  - Kim ",
+     "https://www.linkedin.com/posts/goldman-sachs_american-banker-has-named-four-goldman-sachs-activity-7511469012757970947-4z19"
+    ],
+    [
+     "2026-10-23",
+     "image",
+     2182,
+     187,
+     "Today, we are proud to announce a $500 million commitment to launch the Goldman Sachs Small Business AI Instit",
+     "https://www.linkedin.com/posts/david-m-solomon_today-we-are-proud-to-announce-a-500-million-activity-7519151524539727872-uMF3"
+    ],
+    [
+     "2026-10-21",
+     "multi-image",
+     807,
+     23,
+     "Since Goldman Sachs 10,000 Women India was founded over 15 years ago, graduates have contributed $2.2B and ove",
+     "https://www.linkedin.com/posts/goldman-sachs_since-goldman-sachs-10000-women-india-was-activity-7518498802362937344-OyZj"
+    ],
+    [
+     "2026-10-13",
+     "image",
+     652,
+     38,
+     "Elevated Treasury yields are reinforcing a higher-for-longer narrative, with half of respondents from a recent",
+     "https://www.linkedin.com/posts/goldman-sachs_elevated-treasury-yields-are-reinforcing-activity-7515847896236183552--HVM"
+    ],
+    [
+     "2026-10-03",
+     "video",
+     634,
+     23,
+     "Following the release of the latest inflation data, Goldman Sachs Chief Economist Jan Hatzius says he now expe",
+     "https://www.linkedin.com/posts/goldman-sachs_following-the-release-of-the-latest-inflation-activity-7512134365036957696-S-Fr"
+    ]
+   ],
+   "bottom_half_median": 272,
+   "fmt_all": {
+    "image": 3,
+    "multi-image": 2,
+    "video": 10,
+    "document": 4,
+    "article": 1
+   },
+   "fmt_top": {
+    "image": 3,
+    "multi-image": 1,
+    "video": 1
+   },
+   "fmt_bottom": {
+    "article": 1,
+    "video": 7,
+    "document": 2
+   },
+   "video_top": [
+    1,
+    5
+   ],
+   "video_bot": [
+    7,
+    10
+   ],
+   "doc_top": [
+    0,
+    5
+   ],
+   "doc_bot": [
+    2,
+    10
+   ],
+   "people_top": [
+    3,
+    5
+   ],
+   "people_bot": [
+    1,
+    10
+   ],
+   "question_top": [
+    0,
+    5
+   ],
+   "question_bot": [
+    5,
+    10
+   ],
+   "number_top": [
+    3,
+    5
+   ],
+   "number_bot": [
+    5,
+    10
+   ],
+   "posts_per_week": 5.0,
+   "repost_share": [
+    2,
+    20
+   ]
+  },
+  "UBS GWM": {
+   "n": 40,
+   "settled_cutoff": "2026-10-25",
+   "followers": "2,298,369 followers",
+   "median_reactions": 134,
+   "top_quarter": [
+    [
+     "2026-10-22",
+     "image",
+     1796,
+     32,
+     "Congratulations to UBS Chairman Colm Kelleher on receiving the 2026 P\u00e1draig \u00d3 hUiginn Outstanding Contribution",
+     "https://www.linkedin.com/posts/ubs_shareubs-activity-7519065323187240961-6mOM"
+    ],
+    [
+     "2026-10-07",
+     "image",
+     1151,
+     10,
+     "The US, alongside Asia Pacific, is a key growth market for UBS. Home to 40% of the world\u2019s millionaires, the m",
+     "https://www.linkedin.com/posts/ubs_ubs-wealthmanagement-globaleconomy-activity-7513676236435509248--JKb"
+    ],
+    [
+     "2026-10-15",
+     "video",
+     683,
+     6,
+     "Celebrating precision, performance and partnership at Formula 1 in Singapore!  Over the Singapore Grand Prix w",
+     "https://www.linkedin.com/posts/ubs_f1-singapore-grand-prix-2026-activity-7516459575307563008-u8dP"
+    ],
+    [
+     "2026-10-06",
+     "image",
+     576,
+     10,
+     "The art collecting landscape is shifting, but how?  Coming soon, The Art Basel and UBS Survey of Global Collec",
+     "https://www.linkedin.com/posts/ubs_shareubs-ubsart-artbasel-activity-7513242191658401792-Q8F5"
+    ],
+    [
+     "2026-10-06",
+     "document",
+     394,
+     8,
+     "At UBS, we want every employee to be a protagonist of our AI transformation.  In the latest Evident AI Index, ",
+     "https://www.linkedin.com/posts/ubs_click-through-to-see-where-we-ranked-in-the-activity-7513156657388965888-GwcA"
+    ],
+    [
+     "2026-10-06",
+     "video",
+     304,
+     12,
+     "The future of our industry will be shaped by people who bring diverse perspectives, think boldly and build mea",
+     "https://www.linkedin.com/posts/ubs_celebrating-our-2026-summer-internship-cohort-activity-7513236630552432640-JM3g"
+    ],
+    [
+     "2026-10-05",
+     "document",
+     271,
+     6,
+     "How are we turning our AI vision into a reality?  The AI & Transformation Factory in our Raleigh office is an ",
+     "https://www.linkedin.com/posts/ubs_swipe-to-hear-from-our-team-on-what-they-activity-7512889385143599104-mR-C"
+    ],
+    [
+     "2026-10-12",
+     "image",
+     263,
+     4,
+     "Celebrating 70 years in the Principality.  For seven decades, UBS has been part of Monaco's story.  Built on t",
+     "https://www.linkedin.com/posts/ubs_shareubs-activity-7515426055529099265-TkKy"
+    ],
+    [
+     "2026-10-22",
+     "image",
+     262,
+     24,
+     "When Kamil joined our UBS Asset Management team, he didn't expect to be so close to the core of the business. ",
+     "https://www.linkedin.com/posts/ubs_shareubs-ubscareers-activity-7518989537700659201-_jmj"
+    ],
+    [
+     "2026-10-09",
+     "video",
+     225,
+     7,
+     "Want to know how our recruiters spot AI-ready talent?\ud83e\udd16  As AI continues to shape the way we work, it's creatin",
+     "https://www.linkedin.com/posts/ubs_want-to-know-how-our-recruiters-spot-ai-ready-activity-7514338891437461504-xFfG"
+    ]
+   ],
+   "bottom_half_median": 99,
+   "fmt_all": {
+    "image": 9,
+    "video": 9,
+    "document": 19,
+    "multi-image": 2,
+    "article": 1
+   },
+   "fmt_top": {
+    "image": 5,
+    "video": 3,
+    "document": 2
+   },
+   "fmt_bottom": {
+    "document": 14,
+    "video": 3,
+    "image": 2,
+    "article": 1
+   },
+   "video_top": [
+    3,
+    10
+   ],
+   "video_bot": [
+    3,
+    20
+   ],
+   "doc_top": [
+    2,
+    10
+   ],
+   "doc_bot": [
+    14,
+    20
+   ],
+   "people_top": [
+    8,
+    10
+   ],
+   "people_bot": [
+    10,
+    20
+   ],
+   "question_top": [
+    3,
+    10
+   ],
+   "question_bot": [
+    3,
+    20
+   ],
+   "number_top": [
+    4,
+    10
+   ],
+   "number_bot": [
+    3,
+    20
+   ],
+   "posts_per_week": 10.0,
+   "repost_share": [
+    0,
+    40
+   ]
+  },
+  "HSBC Private Bank": {
+   "n": 22,
+   "settled_cutoff": "2026-10-25",
+   "followers": "178,837 followers",
+   "median_reactions": 64,
+   "top_quarter": [
+    [
+     "2026-10-07",
+     "image",
+     732,
+     13,
+     "Our CEO Ida Liu has written for Financial News on how private banking has reached a turning point, with trilli",
+     "https://www.linkedin.com/posts/hsbc-private-bank_nextgen-greatwealthtransfer-privatebanking-activity-7513475451613331456-612G"
+    ],
+    [
+     "2026-10-15",
+     "image",
+     662,
+     17,
+     "We're proud that Financial News has named our CEO Ida Liu one of the 100 Most Influential Women in European Fi",
+     "https://www.linkedin.com/posts/hsbc-private-bank_fn100women-mostinfluential-activity-7516377324456529920-JJHx"
+    ],
+    [
+     "2026-10-15",
+     "image",
+     217,
+     0,
+     "As market conditions evolve, investors are increasingly seeking professionally managed investment solutions th",
+     "https://www.linkedin.com/posts/hsbc-private-bank_hsbc-wealth-investing-activity-7516347126495379456-AvAw"
+    ],
+    [
+     "2026-10-22",
+     "video",
+     169,
+     6,
+     "Why do long-term investors win?  For Larry Fink, Chairman, CEO and Co-founder of BlackRock, the answer is simp",
+     "https://www.linkedin.com/posts/hsbc-private-bank_think-wealth-visionaries-larry-fink-and-activity-7518951786427121664-QPKj"
+    ],
+    [
+     "2026-10-21",
+     "image",
+     117,
+     4,
+     "There is no one-size-fits-all approach when it comes to the next generation of wealth.  Speaking with the Asia",
+     "https://www.linkedin.com/posts/hsbc-private-bank_hsbc-privatebanking-nextgeneration-activity-7518521497821380609-KP7s"
+    ],
+    [
+     "2026-10-23",
+     "image",
+     116,
+     14,
+     "We're delighted that Ronald Oman will join us as Global Head of Marketing on 2 November.   Ronald brings 25 ye",
+     "https://www.linkedin.com/posts/hsbc-private-bank_were-delighted-that-ronald-oman-will-join-activity-7519291525059493889-gzMw"
+    ]
+   ],
+   "bottom_half_median": 45,
+   "fmt_all": {
+    "image": 10,
+    "video": 5,
+    "article": 3,
+    "document": 1,
+    "multi-image": 2,
+    "text": 1
+   },
+   "fmt_top": {
+    "image": 5,
+    "video": 1
+   },
+   "fmt_bottom": {
+    "image": 5,
+    "multi-image": 2,
+    "video": 2,
+    "text": 1,
+    "article": 1
+   },
+   "video_top": [
+    1,
+    6
+   ],
+   "video_bot": [
+    2,
+    11
+   ],
+   "doc_top": [
+    0,
+    6
+   ],
+   "doc_bot": [
+    0,
+    11
+   ],
+   "people_top": [
+    4,
+    6
+   ],
+   "people_bot": [
+    6,
+    11
+   ],
+   "question_top": [
+    1,
+    6
+   ],
+   "question_bot": [
+    1,
+    11
+   ],
+   "number_top": [
+    2,
+    6
+   ],
+   "number_bot": [
+    4,
+    11
+   ],
+   "posts_per_week": 5.5,
+   "repost_share": [
+    2,
+    22
+   ]
+  },
+  "Morgan Stanley PWM": {
+   "n": 25,
+   "settled_cutoff": "2026-10-25",
+   "followers": "4,579,419 followers",
+   "median_reactions": 195,
+   "top_quarter": [
+    [
+     "2026-10-14",
+     "image",
+     1787,
+     21,
+     "Morgan Stanley today reported net revenues of $20.3 billion for the third quarter ended September 30, 2026 com",
+     "https://www.linkedin.com/posts/morgan-stanley_morgan-stanley-today-reported-net-revenues-activity-7516107183047073792-DEbB"
+    ],
+    [
+     "2026-10-14",
+     "image",
+     1362,
+     15,
+     "Chairman and CEO Ted Pick and CFO Sharon Yeshaya will host Morgan Stanley\u2019s 3Q26 investor conference call at 9",
+     "https://www.linkedin.com/posts/morgan-stanley_chairman-and-ceo-ted-pick-and-cfo-sharon-activity-7516114387229753344-ajeV"
+    ],
+    [
+     "2026-10-01",
+     "image",
+     1158,
+     33,
+     "Congratulations to Sharon Yeshaya and Lisa Shalett for their recognition on American Banker's 2026 The Most Po",
+     "https://www.linkedin.com/posts/morgan-stanley_congratulations-to-sharon-yeshaya-and-lisa-activity-7511503090148204544-AZw1"
+    ],
+    [
+     "2026-10-15",
+     "video",
+     1059,
+     16,
+     "Following the release of third quarter earnings, Chairman and CEO Ted Pick joined CNBC to discuss the Firm\u2019s s",
+     "https://www.linkedin.com/posts/morgan-stanley_ted-pick-on-3q-2026-results-with-cnbc-activity-7516579862434988033-wUIY"
+    ],
+    [
+     "2026-10-16",
+     "multi-image",
+     629,
+     9,
+     "Some of life's most valuable connections begin at work.  The Morgan Stanley Alumni Network recently brought to",
+     "https://www.linkedin.com/posts/morgan-stanley_some-of-lifes-most-valuable-connections-activity-7516846419635404800-grcR"
+    ],
+    [
+     "2026-10-13",
+     "multi-image",
+     474,
+     5,
+     "This Hispanic Heritage Month, colleagues across the Firm came together to celebrate culture, foster connection",
+     "https://www.linkedin.com/posts/morgan-stanley_this-hispanic-heritage-month-colleagues-activity-7515860287774715906-9sOL"
+    ],
+    [
+     "2026-10-15",
+     "article",
+     377,
+     29,
+     "Welcome to The Signal, a Morgan Stanley Institute newsletter delivering integrated insights on the defining qu",
+     "https://www.linkedin.com/posts/morgan-stanley_welcome-to-the-signal-a-morgan-stanley-institute-activity-7516518963355344896-_uxM"
+    ]
+   ],
+   "bottom_half_median": 129,
+   "fmt_all": {
+    "image": 6,
+    "video": 9,
+    "multi-image": 3,
+    "article": 2,
+    "document": 4,
+    "text": 1
+   },
+   "fmt_top": {
+    "image": 3,
+    "video": 1,
+    "multi-image": 2,
+    "article": 1
+   },
+   "fmt_bottom": {
+    "article": 1,
+    "document": 4,
+    "video": 5,
+    "image": 1,
+    "text": 1
+   },
+   "video_top": [
+    1,
+    7
+   ],
+   "video_bot": [
+    5,
+    12
+   ],
+   "doc_top": [
+    0,
+    7
+   ],
+   "doc_bot": [
+    4,
+    12
+   ],
+   "people_top": [
+    5,
+    7
+   ],
+   "people_bot": [
+    5,
+    12
+   ],
+   "question_top": [
+    0,
+    7
+   ],
+   "question_bot": [
+    1,
+    12
+   ],
+   "number_top": [
+    3,
+    7
+   ],
+   "number_bot": [
+    3,
+    12
+   ],
+   "posts_per_week": 6.2,
+   "repost_share": [
+    3,
+    25
+   ]
+  },
+  "BlackRock": {
+   "n": 6,
+   "settled_cutoff": "2026-10-25",
+   "followers": "3,274,227 followers",
+   "median_reactions": 32,
+   "top_quarter": [
+    [
+     "2026-10-22",
+     "image",
+     62,
+     0,
+     "O time da BlackRock Brasil participou de uma caminhada pelo Parque do Povo (Outubro Rosa)",
+     "https://www.linkedin.com/posts/blackrock_outubrorosa-blackrockbrasil-activity-7519004636842803200-RxgW"
+    ],
+    [
+     "2026-10-21",
+     "multi-image",
+     62,
+     2,
+     "Bruno Barino, Country Manager da BlackRock no Brasil, participou de uma entrevista \u00e0 GloboNews",
+     "https://www.linkedin.com/posts/blackrock_bruno-barino-country-manager-da-blackrock-activity-7518642272364830721-F1nJ"
+    ]
+   ],
+   "bottom_half_median": 18,
+   "fmt_all": {
+    "image": 2,
+    "multi-image": 4
+   },
+   "fmt_top": {
+    "image": 1,
+    "multi-image": 1
+   },
+   "fmt_bottom": {
+    "image": 1,
+    "multi-image": 2
+   },
+   "video_top": [
+    0,
+    2
+   ],
+   "video_bot": [
+    0,
+    3
+   ],
+   "doc_top": [
+    0,
+    2
+   ],
+   "doc_bot": [
+    0,
+    3
+   ],
+   "people_top": [
+    0,
+    2
+   ],
+   "people_bot": [
+    0,
+    3
+   ],
+   "question_top": [
+    0,
+    2
+   ],
+   "question_bot": [
+    0,
+    3
+   ],
+   "number_top": [
+    0,
+    2
+   ],
+   "number_bot": [
+    2,
+    3
+   ],
+   "posts_per_week": 1.5,
+   "repost_share": [
+    0,
+    6
+   ]
+  }
+ },
+ "meta": {
+  "Goldman Sachs PWM": {
+   "active": 40,
+   "pages": [
+    "Goldman Sachs"
+   ],
+   "oldest": "2026-09-02",
+   "domains": [
+    [
+     "ad.doubleclick.net",
+     30
+    ]
+   ],
+   "titles": [
+    [
+     "Goldman Sachs 10,000 Small Businesses",
+     15
+    ]
+   ]
+  },
+  "UBS GWM": {
+   "active": 698,
+   "pages": [
+    "UBS"
+   ],
+   "oldest": "2026-08-05",
+   "domains": [
+    [
+     "www.ubs.com",
+     19
+    ],
+    [
+     "from.ubs",
+     11
+    ]
+   ],
+   "titles": [
+    [
+     "UBS\u306eCraft\u3068\u306f\uff1f",
+     8
+    ],
+    [
+     "With you, wherever your legacy leads.\u200b",
+     3
+    ],
+    [
+     "\u8cc7\u7523\u306e\u672a\u6765\u3092\u3001\u518d\u5b9a\u7fa9\u3059\u308b",
+     3
+    ],
+    [
+     "Fale com um Client Advisor",
+     3
+    ]
+   ]
+  },
+  "Morgan Stanley PWM": {
+   "active": 58,
+   "pages": [
+    "Morgan Stanley"
+   ],
+   "oldest": "2026-10-01",
+   "domains": [
+    [
+     "ad.doubleclick.net",
+     30
+    ]
+   ],
+   "titles": [
+    [
+     "Hard Lessons",
+     6
+    ],
+    [
+     "Morgan Stanley Institute",
+     6
+    ],
+    [
+     "Hard Lessons: Jean Eric Salata",
+     5
+    ],
+    [
+     "The Morgan Stanley Blueprint: Bloom Energy",
+     4
+    ]
+   ]
+  },
+  "BlackRock": {
+   "active": 15,
+   "pages": [
+    "BlackRock"
+   ],
+   "oldest": "2026-10-28",
+   "domains": [
+    [
+     "ad.doubleclick.net",
+     13
+    ],
+    [
+     "partners.barrons.com",
+     2
+    ]
+   ],
+   "titles": [
+    [
+     "AI\u71b1\u6f6e\u8ab0\u5728\u80cc\u5f8c\u4f9b\u6599\uff1f009835\uff0c\u7784\u6e96\u95dc\u9375\u8cc7\u6e90",
+     6
+    ],
+    [
+     "\u9ec3\u91d1\u884c\u60c5\uff0c\u5225\u53ea\u770b\u91d1\u50f9  009834\u91d1\u7926\u4e5f\u6709\u770b\u982d",
+     6
+    ],
+    [
+     "Half of Models Now Hold Active ETFs",
+     2
+    ],
+    [
+     "\u9ec3\u91d1\u884c\u60c5\u5225\u53ea\u770b\u91d1\u50f9  009834\uff0c\u91d1\u7926\u4e5f\u6709\u770b\u982d",
+     1
+    ]
+   ]
+  }
+ },
+ "moves": [
+  {
+   "brand": "Goldman Sachs PWM",
+   "date": "2025-10-30",
+   "channel": "google-ads",
+   "move": "new Google text creatives (Goldman Sachs & Co. LLC)",
+   "link": "https://adstransparency.google.com/advertiser/AR12684134775619846145",
+   "reach": null,
+   "organic_lift_pct": "window incomplete",
+   "paid_lift_pct": "window incomplete"
+  },
+  {
+   "brand": "Goldman Sachs PWM",
+   "date": "2025-11-07",
+   "channel": "google-ads",
+   "move": "new Google text creative",
+   "link": "https://adstransparency.google.com/advertiser/AR12684134775619846145",
+   "reach": null,
+   "organic_before_avg": 246200,
+   "organic_after_avg": 240767,
+   "organic_lift_pct": -2.2,
+   "paid_before_avg": 416,
+   "paid_after_avg": 13184,
+   "paid_lift_pct": 3069.2
+  },
+  {
+   "brand": "Goldman Sachs PWM",
+   "date": "2026-01-01",
+   "channel": "google-ads",
+   "move": "new Google text creatives (Jan 1 and Jan 5)",
+   "link": "https://adstransparency.google.com/advertiser/AR12684134775619846145",
+   "reach": null,
+   "organic_before_avg": 237150,
+   "organic_after_avg": 235833,
+   "organic_lift_pct": -0.6,
+   "paid_before_avg": 9976,
+   "paid_after_avg": 20730,
+   "paid_lift_pct": 107.8
+  },
+  {
+   "brand": "Goldman Sachs PWM",
+   "date": "2026-03-03",
+   "channel": "google-ads",
+   "move": "MightyHive display/video flight starts (Mar 3, Mar 16) + new text creatives",
+   "link": "https://adstransparency.google.com/advertiser/AR09806350161511710721",
+   "reach": null,
+   "organic_before_avg": 246350,
+   "organic_after_avg": 205633,
+   "organic_lift_pct": -16.5,
+   "paid_before_avg": 20275,
+   "paid_after_avg": 25870,
+   "paid_lift_pct": 27.6
+  },
+  {
+   "brand": "Goldman Sachs PWM",
+   "date": "2026-03-20",
+   "channel": "press",
+   "move": "Euromoney Private Banking Awards 2026: World's Best for UHNW, Asia's Best for UHNW and Alternatives",
+   "link": "https://www.euromoney.com/awards/private-banking-awards/pb-2026-results/",
+   "reach": null,
+   "organic_before_avg": 246350,
+   "organic_after_avg": 205633,
+   "organic_lift_pct": -16.5,
+   "paid_before_avg": 20275,
+   "paid_after_avg": 25870,
+   "paid_lift_pct": 27.6
+  },
+  {
+   "brand": "Goldman Sachs PWM",
+   "date": "2026-04-11",
+   "channel": "google-ads",
+   "move": "new text creative + MightyHive image flight (Apr 13)",
+   "link": "https://adstransparency.google.com/advertiser/AR13815301222900432897",
+   "reach": null,
+   "organic_before_avg": 229750,
+   "organic_after_avg": 197667,
+   "organic_lift_pct": -14.0,
+   "paid_before_avg": 21295,
+   "paid_after_avg": 28777,
+   "paid_lift_pct": 35.1
+  },
+  {
+   "brand": "Goldman Sachs PWM",
+   "date": "2026-04-15",
+   "channel": "linkedin-ads",
+   "move": "10,000 Women India LinkedIn campaign (16 variants)",
+   "link": "https://www.linkedin.com/ad-library/detail/1218780033",
+   "reach": null,
+   "organic_before_avg": 229750,
+   "organic_after_avg": 197667,
+   "organic_lift_pct": -14.0,
+   "paid_before_avg": 21295,
+   "paid_after_avg": 28777,
+   "paid_lift_pct": 35.1
+  },
+  {
+   "brand": "Goldman Sachs PWM",
+   "date": "2026-09-02",
+   "channel": "google-ads",
+   "move": "new Google text creative",
+   "link": "https://adstransparency.google.com/advertiser/AR12684134775619846145",
+   "reach": null,
+   "organic_before_avg": 191450,
+   "organic_after_avg": 196900,
+   "organic_lift_pct": 2.8,
+   "paid_before_avg": 30995,
+   "paid_after_avg": 34080,
+   "paid_lift_pct": 10.0
+  },
+  {
+   "brand": "UBS GWM",
+   "date": "2025-09-16",
+   "channel": "google-ads",
+   "move": "new UBS Switzerland AG text creative",
+   "link": "https://adstransparency.google.com/advertiser/AR16219291845509775361",
+   "reach": null,
+   "organic_lift_pct": "outside SpyFu window",
+   "paid_lift_pct": "outside SpyFu window"
+  },
+  {
+   "brand": "UBS GWM",
+   "date": "2026-04-18",
+   "channel": "google-ads",
+   "move": "new UBS Switzerland AG text creative",
+   "link": "https://adstransparency.google.com/advertiser/AR16219291845509775361",
+   "reach": null,
+   "organic_before_avg": 179150,
+   "organic_after_avg": 179567,
+   "organic_lift_pct": 0.2,
+   "paid_before_avg": 288950,
+   "paid_after_avg": 481933,
+   "paid_lift_pct": 66.8
+  },
+  {
+   "brand": "UBS GWM",
+   "date": "2026-06-20",
+   "channel": "google-ads",
+   "move": "UBS Business Solutions AG image creative",
+   "link": "https://adstransparency.google.com/advertiser/AR15402754928304717825",
+   "reach": null,
+   "organic_before_avg": 181500,
+   "organic_after_avg": 167500,
+   "organic_lift_pct": -7.7,
+   "paid_before_avg": 470200,
+   "paid_after_avg": 521567,
+   "paid_lift_pct": 10.9
+  },
+  {
+   "brand": "UBS GWM",
+   "date": "2026-09-21",
+   "channel": "google-ads",
+   "move": "new image + text creatives (Sep 21, Sep 24)",
+   "link": "https://adstransparency.google.com/advertiser/AR16219291845509775361",
+   "reach": null,
+   "organic_before_avg": 163400,
+   "organic_after_avg": 162300,
+   "organic_lift_pct": -0.7,
+   "paid_before_avg": 529650,
+   "paid_after_avg": 565800,
+   "paid_lift_pct": 6.8
+  },
+  {
+   "brand": "UBS GWM",
+   "date": "2026-10-16",
+   "channel": "linkedin-ads",
+   "move": "UBS AM \"Opportunity in a changing world\" EM and income campaign in APAC",
+   "link": "https://www.linkedin.com/ad-library/detail/1584730263",
+   "reach": null,
+   "organic_lift_pct": "outside SpyFu window",
+   "paid_lift_pct": "outside SpyFu window"
+  },
+  {
+   "brand": "Morgan Stanley PWM",
+   "date": "2025-06-18",
+   "channel": "google-ads",
+   "move": "Morgan Stanley & Co Incorporated text wave (13+ creatives)",
+   "link": "https://adstransparency.google.com/advertiser/AR03008790754542747649",
+   "reach": null,
+   "organic_lift_pct": "outside SpyFu window",
+   "paid_lift_pct": "outside SpyFu window"
+  },
+  {
+   "brand": "Morgan Stanley PWM",
+   "date": "2025-07-16",
+   "channel": "google-ads",
+   "move": "new Morgan Stanley & Co. LLC text creatives",
+   "link": "https://adstransparency.google.com/advertiser/AR15948927588416618497",
+   "reach": null,
+   "organic_lift_pct": "outside SpyFu window",
+   "paid_lift_pct": "outside SpyFu window"
+  },
+  {
+   "brand": "Morgan Stanley PWM",
+   "date": "2026-05-08",
+   "channel": "google-ads",
+   "move": "new text creative",
+   "link": "https://adstransparency.google.com/advertiser/AR03008790754542747649",
+   "reach": null,
+   "organic_before_avg": 424900,
+   "organic_after_avg": 434300,
+   "organic_lift_pct": 2.2,
+   "paid_before_avg": 117050,
+   "paid_after_avg": 137367,
+   "paid_lift_pct": 17.4
+  },
+  {
+   "brand": "Morgan Stanley PWM",
+   "date": "2026-06-02",
+   "channel": "google-ads",
+   "move": "new text creatives (Jun 2, Jun 16, Jun 21)",
+   "link": "https://adstransparency.google.com/advertiser/AR15948927588416618497",
+   "reach": null,
+   "organic_before_avg": 429250,
+   "organic_after_avg": 429667,
+   "organic_lift_pct": 0.1,
+   "paid_before_avg": 128300,
+   "paid_after_avg": 144567,
+   "paid_lift_pct": 12.7
+  },
+  {
+   "brand": "Morgan Stanley PWM",
+   "date": "2026-07-31",
+   "channel": "linkedin-ads",
+   "move": "MSIM \"The right alternatives platform is closer than you think\" SG/AU campaign",
+   "link": "https://www.linkedin.com/ad-library/detail/1578489884",
+   "reach": null,
+   "organic_before_avg": 433250,
+   "organic_after_avg": 418600,
+   "organic_lift_pct": -3.4,
+   "paid_before_avg": 132350,
+   "paid_after_avg": 152667,
+   "paid_lift_pct": 15.4
+  },
+  {
+   "brand": "Morgan Stanley PWM",
+   "date": "2026-08-21",
+   "channel": "google-ads",
+   "move": "new text creative",
+   "link": "https://adstransparency.google.com/advertiser/AR03008790754542747649",
+   "reach": null,
+   "organic_before_avg": 433150,
+   "organic_after_avg": 409700,
+   "organic_lift_pct": -5.4,
+   "paid_before_avg": 140900,
+   "paid_after_avg": 155300,
+   "paid_lift_pct": 10.2
+  },
+  {
+   "brand": "BlackRock",
+   "date": "2026-03-04",
+   "channel": "google-ads",
+   "move": "Mindshare Media text flight starts",
+   "link": "https://adstransparency.google.com/advertiser/AR11545421847461888001",
+   "reach": null,
+   "organic_before_avg": 299850,
+   "organic_after_avg": 301400,
+   "organic_lift_pct": 0.5,
+   "paid_before_avg": 24125,
+   "paid_after_avg": 34383,
+   "paid_lift_pct": 42.5
+  },
+  {
+   "brand": "BlackRock",
+   "date": "2026-04-16",
+   "channel": "google-ads",
+   "move": "Mindshare + BLACKROCK INC creatives (Apr 16, 21, 30)",
+   "link": "https://adstransparency.google.com/advertiser/AR09961582030619672577",
+   "reach": null,
+   "organic_before_avg": 303850,
+   "organic_after_avg": 299067,
+   "organic_lift_pct": -1.6,
+   "paid_before_avg": 28200,
+   "paid_after_avg": 40420,
+   "paid_lift_pct": 43.3
+  },
+  {
+   "brand": "BlackRock",
+   "date": "2026-05-15",
+   "channel": "google-ads",
+   "move": "Australia entity + BLACKROCK INC creatives (May 15, 27, 29)",
+   "link": "https://adstransparency.google.com/advertiser/AR05832621465492520961",
+   "reach": null,
+   "organic_before_avg": 301650,
+   "organic_after_avg": 306133,
+   "organic_lift_pct": 1.5,
+   "paid_before_avg": 31905,
+   "paid_after_avg": 49123,
+   "paid_lift_pct": 54.0
+  },
+  {
+   "brand": "BlackRock",
+   "date": "2026-06-01",
+   "channel": "google-ads",
+   "move": "Mindshare text creatives",
+   "link": "https://adstransparency.google.com/advertiser/AR11545421847461888001",
+   "reach": null,
+   "organic_before_avg": 299850,
+   "organic_after_avg": 312467,
+   "organic_lift_pct": 4.2,
+   "paid_before_avg": 36245,
+   "paid_after_avg": 61767,
+   "paid_lift_pct": 70.4
+  },
+  {
+   "brand": "BlackRock",
+   "date": "2026-07-20",
+   "channel": "google-ads",
+   "move": "BlackRock, Inc. text creative",
+   "link": "https://adstransparency.google.com/advertiser/AR17709583924570619905",
+   "reach": null,
+   "organic_before_avg": 299200,
+   "organic_after_avg": 309833,
+   "organic_lift_pct": 3.6,
+   "paid_before_avg": 44055,
+   "paid_after_avg": 72033,
+   "paid_lift_pct": 63.5
+  },
+  {
+   "brand": "BlackRock",
+   "date": "2026-08-04",
+   "channel": "google-ads",
+   "move": "Mindshare + Taiwan entity flights (Aug 4-14)",
+   "link": "https://adstransparency.google.com/advertiser/AR13697326786335997953",
+   "reach": null,
+   "organic_before_avg": 308750,
+   "organic_after_avg": 304750,
+   "organic_lift_pct": -1.3,
+   "paid_before_avg": 54015,
+   "paid_after_avg": 78420,
+   "paid_lift_pct": 45.2
+  },
+  {
+   "brand": "BlackRock",
+   "date": "2026-08-20",
+   "channel": "linkedin-ads",
+   "move": "\"New angles on portfolio construction\" LinkedIn set",
+   "link": "https://www.linkedin.com/ad-library/detail/1644734066",
+   "reach": null,
+   "organic_before_avg": 308750,
+   "organic_after_avg": 304750,
+   "organic_lift_pct": -1.3,
+   "paid_before_avg": 54015,
+   "paid_after_avg": 78420,
+   "paid_lift_pct": 45.2
+  },
+  {
+   "brand": "BlackRock",
+   "date": "2026-09-01",
+   "channel": "google-ads",
+   "move": "Mindshare + BlackRock text flights (Sep 1-28)",
+   "link": "https://adstransparency.google.com/advertiser/AR11545421847461888001",
+   "reach": null,
+   "organic_before_avg": 319950,
+   "organic_after_avg": 289600,
+   "organic_lift_pct": -9.5,
+   "paid_before_avg": 68265,
+   "paid_after_avg": 79570,
+   "paid_lift_pct": 16.6
+  },
+  {
+   "brand": "BlackRock",
+   "date": "2026-09-30",
+   "channel": "linkedin-ads",
+   "move": "\"Closer than you think / This is Asia's moment\" ASEAN campaign",
+   "link": "https://www.linkedin.com/ad-library/detail/1578892164",
+   "reach": null,
+   "organic_before_avg": 319950,
+   "organic_after_avg": 289600,
+   "organic_lift_pct": -9.5,
+   "paid_before_avg": 68265,
+   "paid_after_avg": 79570,
+   "paid_lift_pct": 16.6
+  },
+  {
+   "brand": "HSBC Private Bank",
+   "date": "2026-10-06",
+   "channel": "linkedin-ads",
+   "move": "Global Entrepreneurial Wealth Report 2026 LinkedIn campaign (169 ads in APAC filter)",
+   "link": "https://www.linkedin.com/ad-library/detail/1596041404",
+   "reach": null,
+   "organic_lift_pct": "outside SpyFu window",
+   "paid_lift_pct": "outside SpyFu window"
+  },
+  {
+   "brand": "J.P. Morgan Private Bank",
+   "date": "2026-05-26",
+   "channel": "linkedin-ads",
+   "move": "Fixed income + Mobility LinkedIn campaign, EN + Simplified Chinese (492 ads in APAC filter)",
+   "link": "https://www.linkedin.com/ad-library/detail/1420632406",
+   "reach": null,
+   "organic_before_avg": 902900,
+   "organic_after_avg": 760600,
+   "organic_lift_pct": -15.8,
+   "paid_before_avg": 352950,
+   "paid_after_avg": 480500,
+   "paid_lift_pct": 36.1
+  },
+  {
+   "brand": "J.P. Morgan Private Bank",
+   "date": "2026-03-20",
+   "channel": "press",
+   "move": "Euromoney 2026: Asia's Best for Next Generation (per ChatGPT citation of results page)",
+   "link": "https://www.euromoney.com/awards/private-banking-awards/pb-2026-results/",
+   "reach": null,
+   "organic_before_avg": 1014950,
+   "organic_after_avg": 868133,
+   "organic_lift_pct": -14.5,
+   "paid_before_avg": 192650,
+   "paid_after_avg": 379800,
+   "paid_lift_pct": 97.1
+  },
+  {
+   "brand": "J.P. Morgan Private Bank",
+   "date": "2025-01-01",
+   "channel": "hiring",
+   "move": "2024: RM headcount in Asia +35% (+86) to 330 (Asian Private Banker league tables); 1H25 most active senior hirer",
+   "link": "https://asianprivatebanker.com/people-news/movers-shakers-decoding-j-p-morgan-private-banks-hiring-spree/",
+   "reach": null,
+   "organic_lift_pct": "outside SpyFu window",
+   "paid_lift_pct": "outside SpyFu window"
+  }
+ ],
+ "spearman": {
+  "J.P. Morgan Private Bank | google-ads": {
+   "moves": 0,
+   "note": "under 5 moves in window: rows listed, no correlation called"
+  },
+  "J.P. Morgan Private Bank | linkedin-ads": {
+   "moves": 1,
+   "note": "under 5 moves in window: rows listed, no correlation called"
+  },
+  "Goldman Sachs PWM | google-ads": {
+   "moves": 6,
+   "lag0_paid": 0.12,
+   "lag0_organic": 0.03,
+   "months": 10,
+   "lag1_paid": 0.81,
+   "lag1_organic": -0.43,
+   "lag2_paid": 0.0,
+   "lag2_organic": -0.45
+  },
+  "Goldman Sachs PWM | linkedin-ads": {
+   "moves": 1,
+   "note": "under 5 moves in window: rows listed, no correlation called"
+  },
+  "UBS GWM | google-ads": {
+   "moves": 3,
+   "note": "under 5 moves in window: rows listed, no correlation called"
+  },
+  "UBS GWM | linkedin-ads": {
+   "moves": 0,
+   "note": "under 5 moves in window: rows listed, no correlation called"
+  },
+  "HSBC Private Bank | google-ads": {
+   "moves": 0,
+   "note": "under 5 moves in window: rows listed, no correlation called"
+  },
+  "HSBC Private Bank | linkedin-ads": {
+   "moves": 0,
+   "note": "under 5 moves in window: rows listed, no correlation called"
+  },
+  "Morgan Stanley PWM | google-ads": {
+   "moves": 3,
+   "note": "under 5 moves in window: rows listed, no correlation called"
+  },
+  "Morgan Stanley PWM | linkedin-ads": {
+   "moves": 1,
+   "note": "under 5 moves in window: rows listed, no correlation called"
+  },
+  "BlackRock | google-ads": {
+   "moves": 7,
+   "lag0_paid": 0.18,
+   "lag0_organic": -0.06,
+   "months": 10,
+   "lag1_paid": 0.12,
+   "lag1_organic": -0.12,
+   "lag2_paid": 0.17,
+   "lag2_organic": -0.1
+  },
+  "BlackRock | linkedin-ads": {
+   "moves": 2,
+   "note": "under 5 moves in window: rows listed, no correlation called"
+  }
+ },
+ "followers": {
+  "Goldman Sachs PWM": "6,204,516 followers",
+  "UBS GWM": "2,298,369 followers",
+  "Morgan Stanley PWM": "4,579,419 followers",
+  "HSBC Private Bank": "178,837 followers",
+  "J.P. Morgan Private Bank": "324,856 followers",
+  "BlackRock": "3,274,227 followers"
+ }
+}
