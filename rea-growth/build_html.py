@@ -83,7 +83,7 @@ def render_md(text):
 
 def chart(kind, title, base_idx, note):
     """Indexed line chart, one line per brand, with month ticks."""
-    W, H, L, R, T, B = 760, 300, 48, 16, 22, 44
+    W, H, L, R, T, B = 760, 300, 48, 56, 22, 44
     xs = [L + (W - L - R) * i / 11 for i in range(12)]
     idx = {b: [v / s[kind][base_idx] * 100 for v in s[kind]] for b, s in series.items()}
     lo = min(min(v) for v in idx.values()); hi = max(max(v) for v in idx.values())
@@ -118,7 +118,7 @@ def math_ceil(v, s): return int(-(-v // s) * s)
 def pins():
     """Dated moves as a pin strip under the charts, one row per brand."""
     moves = [m for m in A['moves'] if m['date'][:7] in MONTHS]
-    W, L, R, rowh = 760, 48, 16, 26
+    W, L, R, rowh = 760, 96, 56, 26
     brands = list(BRAND_COLOR.keys())
     H = 24 + rowh * len(brands) + 10
     xs = {m: L + (W - L - R) * i / 11 for i, m in enumerate(MONTHS)}
